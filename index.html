@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightshift Studio | Moderne Apps</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { primary: '#2563eb' }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Sanfter Glow-Effekt für das Logo */
+        .logo-glow {
+            filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2));
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
+
+    <!-- HEADER: Weiß mit Trennlinie -->
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-slate-900">
+                SD Nightshift Studio
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-500">
+                <a href="#apps" class="hover:text-primary transition-colors">Apps</a>
+                <a href="#" class="hover:text-primary transition-colors">Datenschutz</a>
+                <a href="#" class="hover:text-primary transition-colors">Kontakt</a>
+            </nav>
+            <button class="md:hidden text-slate-600" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 flex-col gap-4 text-sm font-medium text-slate-600 absolute w-full z-40">
+        <a href="#apps" class="py-2">Apps</a>
+        <a href="#" class="py-2">Datenschutz</a>
+        <a href="#" class="py-2">Kontakt</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow">
+        
+        <!-- HERO SECTION: Leicht bläulich mit Kurve -->
+        <section class="relative bg-slate-50 pt-16 pb-32 md:pt-24 md:pb-48 overflow-hidden">
+            <!-- Aura Glow Effekte -->
+            <div class="absolute top-0 right-0 -z-10 w-[500px] h-[500px] bg-blue-200 rounded-full blur-[120px] opacity-30 translate-x-1/4 -translate-y-1/4"></div>
+            
+            <div class="max-w-6xl mx-auto px-6 flex flex-col-reverse md:flex-row items-center justify-between relative z-10">
+                <!-- Text -->
+                <div class="w-full md:w-1/2 mt-12 md:mt-0 text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-slate-900">
+                        Moderne Apps<br>für deinen Alltag
+                    </h1>
+                    <p class="mt-6 text-lg text-slate-600 max-w-md leading-relaxed">
+                        Wir entwickeln mit Leidenschaft durchdachte Android Apps.
+                    </p>
+
+                    <!-- Infobox -->
+                    <div class="mt-10 p-4 bg-white/80 backdrop-blur-sm border-2 border-dashed border-blue-200 rounded-2xl flex items-center gap-4 w-full max-w-sm shadow-sm">
+                        <div class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-500/20">
+                            <i data-lucide="code-2" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-sm">Erste App in Entwicklung</h3>
+                            <p class="text-xs text-slate-500">Release in Kürze · Stay tuned!</p>
+                        </div>
+                    </div>
+
+                    <a href="#features" class="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary group">
+                        <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-1 transition-transform"></i>
+                        Nach unten scrollen
+                    </a>
+                </div>
+
+                <!-- Logo Image -->
+                <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+                    <div class="relative w-72 h-72 md:w-[450px] md:h-[450px]">
+                        <img src="assets/images/icons/logo.png" alt="SD Logo" class="w-full h-full object-contain logo-glow">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trennungskurve zum Body (SVG) -->
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] transform rotate-180">
+                <svg class="relative block w-full h-[60px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V120c63.59-40.11,153.58-52.82,231.28-56.71C261.1,62.15,291.54,62,321.39,56.44Z" fill="#FFFFFF"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- WHITE BODY SECTION -->
+        <section id="features" class="bg-white py-24">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-12">Warum Nightshift Studio?</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center shrink-0">
+                            <i data-lucide="zap" class="w-7 h-7 fill-blue-600/10"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900">Performance</h3>
+                            <p class="text-sm text-slate-500 font-medium">Schnell & effizient</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center shrink-0">
+                            <i data-lucide="layout" class="w-7 h-7 fill-blue-600/10"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900">Design</h3>
+                            <p class="text-sm text-slate-500 font-medium">Modern & intuitiv</p>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm flex items-center gap-5 hover:shadow-md transition-shadow">
+                        <div class="w-14 h-14 bg-blue-50 text-primary rounded-2xl flex items-center justify-center shrink-0">
+                            <i data-lucide="shield-check" class="w-7 h-7 fill-blue-600/10"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900">Privacy First</h3>
+                            <p class="text-sm text-slate-500 font-medium">Deine Daten zählen</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- APP SHOWCASE -->
+        <section id="apps" class="bg-white pb-32">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-12">Unsere Apps</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- App Card -->
+                    <div class="bg-white border border-slate-100 rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition-all flex flex-col items-center text-center group border-t-4 border-t-primary">
+                        <div class="w-24 h-24 bg-slate-50 border border-slate-100 rounded-[2rem] flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-inner">
+                            <i data-lucide="smartphone" class="w-10 h-10 text-primary"></i>
+                        </div>
+                        <div class="inline-flex items-center gap-2 bg-blue-50 text-primary text-[10px] uppercase tracking-widest font-bold px-3 py-1 rounded-full mb-4">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            Coming Soon
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Produktivitäts-App</h3>
+                        <p class="text-slate-500 mb-10 leading-relaxed">
+                            Maximiere deine Effizienz mit unserem durchdachten Tool. Schlicht im Design, mächtig in der Funktion.
+                        </p>
+                        <button class="w-full bg-primary hover:bg-blue-700 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all shadow-lg shadow-blue-500/25 active:scale-[0.98]">
+                            <i data-lucide="bell-ring" class="w-5 h-5"></i>
+                            Benachrichtigung erhalten
+                        </button>
+                    </div>
+
+                    <!-- Placeholder -->
+                    <div class="border-2 border-dashed border-slate-200 bg-slate-50/30 rounded-[2.5rem] p-10 flex flex-col items-center justify-center text-center opacity-60">
+                        <div class="w-16 h-16 bg-white border border-slate-100 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                            <i data-lucide="plus" class="w-6 h-6 text-slate-400"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-600">Weitere Projekte</h3>
+                        <p class="text-sm text-slate-400 mt-2 max-w-[200px]">Wir tüfteln bereits an der nächsten Idee.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER: Leicht abgesetzt mit Trennlinie -->
+    <footer class="w-full bg-slate-50 border-t border-slate-100 py-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <span class="font-bold text-slate-900">SD Nightshift Studio</span>
+                <p class="text-sm text-slate-400 italic">Crafted with passion in Germany.</p>
+            </div>
+            
+            <div class="flex items-center gap-8 text-sm font-medium text-slate-500">
+                <a href="#" class="hover:text-primary transition-colors">Impressum</a>
+                <a href="#" class="hover:text-primary transition-colors">Datenschutz</a>
+                <a href="#" class="hover:text-primary transition-colors">Kontakt</a>
+            </div>
+            
+            <p class="text-sm text-slate-400">© 2026 Nightshift Studio</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>
