@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SD Nightshift Studio | Moderne Apps</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans:['Inter', 'sans-serif'] },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: { primary: '#5397EA' }
                 }
             }
@@ -22,9 +23,12 @@
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .logo-glow { filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2)); }
+        .logo-glow {
+            filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2));
+        }
     </style>
 </head>
+
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
     <!-- HEADER -->
@@ -34,12 +38,17 @@
                 <img src="assets/images/logo.png" alt="SD Nightshift Studio Logo" class="w-10 h-10 text-primary">
                 Nightshift Studio
             </a>
-            
+
             <nav class="hidden md:flex items-center gap-8 text-m font-semibold text-slate-700">
-                <a href="#home" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Home</a>
-                <a href="#about" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Über mich</a>
-                <a href="#apps" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Apps</a>
-                <a href="#contact" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Kontakt</a>
+                <a href="#home"
+                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Home</a>
+                <a href="#about"
+                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Über
+                    mich</a>
+                <a href="#apps"
+                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Apps</a>
+                <a href="#contact"
+                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Kontakt</a>
             </nav>
             <button class="md:hidden text-slate-600" id="mobile-menu-btn">
                 <i data-lucide="menu"></i>
@@ -48,7 +57,8 @@
     </header>
 
     <!-- MOBILE MENU -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 flex-col gap-4 text-sm font-medium text-slate-700 absolute w-full z-40 shadow-lg">
+    <div id="mobile-menu"
+        class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 flex-col gap-4 text-sm font-medium text-slate-700 absolute w-full z-40 shadow-lg">
         <a href="#home" class="py-2 hover:text-primary">Home</a>
         <a href="#about" class="py-2 hover:text-primary">Über mich</a>
         <a href="#apps" class="py-2 hover:text-primary">Apps</a>
@@ -57,70 +67,78 @@
 
     <!-- MAIN CONTENT -->
     <main class="flex-grow">
-        
-<!-- 1. WELCOME / HERO SECTION (Clean & Minimalist) -->
-<section id="home" class="relative bg-slate-50 pt-8 md:pt-16 pb-8 md:pb-16 overflow-hidden border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
-        
-        <!-- Text-Spalte -->
-        <div class="w-full md:w-2/3 text-left">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-tight text-slate-900">
-                Willkommen bei<br>SD Nightshift Studio
-            </h1>
-            <p class="mt-6 text-lg text-slate-600 max-w-2xl leading-relaxed">
-                Innovative Mobile Apps für deinen Alltag. Wir entwickeln mit Leidenschaft durchdachte Android-Anwendungen.
-            </p>
-            <div class="mt-8">
-                <a href="#apps" class="inline-flex bg-primary hover:bg-blue-700 text-white px-8 py-3.5 rounded-xl font-semibold items-center justify-center gap-3 transition-all shadow-lg shadow-blue-500/30">
-                    Aktuelles Projekt entdecken
-                    <i data-lucide="sparkles" class="w-5 h-5"></i>
-                </a>
-            </div>
-        </div>
 
-        <!-- Bild-Spalte -->
-        <div class="w-full md:w-1/3 flex justify-center md:justify-end">
-            <div class="relative w-80 h-80 md:w-96 md:h-96 translate-y-8">
-                <img src="assets/images/comic1.png" alt="Comic1" class="w-full h-full object-contain logo-glow">
+        <!-- 1. WELCOME / HERO SECTION (Clean & Minimalist) -->
+        <section id="home"
+            class="relative bg-slate-50 pt-8 md:pt-16 pb-8 md:pb-16 overflow-hidden border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+
+                <!-- Text-Spalte -->
+                <div class="w-full md:w-2/3 text-left">
+                    <h1
+                        class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-tight text-slate-900">
+                        Willkommen bei<br>SD Nightshift Studio
+                    </h1>
+                    <p class="mt-6 text-lg text-slate-600 max-w-2xl leading-relaxed">
+                        Innovative Mobile Apps für deinen Alltag. Wir entwickeln mit Leidenschaft durchdachte
+                        Android-Anwendungen.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#apps"
+                            class="inline-flex bg-primary hover:bg-blue-700 text-white px-8 py-3.5 rounded-xl font-semibold items-center justify-center gap-3 transition-all shadow-lg shadow-blue-500/30">
+                            Aktuelles Projekt entdecken
+                            <i data-lucide="sparkles" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bild-Spalte -->
+                <div class="w-full md:w-1/3 flex justify-center md:justify-end">
+                    <div class="relative w-80 h-80 md:w-96 md:h-96 translate-y-8">
+                        <img src="assets/images/comic1.png" alt="Comic1" class="w-full h-full object-contain logo-glow">
+                    </div>
+                </div>
+
             </div>
-        </div>
-        
-    </div>
-</section>
+        </section>
 
         <!-- 2. ABOUT US SECTION -->
-<section id="about" class="relative bg-white pt-8 md:pt-16 pb-8 md:pb-16 border-b border-slate-200 overflow-hidden">
-    <div class="max-w-6xl mx-auto px-6">
-        
-        <!-- Wir nutzen items-start, damit Text und Bild oben auf der gleichen Linie beginnen -->
-        <div class="flex flex-col md:flex-row items-start justify-between gap-12">
-            
-            <!-- Text-Spalte (2/3 Breite) -->
-            <div class="w-full md:w-2/3 text-left">
-                <!-- Die Sektions-Überschrift ist jetzt der Ankerpunkt (wie das H1 oben) -->
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8 relative inline-block">
-                    Über mich
-                    <div class="absolute -bottom-3 left-0 w-12 h-1.5 bg-primary rounded-full"></div>
-                </h2>
+        <section id="about"
+            class="scroll-mt-16 relative bg-white pt-8 md:pt-16 pb-8 md:pb-16 border-b border-slate-200 overflow-hidden">
+            <div class="max-w-6xl mx-auto px-6">
 
-                <div class="mt-4">
-                    <h3 class="text-xl font-bold text-slate-800 mb-4">Unabhängiger App-Entwickler</h3>
-                    <p class="text-lg text-slate-600 max-w-2xl leading-relaxed">
-                        Ich kreiere benutzerfreundliche und innovative mobile Anwendungen, um deinen täglichen Ablauf zu verbessern. Jede meiner Apps wird mit einem starken Fokus auf Performance, Design und den Schutz deiner Privatsphäre entwickelt.
-                    </p>
+                <!-- Wir nutzen items-start, damit Text und Bild oben auf der gleichen Linie beginnen -->
+                <div class="flex flex-col md:flex-row items-start justify-between gap-12">
+
+                    <!-- Text-Spalte (2/3 Breite) -->
+                    <div class="w-full md:w-2/3 text-left">
+                        <!-- Die Sektions-Überschrift ist jetzt der Ankerpunkt (wie das H1 oben) -->
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8 relative inline-block">
+                            Über mich
+                            <div class="absolute -bottom-3 left-0 w-12 h-1.5 bg-primary rounded-full"></div>
+                        </h2>
+
+                        <div class="mt-4">
+                            <h3 class="text-xl font-bold text-slate-800 mb-4">Unabhängiger App-Entwickler</h3>
+                            <p class="text-lg text-slate-600 max-w-2xl leading-relaxed">
+                                Ich kreiere benutzerfreundliche und innovative mobile Anwendungen, um deinen täglichen
+                                Ablauf zu verbessern. Jede meiner Apps wird mit einem starken Fokus auf Performance,
+                                Design und den Schutz deiner Privatsphäre entwickelt.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Bild-Spalte (1/3 Breite) -->
+                    <div class="w-full md:w-1/3 flex justify-center md:justify-end">
+                        <div class="relative w-80 h-80 md:w-96 md:h-96 -translate-y-8">
+                            <img src="assets/images/comic2.png" alt="Comic2"
+                                class="w-full h-full object-contain logo-glow">
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            
-            <!-- Bild-Spalte (1/3 Breite) -->
-            <div class="w-full md:w-1/3 flex justify-center md:justify-end">
-                   <div class="relative w-80 h-80 md:w-96 md:h-96 -translate-y-8">
-                    <img src="assets/images/comic2.png" alt="Comic2" class="w-full h-full object-contain logo-glow">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- 3. OUR APPS SECTION -->
         <section id="apps" class="bg-slate-50 pt-8 md:pt-16 pb-8 md:pb-16 border-b border-slate-200">
@@ -129,49 +147,51 @@
                     Meine Apps
                     <div class="absolute -bottom-3 left-0 w-12 h-1.5 bg-primary rounded-full "></div>
                 </h2>
-                   
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                    
-                    <!-- App Card 1 -->
-                    <div class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group relative">
+
+
+                    <!-- App Card 1 (AdventuVerse) -->
+                    <a href="apps/adventuverse.html"
+                        class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group relative">
                         <!-- Coming Soon Badge -->
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full z-10 border border-blue-100 flex items-center gap-2 shadow-sm">
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full z-10 border border-blue-100 flex items-center gap-2 shadow-sm">
                             <span class="relative flex h-2 w-2">
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                             </span>
                             In Entwicklung
                         </div>
 
-                        <div class="h-48 bg-gradient-to-br from-blue-50 to-slate-100 border-b border-slate-100 flex items-center justify-center relative overflow-hidden">
-                            <i data-lucide="check-square" class="w-16 h-16 text-primary/40 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div
+                            class="h-48 bg-gradient-to-br from-blue-50 to-slate-100 border-b border-slate-100 flex items-center justify-center relative overflow-hidden">
+                            <i data-lucide="book-open"
+                                class="w-16 h-16 text-primary/40 group-hover:scale-110 transition-transform duration-500"></i>
                         </div>
-                        
+
                         <div class="p-8 flex flex-col flex-grow text-center">
                             <h3 class="text-2xl font-bold text-slate-900 mb-2">AdventuVerse</h3>
                             <p class="text-sm text-slate-500 mb-8 leading-relaxed">
-                                Tauche ein in fesselnde, interaktive Stories aus verschiedenen Genres. Triff deine Entscheidungen und nutze deinen Verstand – dein Smartphone wird zum Schlüssel deiner Abenteuer.
+                                Tauche ein in fesselnde, interaktive Stories aus verschiedenen Genres. Triff deine
+                                Entscheidungen und nutze deinen Verstand – dein Smartphone wird zum Schlüssel deiner
+                                Abenteuer.
                             </p>
-                            
-                            <!-- NEU: Angepasste Buttons -->
+
                             <div class="w-full mt-auto">
-                                <!-- 1. Button (Oben): Beta anmelden (Primär) -->
-                                <button class="w-full bg-primary hover:bg-blue-700 text-white py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-md shadow-blue-500/20 active:scale-[0.98]">
-                                    <i data-lucide="beaker" class="w-5 h-5"></i>
-                                    Für Beta anmelden
-                                </button>
-                                
-                                <!-- 2. Button (Unten): Benachrichtigung (Sekundär) -->
-                                <button class="w-full mt-3 border-2 border-primary/20 text-primary hover:bg-primary/5 hover:border-primary/40 py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
-                                    <i data-lucide="bell-ring" class="w-5 h-5"></i>
-                                    Release-Info erhalten
-                                </button>
+                                <span
+                                    class="w-full bg-primary group-hover:bg-blue-700 text-white py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 transition-all">
+                                    Details ansehen
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                     <!-- Placeholder Card 3 -->
-                    <div class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group opacity-60">
+                    <div
+                        class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group opacity-60">
                         <div class="h-48 bg-slate-50 border-b border-slate-100 flex items-center justify-center">
                             <i data-lucide="plus" class="w-12 h-12 text-slate-300"></i>
                         </div>
@@ -188,14 +208,16 @@
         <!-- 4. CONTACT & IMPRESSUM -->
         <section id="contact" class="bg-white py-8">
             <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
-                
+
                 <div>
                     <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-3">Kontakt</h3>
-                      <div class="flex items-center gap-3 bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl w-fit shadow-sm">
+                    <div
+                        class="flex items-center gap-3 bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl w-fit shadow-sm">
                         <div class="bg-blue-100 p-2 rounded-lg text-primary">
                             <i data-lucide="mail" class="w-5 h-5"></i>
                         </div>
-                        <a href="mailto:sdnightshift.dev@gmail.com" class="text-slate-700 font-medium hover:text-primary transition-colors">
+                        <a href="mailto:sdnightshift.dev@gmail.com"
+                            class="text-slate-700 font-medium hover:text-primary transition-colors">
                             sdnightshift.dev@gmail.com
                         </a>
                     </div>
@@ -218,7 +240,8 @@
 
     <!-- 5. BOTTOM FOOTER -->
     <footer class="w-full bg-slate-100 border-t border-slate-200 py-6 text-center">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-sm font-medium text-slate-500">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-sm font-medium text-slate-500">
             <p>© 2026 SD Nightshift Studio</p>
             <span class="hidden md:inline text-slate-300">|</span>
             <p>Alle Rechte vorbehalten</p>
@@ -238,4 +261,5 @@
         });
     </script>
 </body>
+
 </html>
