@@ -17,6 +17,16 @@
             }
         }</script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+    /* Verhindert das Springen des Layouts beim Seitenwechsel */
+    html {
+        overflow-y: scroll;
+    }
+    /* Optional: Verhindert, dass Flex-Items den Header "aufpumpen" */
+    .header-container {
+        min-height: 72px; /* Setze eine feste Mindesthöhe */
+    }
+</style>
     <link rel="icon" type="image/png" href="../../assets/images/logo.png">
 </head>
 

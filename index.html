@@ -21,6 +21,15 @@
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
+        html {
+            overflow-y: scroll;
+        }
+
+        .header-container {
+            min-height: 72px;
+            /* Setze eine feste Mindesthöhe */
+        }
+
         .logo-glow {
             filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2));
         }
@@ -31,45 +40,40 @@
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
     <!-- HEADER -->
-    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between relative gap-2">
+<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+    <!-- max-w-6xl und px-4 sm:px-6 MÜSSEN auf jeder Seite identisch sein -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
 
-            <!-- Logo & Brand Name -->
-            <a href="#home" class="flex items-center gap-2 sm:gap-3 group shrink-0">
-                <!-- Bildgröße passt sich an (w-8 auf Mobile, w-10 ab sm) -->
-                <img src="assets/images/logo.png" alt="SD Logo"
-                    class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
-                <!-- Textgröße skaliert: text-lg auf Mobile, text-2xl ab sm -->
-                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
-                    Nightshift Studio
-                </span>
-            </a>
+        <!-- Logo & Brand Name: shrink-0 verhindert das Verkleinern -->
+        <a href="#home" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+            <img src="assets/images/logo.png" alt="SD Logo"
+                class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
+            <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
+                Nightshift Studio
+            </span>
+        </a>
 
-            <!-- Desktop Navigation (Wird auf Mobile komplett ausgeblendet) -->
-            <nav class="hidden md:flex items-center gap-8 text-base font-semibold text-slate-700">
-                <a href="#about"
-                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Über
-                    mich</a>
-                <a href="#apps"
-                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Apps</a>
-                <a href="#contact"
-                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Kontakt</a>
-            </nav>
+        <!-- Desktop Navigation: Nutzt flex-grow um den Platz zu füllen, falls nötig -->
+        <nav class="hidden md:flex items-center gap-8 text-base font-semibold text-slate-700">
+            <a href="#about" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Über mich</a>
+            <a href="#apps" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Apps</a>
+            <a href="#contact" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Kontakt</a>
+        </nav>
 
-            <!-- Burger Button (Immer rechts außen auf Mobile) -->
-            <button class="md:hidden text-slate-600 p-2 shrink-0" id="mobile-menu-btn">
-                <i data-lucide="menu"></i>
-            </button>
+        <!-- Burger Button (Mobile) -->
+        <button class="md:hidden text-slate-600 p-2 shrink-0" id="mobile-menu-btn">
+            <i data-lucide="menu"></i>
+        </button>
 
-            <!-- MOBILE MENÜ (Positionierung bleibt gleich, innerhalb des Headers) -->
-            <div id="mobile-menu"
-                class="hidden md:hidden bg-white border-t border-b border-slate-200 px-6 py-6 flex-col gap-5 text-base font-semibold text-slate-700 absolute top-full left-0 w-full shadow-xl">
-                <a href="#about" class="hover:text-primary transition-colors">Über mich</a>
-                <a href="#apps" class="hover:text-primary transition-colors">Apps</a>
-                <a href="#contact" class="hover:text-primary transition-colors">Kontakt</a>
-            </div>
+        <!-- Mobile Menü (Absolute Positionierung) -->
+        <div id="mobile-menu"
+            class="hidden bg-white border-t border-b border-slate-200 px-6 py-6 flex-col gap-5 text-base font-semibold text-slate-700 absolute top-full left-0 w-full shadow-xl">
+            <a href="#about" class="hover:text-primary transition-colors">Über mich</a>
+            <a href="#apps" class="hover:text-primary transition-colors">Apps</a>
+            <a href="#contact" class="hover:text-primary transition-colors">Kontakt</a>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- MAIN CONTENT -->
     <main class="flex-grow">
@@ -129,14 +133,14 @@
                             <p class="text-lg text-slate-600 max-w-2xl leading-relaxed mb-4">
                                 Als nebenberuflicher, unabhängiger App-Entwickler arbeite ich kontinuierlich an neuen
                                 Projekten und setze eigene Ideen in funktionale digitale Produkte um. </p>
-                                
-                                <p class="text-lg text-slate-600 max-w-2xl leading-relaxed mb-4">
+
+                            <p class="text-lg text-slate-600 max-w-2xl leading-relaxed mb-4">
                                 Mein Schwerpunkt liegt auf der Entwicklung von Anwendungen in unterschiedlichen
                                 Bereichen – von nützlichen Tools bis hin zu Spielen. Dabei achte ich darauf, nicht nur
                                 technisch saubere Lösungen zu entwickeln, sondern auch ein stimmiges Gesamtbild zu
                                 schaffen.</p>
-                                
-                                <p class="text-lg text-slate-600 max-w-2xl leading-relaxed">
+
+                            <p class="text-lg text-slate-600 max-w-2xl leading-relaxed">
                                 Ein klares Design, eine intuitive Nutzerführung und eine saubere Umsetzung stehen bei
                                 meinen Projekten im Mittelpunkt. Ziel ist es, Anwendungen zu entwickeln, die einfach
                                 funktionieren und angenehm zu bedienen sind.</p>
