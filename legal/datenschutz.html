@@ -133,16 +133,29 @@
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+<footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+        
+        <!-- Gruppe 1: Copyright -->
+        <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-slate-400">
             <p>© 2026 SD Nightshift Studio</p>
-            <span class="hidden md:inline text-slate-300">|</span>
-            <a href="../index.html" class="hover:text-primary transition-colors">Startseite</a>
-            <span class="text-slate-300">|</span>
-            <a href="impressum.html" class="hover:text-primary transition-colors">Impressum</a>
+            <span class="hidden sm:inline">|</span>
+            <p>Alle Rechte vorbehalten</p>
         </div>
-    </footer>
+
+        <span class="hidden md:inline text-slate-300">|</span>
+
+        <!-- Gruppe 2: Links (Bleibt auf Mobile IMMER in einer Reihe) -->
+        <div class="flex items-center gap-3">
+            <a href="../index.html" class="hover:text-primary transition-colors text-slate-500">Startseite</a>
+            <span class="text-slate-300">|</span>
+            <a href="impressum.html" class="hover:text-primary transition-colors text-slate-500">Impressum</a>
+            <span class="text-slate-300">|</span>
+            <a href="datenschutz.html" class="hover:text-primary transition-colors text-slate-500">Datenschutz</a>
+        </div>
+        
+    </div>
+</footer>
 
     <script>
         lucide.createIcons();
