@@ -1,5 +1,69 @@
 --- SD NIGHTSHIFT STUDIO CONTEXT SNAPSHOT ---
-Erstellt am: 27.3.2026, 14:12:47
+Erstellt am: 27.3.2026, 14:25:40
+
+
+============================================================
+FILE: 404.html
+============================================================
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Seite nicht gefunden | SD Nightshift Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+                    colors: { primary: '#5397EA' }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
+
+    <header class="w-full bg-white border-b border-slate-100 py-4">
+        <div class="max-w-6xl mx-auto px-6 flex justify-center">
+            <a href="index.html" class="flex items-center gap-3 text-2xl font-bold tracking-tight">
+                <img src="assets/images/logo.png" alt="SD Logo" class="w-10 h-10">
+                <span>Nightshift Studio</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center relative overflow-hidden">
+        <!-- Dezenter Hintergrund-Glow für den Nightshift Look -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-50 rounded-full blur-[100px] -z-10"></div>
+
+        <div class="text-center px-6">
+            <div class="inline-flex p-4 bg-blue-50 rounded-3xl mb-6 text-primary">
+                <i data-lucide="map-pin-off" class="w-12 h-12"></i>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black text-slate-900 mb-4">404</h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-6">Hoppla! Hier ist es zappenduster.</h2>
+            <p class="text-slate-500 mb-10 max-w-md mx-auto leading-relaxed">
+                Die Seite, die du suchst, scheint in eine andere Dimension verschwunden zu sein oder existiert gar nicht.
+            </p>
+            <a href="index.html" class="inline-flex bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold items-center gap-3 transition-all shadow-lg shadow-blue-500/20 active:scale-95">
+                <i data-lucide="home" class="w-5 h-5"></i>
+                Zurück zur Startseite
+            </a>
+        </div>
+    </main>
+
+    <footer class="w-full py-8 text-center text-sm text-slate-400">
+        © 2026 SD Nightshift Studio
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
 
 
 ============================================================
@@ -8,15 +72,26 @@ FILE: apps\adventuverse\agb.html
 
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGB - AdventuVerse | SD Nightshift Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { fontFamily: { sans:['Inter', 'sans-serif'] }, colors: { primary: '#5397EA' } } } }</script>
+    <script>tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
+                    colors: { primary: '#5397EA' }
+                }
+            }
+        }</script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" type="image/png" href="../../assets/images/logo.png">
 </head>
+
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
     <!-- HEADER -->
@@ -26,7 +101,8 @@ FILE: apps\adventuverse\agb.html
                 <img src="../../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10">
                 <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900">Nightshift Studio</span>
             </a>
-            <a href="index.html" id="back-link" class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group">
+            <a href="index.html" id="back-link"
+                class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group">
                 <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
                 <span>Zurück</span>
             </a>
@@ -37,47 +113,56 @@ FILE: apps\adventuverse\agb.html
         <!-- TITELBEREICH -->
         <section class="bg-slate-50 py-12 md:py-16 border-b border-slate-200 text-center">
             <div class="max-w-3xl mx-auto px-6">
-                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Allgemeine Geschäftsbedingungen</h1>
-                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">AdventuVerse – Stand: März 2026</p>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Allgemeine
+                    Geschäftsbedingungen</h1>
+                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">AdventuVerse – Stand: März
+                    2026</p>
             </div>
         </section>
 
         <!-- DOKUMENTEN-BODY -->
         <section class="py-16">
             <div class="max-w-3xl mx-auto px-6 text-slate-700 leading-relaxed space-y-12">
-                
+
                 <!-- Einleitung -->
                 <div>
-                    <p class="text-lg">Willkommen bei AdventuVerse. Durch die Nutzung dieser Anwendung erklären Sie sich mit den folgenden Bedingungen einverstanden. Bitte lesen Sie diese aufmerksam durch.</p>
+                    <p class="text-lg">Willkommen bei AdventuVerse. Durch die Nutzung dieser Anwendung erklären Sie sich
+                        mit den folgenden Bedingungen einverstanden. Bitte lesen Sie diese aufmerksam durch.</p>
                 </div>
 
                 <!-- Sektion 1 -->
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Nutzungsrecht</h2>
-                    <p>Wir gewähren Ihnen ein persönliches, nicht übertragbares und nicht exklusives Recht, die App AdventuVerse für den privaten Gebrauch auf Ihren mobilen Endgeräten zu nutzen.</p>
+                    <p>Wir gewähren Ihnen ein persönliches, nicht übertragbares und nicht exklusives Recht, die App
+                        AdventuVerse für den privaten Gebrauch auf Ihren mobilen Endgeräten zu nutzen.</p>
                 </div>
 
                 <!-- Sektion 2 -->
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Virtuelle Güter (Münzen & Abenteuer)</h2>
-                    <p>Innerhalb der App besteht die Möglichkeit, virtuelle Münzen zu erwerben. Hierbei gelten folgende Grundregeln:</p>
+                    <p>Innerhalb der App besteht die Möglichkeit, virtuelle Münzen zu erwerben. Hierbei gelten folgende
+                        Grundregeln:</p>
                     <ul class="list-disc list-inside mt-4 space-y-2 ml-2">
-                        <li>Virtuelle Münzen besitzen keinen realen Geldwert und können nicht in echte Währung umgetauscht werden.</li>
+                        <li>Virtuelle Münzen besitzen keinen realen Geldwert und können nicht in echte Währung
+                            umgetauscht werden.</li>
                         <li>Käufe von virtuellen Gütern sind final und nicht erstattungsfähig.</li>
-                        <li>Der Zugriff auf erworbene Geschichten bleibt bestehen, solange Ihr Nutzerkonto existiert und der Dienst betrieben wird.</li>
+                        <li>Der Zugriff auf erworbene Geschichten bleibt bestehen, solange Ihr Nutzerkonto existiert und
+                            der Dienst betrieben wird.</li>
                     </ul>
                 </div>
 
                 <!-- Sektion 3 -->
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Haftungsausschluss</h2>
-                    <p>Die Anwendung wird im aktuellen Zustand ("wie besehen") bereitgestellt. SD Nightshift Studio übernimmt keine Haftung für:</p>
+                    <p>Die Anwendung wird im aktuellen Zustand ("wie besehen") bereitgestellt. SD Nightshift Studio
+                        übernimmt keine Haftung für:</p>
                     <ul class="list-disc list-inside mt-4 space-y-2 ml-2 border-l-4 border-slate-100 pl-4">
                         <li>Eventuellen Datenverlust innerhalb der App.</li>
                         <li>Schäden an der Hardware, die durch die Nutzung entstehen könnten.</li>
                         <li>Unterbrechungen der Server-Erreichbarkeit.</li>
                     </ul>
-                    <p class="mt-4 italic">Dies gilt nicht bei nachweislich grober Fahrlässigkeit oder Vorsatz seitens des Betreibers.</p>
+                    <p class="mt-4 italic">Dies gilt nicht bei nachweislich grober Fahrlässigkeit oder Vorsatz seitens
+                        des Betreibers.</p>
                 </div>
 
             </div>
@@ -86,7 +171,8 @@ FILE: apps\adventuverse\agb.html
 
     <!-- FOOTER -->
     <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
             <p>© 2026 SD Nightshift Studio</p>
             <span class="hidden md:inline text-slate-300">|</span>
             <a href="../../legal/impressum.html" class="hover:text-primary">Impressum</a>
@@ -97,11 +183,12 @@ FILE: apps\adventuverse\agb.html
 
     <script>
         lucide.createIcons();
-        document.getElementById('back-link').addEventListener('click', function(e) {
+        document.getElementById('back-link').addEventListener('click', function (e) {
             if (document.referrer && window.history.length > 1) { e.preventDefault(); window.history.back(); }
         });
     </script>
 </body>
+
 </html>
 
 
@@ -111,15 +198,26 @@ FILE: apps\adventuverse\datenschutz.html
 
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenschutz - AdventuVerse | SD Nightshift Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { fontFamily: { sans:['Inter', 'sans-serif'] }, colors: { primary: '#5397EA' } } } }</script>
+    <script>tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
+                    colors: { primary: '#5397EA' }
+                }
+            }
+        }</script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" type="image/png" href="../../assets/images/logo.png">
 </head>
+
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
     <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
@@ -128,7 +226,8 @@ FILE: apps\adventuverse\datenschutz.html
                 <img src="../../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10">
                 <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900">Nightshift Studio</span>
             </a>
-            <a href="index.html" id="back-link" class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group">
+            <a href="index.html" id="back-link"
+                class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group">
                 <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
                 <span>Zurück</span>
             </a>
@@ -139,44 +238,56 @@ FILE: apps\adventuverse\datenschutz.html
         <!-- TITELBEREICH -->
         <section class="bg-slate-50 py-12 md:py-16 border-b border-slate-200 text-center">
             <div class="max-w-3xl mx-auto px-6">
-                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">App-Datenschutzerklärung</h1>
-                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">AdventuVerse – Stand: März 2026</p>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">App-Datenschutzerklärung
+                </h1>
+                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">AdventuVerse – Stand: März
+                    2026</p>
             </div>
         </section>
 
         <!-- DOKUMENTEN-BODY -->
         <section class="py-16">
             <div class="max-w-3xl mx-auto px-6 text-slate-700 leading-relaxed space-y-12">
-                
+
                 <!-- Einleitung -->
                 <div>
-                    <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Nachfolgend informieren wir Sie darüber, wie AdventuVerse Daten verarbeitet. Verantwortlich ist SD Nightshift Studio (Details siehe <a href="../../legal/impressum.html" class="text-primary font-semibold hover:underline">Impressum</a>).</p>
+                    <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Nachfolgend informieren wir Sie darüber, wie
+                        AdventuVerse Daten verarbeitet. Verantwortlich ist SD Nightshift Studio (Details siehe <a
+                            href="../../legal/impressum.html"
+                            class="text-primary font-semibold hover:underline">Impressum</a>).</p>
                 </div>
 
                 <!-- Kapitel 1 -->
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Datenerfassung & Infrastruktur</h2>
                     <h3 class="text-xl font-semibold text-slate-800 mb-2">Cloud-Dienste (Supabase)</h3>
-                    <p>Um Spielstände geräteübergreifend zu synchronisieren, nutzen wir den Dienst <strong>Supabase</strong>. Dabei werden Ihre E-Mail-Adresse (bei Anmeldung über Drittanbieter) sowie Ihr gewählter Nutzername auf verschlüsselten Servern gespeichert.</p>
+                    <p>Um Spielstände geräteübergreifend zu synchronisieren, nutzen wir den Dienst
+                        <strong>Supabase</strong>. Dabei werden Ihre E-Mail-Adresse (bei Anmeldung über Drittanbieter)
+                        sowie Ihr gewählter Nutzername auf verschlüsselten Servern gespeichert.</p>
                 </div>
 
                 <!-- Kapitel 2 -->
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Hardware-Zugriffe & Sensoren</h2>
-                    <p>AdventuVerse nutzt technische Funktionen Ihres Geräts, um interaktive Spielmechaniken zu ermöglichen. Hierbei gilt unser Grundsatz: <strong>Alle Sensordaten werden ausschließlich lokal auf Ihrem Gerät verarbeitet.</strong></p>
-                    
+                    <p>AdventuVerse nutzt technische Funktionen Ihres Geräts, um interaktive Spielmechaniken zu
+                        ermöglichen. Hierbei gilt unser Grundsatz: <strong>Alle Sensordaten werden ausschließlich lokal
+                            auf Ihrem Gerät verarbeitet.</strong></p>
+
                     <div class="mt-6 space-y-4 border-l-4 border-blue-50 pl-6">
                         <div>
                             <h4 class="font-bold text-slate-900">Mikrofon</h4>
-                            <p class="text-sm text-slate-600">Wird für Rätsel genutzt (z. B. Pusten). Die App misst nur den Pegel; es werden keine Aufnahmen erstellt oder übertragen.</p>
+                            <p class="text-sm text-slate-600">Wird für Rätsel genutzt (z. B. Pusten). Die App misst nur
+                                den Pegel; es werden keine Aufnahmen erstellt oder übertragen.</p>
                         </div>
                         <div>
                             <h4 class="font-bold text-slate-900">Bewegungsdaten</h4>
-                            <p class="text-sm text-slate-600">Erkennung von Neigungen, Schütteln oder Drehungen des Geräts für Spielaktionen.</p>
+                            <p class="text-sm text-slate-600">Erkennung von Neigungen, Schütteln oder Drehungen des
+                                Geräts für Spielaktionen.</p>
                         </div>
                         <div>
                             <h4 class="font-bold text-slate-900">Lichtsensor</h4>
-                            <p class="text-sm text-slate-600">Wird genutzt, um Spielereignisse basierend auf der Umgebungshelligkeit auszulösen.</p>
+                            <p class="text-sm text-slate-600">Wird genutzt, um Spielereignisse basierend auf der
+                                Umgebungshelligkeit auszulösen.</p>
                         </div>
                     </div>
                 </div>
@@ -185,16 +296,21 @@ FILE: apps\adventuverse\datenschutz.html
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Werbe- und Zahlsysteme</h2>
                     <h3 class="text-xl font-semibold text-slate-800 mb-2">Google AdMob</h3>
-                    <p>Die App nutzt Google AdMob zur Werbe-Finanzierung. Google verwendet ggf. Werbe-IDs (IDFA/AAID), um Anzeigen zu personalisieren. Sie können dies in Ihren Systemeinstellungen einschränken.</p>
-                    
+                    <p>Die App nutzt Google AdMob zur Werbe-Finanzierung. Google verwendet ggf. Werbe-IDs (IDFA/AAID),
+                        um Anzeigen zu personalisieren. Sie können dies in Ihren Systemeinstellungen einschränken.</p>
+
                     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">RevenueCat</h3>
-                    <p>Zur Verwaltung von In-App-Käufen nutzen wir RevenueCat. Es werden keine privaten Zahlungsdaten (Kreditkarten etc.) auf unseren Servern gespeichert; die Abwicklung erfolgt durch den App Store.</p>
+                    <p>Zur Verwaltung von In-App-Käufen nutzen wir RevenueCat. Es werden keine privaten Zahlungsdaten
+                        (Kreditkarten etc.) auf unseren Servern gespeichert; die Abwicklung erfolgt durch den App Store.
+                    </p>
                 </div>
 
                 <!-- Kapitel 4 -->
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Ihre Rechte</h2>
-                    <p>Sie haben das Recht auf Auskunft, Korrektur und Löschung Ihrer Daten. Sie können Ihr Konto sowie alle Fortschritte jederzeit <strong>direkt innerhalb der App unwiderruflich löschen.</strong></p>
+                    <p>Sie haben das Recht auf Auskunft, Korrektur und Löschung Ihrer Daten. Sie können Ihr Konto sowie
+                        alle Fortschritte jederzeit <strong>direkt innerhalb der App unwiderruflich löschen.</strong>
+                    </p>
                 </div>
 
             </div>
@@ -203,7 +319,8 @@ FILE: apps\adventuverse\datenschutz.html
 
     <!-- FOOTER -->
     <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
             <p>© 2026 SD Nightshift Studio</p>
             <span class="hidden md:inline text-slate-300">|</span>
             <a href="../../legal/impressum.html" class="hover:text-primary">Impressum</a>
@@ -214,11 +331,12 @@ FILE: apps\adventuverse\datenschutz.html
 
     <script>
         lucide.createIcons();
-        document.getElementById('back-link').addEventListener('click', function(e) {
+        document.getElementById('back-link').addEventListener('click', function (e) {
             if (document.referrer && window.history.length > 1) { e.preventDefault(); window.history.back(); }
         });
     </script>
 </body>
+
 </html>
 
 
@@ -228,21 +346,20 @@ FILE: apps\adventuverse\index.html
 
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdventuVerse | SD Nightshift Studio</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans:['Inter', 'sans-serif'] },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
                     colors: { primary: '#5397EA' }
                 }
             }
@@ -250,35 +367,40 @@ FILE: apps\adventuverse\index.html
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .logo-glow { filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2)); }
+        .logo-glow {
+            filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2));
+        }
     </style>
     <link rel="icon" type="image/png" href="../../assets/images/logo.png">
 </head>
+
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
-<!-- HEADER (Synchronisiert mit Index + relative Pfade) -->
-<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
-        
-        <!-- Logo & Name -->
-        <a href="../../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
-            <img src="../../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
-            <!-- text-lg auf Mobile, text-2xl ab sm (640px) -->
-            <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
-                Nightshift Studio
-            </span>
-        </a>
-        
-        <!-- Zurück-Link -->
-        <a href="../../index.html#apps" class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
-            <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
-            <!-- "Zurück zur Übersicht" wird auf Mobile zu "Zurück" -->
-            <span class="hidden sm:inline">Zurück zur Startseite</span>
-            <span class="sm:hidden">Zurück</span>
-        </a>
+    <!-- HEADER (Synchronisiert mit Index + relative Pfade) -->
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
 
-    </div>
-</header>
+            <!-- Logo & Name -->
+            <a href="../../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+                <img src="../../assets/images/logo.png" alt="SD Logo"
+                    class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
+                <!-- text-lg auf Mobile, text-2xl ab sm (640px) -->
+                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
+                    Nightshift Studio
+                </span>
+            </a>
+
+            <!-- Zurück-Link -->
+            <a href="../../index.html#apps"
+                class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
+                <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+                <!-- "Zurück zur Übersicht" wird auf Mobile zu "Zurück" -->
+                <span class="hidden sm:inline">Zurück zur Startseite</span>
+                <span class="sm:hidden">Zurück</span>
+            </a>
+
+        </div>
+    </header>
 
     <main class="flex-grow">
         <!-- HERO SECTION -->
@@ -286,26 +408,32 @@ FILE: apps\adventuverse\index.html
             <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
                 <!-- App Icon / Illustration -->
                 <div class="w-full md:w-1/3 flex justify-center">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-[3rem] shadow-2xl border border-slate-100 flex items-center justify-center overflow-hidden group">
+                    <div
+                        class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-[3rem] shadow-2xl border border-slate-100 flex items-center justify-center overflow-hidden group">
                         <!-- Hier später dein echtes App-Icon -->
                         <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
                         <!-- <i data-lucide="book-open" class="w-32 h-32 text-primary logo-glow transition-transform group-hover:scale-110 duration-500"></i> -->
-                        <img src="../../assets/images/apps/adventuverse/adventuverse_logo.png" alt="Adventuverse_Logo" class="w-[200px] h-[200px] md:w-64 md:h-64 logo-glow">
+                        <img src="../../assets/images/apps/adventuverse/adventuverse_logo.png" alt="Adventuverse_Logo"
+                            class="w-[200px] h-[200px] md:w-64 md:h-64 logo-glow">
                     </div>
                 </div>
 
                 <!-- Text Content -->
                 <div class="w-full md:w-2/3 text-left">
-                    <div class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
+                    <div
+                        class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
                         Gaming
                     </div>
                     <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">AdventuVerse</h1>
                     <p class="text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl">
-                        Verlasse die Realität und werde zum Helden deiner eigenen Geschichte. AdventuVerse kombiniert packendes Storytelling mit interaktiven Mechaniken, bei denen jede deiner Entscheidungen das Ende beeinflusst.
+                        Verlasse die Realität und werde zum Helden deiner eigenen Geschichte. AdventuVerse kombiniert
+                        packendes Storytelling mit interaktiven Mechaniken, bei denen jede deiner Entscheidungen das
+                        Ende beeinflusst.
                     </p>
-                    
+
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all shadow-lg shadow-blue-500/30">
+                        <button
+                            class="bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all shadow-lg shadow-blue-500/30">
                             <i data-lucide="beaker" class="w-5 h-5"></i>
                             Für Testversion anmelden
                         </button>
@@ -321,27 +449,33 @@ FILE: apps\adventuverse\index.html
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Feature 1 -->
                     <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
-                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+                        <div
+                            class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
                             <i data-lucide="clapperboard"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3">Multiversum an Genres</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Von packenden Krimis bis hin zu epischen Sci-Fi Abenteuern. Wir bieten Geschichten für jeden Geschmack.</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">Von packenden Krimis bis hin zu epischen
+                            Sci-Fi Abenteuern. Wir bieten Geschichten für jeden Geschmack.</p>
                     </div>
                     <!-- Feature 2 -->
                     <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
-                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+                        <div
+                            class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
                             <i data-lucide="git-branch"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3">Deine Wahl zählt</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Jede Entscheidung verzweigt die Handlung. Es gibt kein richtig oder falsch – nur deine Geschichte.</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">Jede Entscheidung verzweigt die Handlung. Es
+                            gibt kein richtig oder falsch – nur deine Geschichte.</p>
                     </div>
                     <!-- Feature 3 -->
                     <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
-                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+                        <div
+                            class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
                             <i data-lucide="smartphone"></i>
                         </div>
                         <h3 class="text-xl font-bold mb-3">Immersives UI</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Ein Design, das dich die Welt um dich herum vergessen lässt. Optimiert für ein perfektes Leseerlebnis.</p>
+                        <p class="text-slate-600 text-sm leading-relaxed">Ein Design, das dich die Welt um dich herum
+                            vergessen lässt. Optimiert für ein perfektes Leseerlebnis.</p>
                     </div>
                 </div>
             </div>
@@ -351,7 +485,8 @@ FILE: apps\adventuverse\index.html
         <section class="py-16 bg-slate-50 border-t border-slate-200">
             <div class="max-w-6xl mx-auto px-6 text-center">
                 <h2 class="text-2xl font-bold mb-6">Rechtliches & Datenschutz</h2>
-                <p class="text-slate-500 mb-8 max-w-xl mx-auto">AdventuVerse nimmt den Schutz deiner Daten ernst. Hier findest du die spezifischen Bedingungen für diese App.</p>
+                <p class="text-slate-500 mb-8 max-w-xl mx-auto">AdventuVerse nimmt den Schutz deiner Daten ernst. Hier
+                    findest du die spezifischen Bedingungen für diese App.</p>
                 <div class="flex justify-center gap-6 text-sm font-semibold text-primary">
                     <a href="datenschutz.html" class="hover:underline">App-Datenschutz</a>
                     <a href="agb.html" class="hover:underline">AGB (AdventuVerse)</a>
@@ -360,58 +495,60 @@ FILE: apps\adventuverse\index.html
         </section>
     </main>
 
-<!-- 5. BOTTOM FOOTER (Synchronisiert mit Index + relative Pfade) -->
-<footer class="w-full bg-slate-100 border-t border-slate-200 py-6 text-center">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
-        
-        <!-- Gruppe 1 -->
-        <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
-            <p>© 2026 SD Nightshift Studio</p>
-            <span class="hidden sm:inline text-slate-300">|</span>
-            <p>Alle Rechte vorbehalten</p>
+    <!-- 5. BOTTOM FOOTER (Synchronisiert mit Index + relative Pfade) -->
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-6 text-center">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+
+            <!-- Gruppe 1 -->
+            <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                <p>© 2026 SD Nightshift Studio</p>
+                <span class="hidden sm:inline text-slate-300">|</span>
+                <p>Alle Rechte vorbehalten</p>
+            </div>
+
+            <span class="hidden md:inline text-slate-300">|</span>
+
+            <!-- Gruppe 2 (Bleibt in einer Reihe) -->
+            <div class="flex items-center gap-3">
+                <a href="../../legal/impressum.html" class="hover:text-primary transition-colors">Impressum</a>
+                <span class="text-slate-300">|</span>
+                <a href="../../legal/datenschutz.html" class="hover:text-primary transition-colors">Datenschutz</a>
+            </div>
+
         </div>
+    </footer>
 
-        <span class="hidden md:inline text-slate-300">|</span>
+    <script>
+        // Icons initialisieren
+        lucide.createIcons();
 
-        <!-- Gruppe 2 (Bleibt in einer Reihe) -->
-        <div class="flex items-center gap-3">
-            <a href="../../legal/impressum.html" class="hover:text-primary transition-colors">Impressum</a>
-            <span class="text-slate-300">|</span>
-            <a href="../../legal/datenschutz.html" class="hover:text-primary transition-colors">Datenschutz</a>
-        </div>
-        
-    </div>
-</footer>
+        // Mobile Menü Logik (Identisch zu Index)
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
 
-<script>
-    // Icons initialisieren
-    lucide.createIcons();
-
-    // Mobile Menü Logik (Identisch zu Index)
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-
-    menuBtn.addEventListener('click', () => {
-        const isHidden = mobileMenu.classList.contains('hidden');
-        if (isHidden) {
-            mobileMenu.classList.remove('hidden');
-            mobileMenu.classList.add('flex');
-        } else {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
-        }
-    });
-
-    // Automatisches Schließen bei Klick
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            }
         });
-    });
-</script>
+
+        // Automatisches Schließen bei Klick
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+    </script>
 </body>
+
 </html>
 
 
@@ -492,16 +629,14 @@ FILE: index.html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SD Nightshift Studio | Moderne Apps</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
                     colors: { primary: '#5397EA' }
                 }
             }
@@ -707,68 +842,72 @@ FILE: index.html
             </div>
         </section>
 
-<!-- 4. CONTACT & SOCIAL MEDIA -->
-<section id="contact" class="bg-white py-16 md:py-20 border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
+        <!-- 4. CONTACT & SOCIAL MEDIA -->
+        <section id="contact" class="bg-white py-16 md:py-20 border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
 
-        <!-- Linke Spalte: Kontakt -->
-        <div>
-            <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6">Kontakt</h3>
-            <p class="text-slate-600 mb-6 font-medium">Hast du Fragen oder Feedback zu meinen Apps?</p>
-            
-            <a href="mailto:sdnightshift.dev@gmail.com" 
-               class="flex items-center gap-4 bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl w-full sm:w-fit shadow-sm hover:bg-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
-                <div class="bg-primary p-2.5 rounded-lg text-white group-hover:bg-blue-600 transition-colors">
-                    <i data-lucide="mail" class="w-6 h-6"></i>
+                <!-- Linke Spalte: Kontakt -->
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6">Kontakt</h3>
+                    <p class="text-slate-600 mb-6 font-medium">Hast du Fragen oder Feedback zu meinen Apps?</p>
+
+                    <a href="mailto:sdnightshift.dev@gmail.com"
+                        class="flex items-center gap-4 bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl w-full sm:w-fit shadow-sm hover:bg-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
+                        <div class="bg-primary p-2.5 rounded-lg text-white group-hover:bg-blue-600 transition-colors">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span
+                                class="text-xs text-slate-400 font-semibold uppercase tracking-wider leading-none mb-1">E-Mail
+                                schreiben</span>
+                            <span class="text-slate-700 ">
+                                sdnightshift.dev@gmail.com
+                            </span>
+                        </div>
+                    </a>
                 </div>
-                <div class="flex flex-col">
-                    <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider leading-none mb-1">E-Mail schreiben</span>
-                    <span class="text-slate-700 ">
-                        sdnightshift.dev@gmail.com
-                    </span>
+
+                <!-- Rechte Spalte: Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6">Social Media</h3>
+                    <p class="text-slate-600 mb-6 font-medium">Comming soon!</p>
+
+
                 </div>
-            </a>
-        </div>
 
-        <!-- Rechte Spalte: Social Media -->
-        <div>
-            <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6">Social Media</h3>
-            <p class="text-slate-600 mb-6 font-medium">Comming soon!</p>
-            
-            
-        </div>
-
-    </div>
-</section>
+            </div>
+        </section>
 
     </main>
 
     <!-- 5. BOTTOM FOOTER -->
-<footer class="w-full bg-slate-100 border-t border-slate-200 py-6 text-center">
-    <!-- Der Hauptcontainer stapelt die Gruppen auf Mobile untereinander -->
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
-        
-        <!-- Gruppe 1: Copyright (Stapelt sich auf sehr schmalen Handys ebenfalls, falls nötig) -->
-        <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
-            <p>© 2026 SD Nightshift Studio</p>
-            <span class="hidden sm:inline text-slate-300">|</span>
-            <p>Alle Rechte vorbehalten</p>
-        </div>
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-6 text-center">
+        <!-- Der Hauptcontainer stapelt die Gruppen auf Mobile untereinander -->
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
 
-        <!-- Dieser Trennstrich wird auf Mobile ausgeblendet -->
-        <span class="hidden md:inline text-slate-300">|</span>
+            <!-- Gruppe 1: Copyright (Stapelt sich auf sehr schmalen Handys ebenfalls, falls nötig) -->
+            <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                <p>© 2026 SD Nightshift Studio</p>
+                <span class="hidden sm:inline text-slate-300">|</span>
+                <p>Alle Rechte vorbehalten</p>
+            </div>
 
-        <!-- Gruppe 2: Rechtliches (Bleibt auf Mobile nebeneinander in einer Reihe!) -->
-        <div class="flex items-center gap-3">
-            <a href="legal/impressum.html" class="hover:text-primary transition-colors">Impressum</a>
-            <span class="text-slate-300">|</span>
-            <a href="legal/datenschutz.html" class="hover:text-primary transition-colors">Datenschutz</a>
+            <!-- Dieser Trennstrich wird auf Mobile ausgeblendet -->
+            <span class="hidden md:inline text-slate-300">|</span>
+
+            <!-- Gruppe 2: Rechtliches (Bleibt auf Mobile nebeneinander in einer Reihe!) -->
+            <div class="flex items-center gap-3">
+                <a href="legal/impressum.html" class="hover:text-primary transition-colors">Impressum</a>
+                <span class="text-slate-300">|</span>
+                <a href="legal/datenschutz.html" class="hover:text-primary transition-colors">Datenschutz</a>
+            </div>
+
         </div>
-        
-    </div>
-</footer>
+    </footer>
 
     <script>
+
         // Icons initialisieren
         lucide.createIcons();
 
@@ -815,16 +954,14 @@ FILE: legal\datenschutz.html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenschutzerklärung | SD Nightshift Studio</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
                     colors: { primary: '#5397EA' }
                 }
             }
@@ -958,19 +1095,19 @@ FILE: legal\datenschutz.html
         </div>
     </footer>
 
-<script>
-    lucide.createIcons();
+    <script>
+        lucide.createIcons();
 
-    // Der ultimative "Smart Back" Loader
-    document.getElementById('back-link').addEventListener('click', function(e) {
-        // history.length > 1 bedeutet: Der Browser hat eine Seite, zu der er zurückgehen kann.
-        // document.referrer bedeutet: Der Nutzer kam nicht durch das Tippen der URL hierher.
-        if (document.referrer && window.history.length > 1) {
-            e.preventDefault(); // Stoppt den Sprung zur index.html
-            window.history.back(); // Geht exakt eine Seite zurück (z.B. zur App-Seite)
-        }
-    });
-</script>
+        // Der ultimative "Smart Back" Loader
+        document.getElementById('back-link').addEventListener('click', function (e) {
+            // history.length > 1 bedeutet: Der Browser hat eine Seite, zu der er zurückgehen kann.
+            // document.referrer bedeutet: Der Nutzer kam nicht durch das Tippen der URL hierher.
+            if (document.referrer && window.history.length > 1) {
+                e.preventDefault(); // Stoppt den Sprung zur index.html
+                window.history.back(); // Geht exakt eine Seite zurück (z.B. zur App-Seite)
+            }
+        });
+    </script>
 </body>
 
 </html>
@@ -982,16 +1119,27 @@ FILE: legal\impressum.html
 
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressum | SD Nightshift Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { theme: { extend: { colors: { primary: '#5397EA' } } } }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
+                    colors: { primary: '#5397EA' }
+                }
+            }
+        }
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
     <!-- HEADER (Minimal) -->
@@ -1028,13 +1176,15 @@ FILE: legal\impressum.html
 
                 <div>
                     <h2 class="text-xl font-bold text-slate-900 mb-2">Kontakt</h2>
-                    <p>E-Mail: <a href="mailto:sdnightshift.dev@gmail.com" class="text-primary hover:underline">sdnightshift.dev@gmail.com</a></p>
+                    <p>E-Mail: <a href="mailto:sdnightshift.dev@gmail.com"
+                            class="text-primary hover:underline">sdnightshift.dev@gmail.com</a></p>
                 </div>
 
                 <div>
                     <h2 class="text-xl font-bold text-slate-900 mb-2">Umsatzsteuer-ID</h2>
                     <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
-                    <strong>DE403476229</strong></p>
+                        <strong>DE403476229</strong>
+                    </p>
                 </div>
 
                 <div>
@@ -1044,7 +1194,10 @@ FILE: legal\impressum.html
 
                 <div class="pt-12 border-t border-slate-100">
                     <h2 class="text-lg font-bold text-slate-900 mb-2">EU-Streitschlichtung</h2>
-                    <p class="text-sm">Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" class="text-primary hover:underline">https://ec.europa.eu/consumers/odr/</a>.<br>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+                    <p class="text-sm">Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS)
+                        bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank"
+                            class="text-primary hover:underline">https://ec.europa.eu/consumers/odr/</a>.<br>Unsere
+                        E-Mail-Adresse finden Sie oben im Impressum.</p>
                 </div>
             </div>
         </section>
@@ -1055,20 +1208,21 @@ FILE: legal\impressum.html
     </footer>
 
     <script>
-    lucide.createIcons();
+        lucide.createIcons();
 
-    // Smart Back Logik (identisch zur Datenschutzseite)
-    // Wir suchen den Link, der zurück zur index führt
-    const backLink = document.querySelector('a[href="../index.html"]');
-    if (backLink) {
-        backLink.addEventListener('click', function(e) {
-            if (document.referrer && window.history.length > 1) {
-                e.preventDefault();
-                window.history.back();
-            }
-        });
-    }
-</script>
+        // Smart Back Logik (identisch zur Datenschutzseite)
+        // Wir suchen den Link, der zurück zur index führt
+        const backLink = document.querySelector('a[href="../index.html"]');
+        if (backLink) {
+            backLink.addEventListener('click', function (e) {
+                if (document.referrer && window.history.length > 1) {
+                    e.preventDefault();
+                    window.history.back();
+                }
+            });
+        }
+    </script>
 </body>
+
 </html>
 
