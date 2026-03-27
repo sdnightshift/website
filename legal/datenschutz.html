@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenschutzerklärung | SD Nightshift Studio</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans:['Inter', 'sans-serif'] },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: { primary: '#5397EA' }
                 }
             }
@@ -22,70 +23,96 @@
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .logo-glow { filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2)); }
+        .logo-glow {
+            filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2));
+        }
+
         /* Styling für die juristischen Texte */
-        .legal-content h3 { @apply text-xl font-bold text-slate-900 mt-10 mb-4; }
-        .legal-content p { @apply text-slate-600 leading-relaxed mb-4; }
-        .legal-content ul { @apply list-disc list-inside text-slate-600 mb-6 space-y-2; }
+        .legal-content h3 {
+            @apply text-xl font-bold text-slate-900 mt-10 mb-4;
+        }
+
+        .legal-content p {
+            @apply text-slate-600 leading-relaxed mb-4;
+        }
+
+        .legal-content ul {
+            @apply list-disc list-inside text-slate-600 mb-6 space-y-2;
+        }
     </style>
 </head>
+
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
     <!-- HEADER (Minimalistisch wie auf der App-Seite) -->
-<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
-        
-        <!-- Logo bleibt gleich -->
-        <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
-            <img src="../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
-            <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
-                Nightshift Studio
-            </span>
-        </a>
-        
-        <!-- MODIFIZIERTER ZURÜCK-LINK -->
-        <a href="../index.html" id="back-link" class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
-            <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
-            <span>Zurück</span>
-        </a>
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
 
-    </div>
-</header>
+            <!-- Logo bleibt gleich -->
+            <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+                <img src="../assets/images/logo.png" alt="SD Logo"
+                    class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
+                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
+                    Nightshift Studio
+                </span>
+            </a>
+
+            <!-- MODIFIZIERTER ZURÜCK-LINK -->
+            <a href="../index.html" id="back-link"
+                class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
+                <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+                <span>Zurück</span>
+            </a>
+
+        </div>
+    </header>
 
     <main class="flex-grow">
         <!-- HERO SECTION -->
         <section class="bg-slate-50 py-12 md:py-20 border-b border-slate-200">
             <div class="max-w-4xl mx-auto px-6">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Datenschutzerklärung</h1>
-                <p class="text-lg text-slate-600">Informationen über die Verarbeitung Ihrer Daten auf unserer Website.</p>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Datenschutzerklärung
+                </h1>
+                <p class="text-lg text-slate-600">Informationen über die Verarbeitung Ihrer Daten auf unserer Website.
+                </p>
             </div>
         </section>
 
         <!-- CONTENT SECTION -->
         <section class="py-16 md:py-24 bg-white">
             <div class="max-w-4xl mx-auto px-6 legal-content">
-                
+
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">1. Datenschutz auf einen Blick</h2>
-                
+
                 <h3>Allgemeine Hinweise</h3>
-                <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+                <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten
+                    passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie
+                    persönlich identifiziert werden können.</p>
 
                 <h3>Datenerfassung auf dieser Website</h3>
                 <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong></p>
-                <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung entnehmen.</p>
-                
+                <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten
+                    können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung
+                    entnehmen.</p>
+
                 <p><strong>Wie erfassen wir Ihre Daten?</strong></p>
-                <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben oder uns per E-Mail senden.</p>
-                <p>Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).</p>
+                <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B.
+                    um Daten handeln, die Sie in ein Kontaktformular eingeben oder uns per E-Mail senden.</p>
+                <p>Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere
+                    IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder
+                    Uhrzeit des Seitenaufrufs).</p>
 
                 <h2 class="text-2xl font-bold text-slate-900 mt-16 mb-6">2. Hosting</h2>
                 <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
                 <p><strong>GitHub Pages</strong><br>
-                GitHub Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA.</p>
-                <p>Wenn Sie unsere Website besuchen, erfasst GitHub u. a. Ihre IP-Adresse. GitHub ist ein CDN (Content Delivery Network). Die Nutzung von GitHub Pages erfolgt im Interesse einer schnellen und sicheren Bereitstellung unseres Online-Angebots (Art. 6 Abs. 1 lit. f DSGVO).</p>
+                    GitHub Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA.</p>
+                <p>Wenn Sie unsere Website besuchen, erfasst GitHub u. a. Ihre IP-Adresse. GitHub ist ein CDN (Content
+                    Delivery Network). Die Nutzung von GitHub Pages erfolgt im Interesse einer schnellen und sicheren
+                    Bereitstellung unseres Online-Angebots (Art. 6 Abs. 1 lit. f DSGVO).</p>
 
-                <h2 class="text-2xl font-bold text-slate-900 mt-16 mb-6">3. Allgemeine Hinweise und Pflichtinformationen</h2>
-                
+                <h2 class="text-2xl font-bold text-slate-900 mt-16 mb-6">3. Allgemeine Hinweise und Pflichtinformationen
+                </h2>
+
                 <h3>Hinweis zur verantwortlichen Stelle</h3>
                 <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
                 <p>
@@ -115,8 +142,8 @@
         <div class="max-w-6xl mx-auto px-6">
             <p class="text-sm font-medium text-slate-500 mb-4">© 2026 SD Nightshift Studio</p>
             <div class="flex justify-center gap-6 text-sm text-slate-500">
-                 <a href="../index.html" class="hover:text-primary transition-colors">Startseite</a>
-                 <a href="impressum.html" class="hover:text-primary transition-colors">Impressum</a>
+                <a href="../index.html" class="hover:text-primary transition-colors">Startseite</a>
+                <a href="impressum.html" class="hover:text-primary transition-colors">Impressum</a>
             </div>
         </div>
     </footer>
@@ -124,19 +151,16 @@
 <script>
     lucide.createIcons();
 
-    // Intelligente Zurück-Logik
-    const backLink = document.getElementById('back-link');
-
-    backLink.addEventListener('click', (e) => {
-        // Prüfen, ob eine vorherige Seite im Browser-Verlauf existiert 
-        // UND ob diese Seite von deiner Domain kommt (referrer)
-        if (document.referrer && document.referrer.includes(window.location.hostname)) {
-            e.preventDefault(); // Verhindert das normale Laden von ../index.html
-            window.history.back(); // Springt exakt zur letzten Seite zurück
+    // Der ultimative "Smart Back" Loader
+    document.getElementById('back-link').addEventListener('click', function(e) {
+        // history.length > 1 bedeutet: Der Browser hat eine Seite, zu der er zurückgehen kann.
+        // document.referrer bedeutet: Der Nutzer kam nicht durch das Tippen der URL hierher.
+        if (document.referrer && window.history.length > 1) {
+            e.preventDefault(); // Stoppt den Sprung zur index.html
+            window.history.back(); // Geht exakt eine Seite zurück (z.B. zur App-Seite)
         }
-        // Falls kein Referrer da ist (Direktaufruf), 
-        // greift das normale href="../index.html" als Sicherheitsnetz.
     });
 </script>
 </body>
+
 </html>
