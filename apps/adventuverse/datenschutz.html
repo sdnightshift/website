@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz - AdventuVerse | SD Nightshift Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { fontFamily: { sans:['Inter', 'sans-serif'] }, colors: { primary: '#5397EA' } } } }</script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .legal-content h2 { @apply text-2xl font-bold text-slate-900 mt-12 mb-4; }
+        .legal-content h3 { @apply text-lg font-bold text-slate-800 mt-8 mb-3; }
+        .legal-content p { @apply text-slate-600 leading-relaxed mb-4; }
+        .legal-content ul { @apply list-disc list-inside text-slate-600 mb-6 space-y-2; }
+    </style>
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+</head>
+<body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="../../index.html" class="flex items-center gap-3 text-2xl font-bold text-slate-900">
+                <img src="../../assets/images/logo.png" alt="SD Logo" class="w-10 h-10">
+                <span class="hidden sm:inline">Nightshift Studio</span>
+            </a>
+            <a href="index.html" id="back-link" class="flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-primary transition-colors group">
+                <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i> Zurück
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="bg-slate-50 py-12 md:py-20 border-b border-slate-200">
+            <div class="max-w-4xl mx-auto px-6">
+                <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">App-Datenschutzerklärung</h1>
+                <p class="text-lg text-slate-600 mt-2">AdventuVerse – Stand: März 2026</p>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-4xl mx-auto px-6 legal-content">
+                <p>Verantwortlich für die App "AdventuVerse": SD Nightshift Studio (Details siehe <a href="../../legal/impressum.html" class="text-primary hover:underline">Impressum</a>).</p>
+
+                <h2>1. Datenerfassung & Supabase</h2>
+                <p>Wir nutzen Supabase zur Authentifizierung und Speicherung von Spielständen. Dabei wird Ihre E-Mail-Adresse und Ihr gewählter Nutzername gespeichert. Diese Daten dienen ausschließlich dem Betrieb der App und der geräteübergreifenden Speicherung Ihres Fortschritts.</p>
+
+                <!-- Hervorgehobener Bereich für Sensoren -->
+                <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 md:p-8 my-10">
+                    <h2 class="!mt-0 flex items-center gap-3 text-primary"><i data-lucide="shield-check"></i> 2. Gerätesensoren und Berechtigungen</h2>
+                    <p class="font-medium text-slate-800">Alle Sensordaten werden ausschließlich lokal auf Ihrem Gerät verarbeitet und niemals an unsere Server oder Dritte gesendet.</p>
+                    <ul class="mt-4">
+                        <li><strong>Mikrofon:</strong> Misst lediglich kurzzeitig die Lautstärke für Rätsel. Es werden <strong>keine</strong> Sprachaufnahmen gemacht.</li>
+                        <li><strong>Bewegungssensoren:</strong> Erkennung von Schütteln oder Drehen des Geräts.</li>
+                        <li><strong>Lichtsensor:</strong> Prüfung der Umgebungshelligkeit für Spielmechaniken.</li>
+                    </ul>
+                </div>
+
+                <h2>3. Werbung (Google AdMob)</h2>
+                <p>Unsere App nutzt Google AdMob zur Anzeige von Werbung. Google erhebt dabei ggf. Werbe-IDs (IDFA/AAID). Sie können dies in den Systemeinstellungen Ihres Geräts einschränken.</p>
+
+                <h2>4. In-App-Käufe (RevenueCat)</h2>
+                <p>Für Käufe nutzen wir RevenueCat zur Validierung. Es werden keine Kreditkartendaten auf unseren Servern gespeichert. Die Abwicklung erfolgt über den App Store.</p>
+
+                <h2>5. Ihre Rechte</h2>
+                <p>Sie haben das Recht auf Auskunft, Korrektur und Löschung. Sie können Ihr Konto und alle Daten jederzeit direkt in der App unwiderruflich löschen.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center text-sm text-slate-500 leading-relaxed">
+        © 2026 SD Nightshift Studio | <a href="../../legal/impressum.html" class="hover:text-primary">Impressum</a> | <a href="../../legal/datenschutz.html" class="hover:text-primary">Studio-Datenschutz</a>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('back-link').addEventListener('click', function(e) {
+            if (document.referrer && window.history.length > 1) { e.preventDefault(); window.history.back(); }
+        });
+    </script>
+</body>
+</html>
