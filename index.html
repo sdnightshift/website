@@ -220,60 +220,92 @@
             </div>
         </section>
 
-        <!-- 4. CONTACT & IMPRESSUM -->
-        <section id="contact" class="bg-white py-8">
-            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
+<!-- 4. CONTACT & SOCIAL MEDIA -->
+<section id="contact" class="bg-white py-16 md:py-20 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
 
-                <!-- Kontakt-Bereich -->
-                <div>
-                    <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-3">Kontakt</h3>
-
-                    <!-- Der neue vollflächige Button -->
-                    <a href="mailto:sdnightshift.dev@gmail.com"
-                        class="flex items-center gap-4 bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl w-fit shadow-sm hover:bg-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
-
-                        <!-- Icon-Box: Färbt sich beim Hover blau ein -->
-                        <div class="bg-primary p-2.5 rounded-lg text-white group-hover:bg-blue-600 transition-colors">
-                            <i data-lucide="mail" class="w-6 h-6"></i>
-                        </div>
-
-                        <!-- E-Mail Adresse -->
-                        <div class="flex flex-col">
-                            <span class="text-slate-700 transition-colors">
-                                sdnightshift.dev@gmail.com
-                            </span>
-                        </div>
-                    </a>
+        <!-- Linke Spalte: Kontakt -->
+        <div>
+            <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6">Kontakt</h3>
+            <p class="text-slate-600 mb-6 font-medium">Hast du Fragen oder Feedback zu meinen Apps?</p>
+            
+            <a href="mailto:sdnightshift.dev@gmail.com" 
+               class="flex items-center gap-4 bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl w-full sm:w-fit shadow-sm hover:bg-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
+                <div class="bg-primary p-2.5 rounded-lg text-white group-hover:bg-blue-600 transition-colors">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
                 </div>
+                <div class="flex flex-col">
+                    <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider leading-none mb-1">E-Mail schreiben</span>
+                    <span class="text-slate-700 font-bold group-hover:text-primary transition-colors">
+                        sdnightshift.dev@gmail.com
+                    </span>
+                </div>
+            </a>
+        </div>
 
-                <!-- Impressum-Bereich (unverändert) -->
-                <div>
-                    <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-3">Impressum</h3>
-                    <div class="text-slate-600 space-y-2 leading-relaxed">
-                        <p class="font-bold text-slate-800">SD Nightshift Studio</p>
-                        <p>Sebastian Wolfgang Dichmann<br>Am Ziegelstadel 20<br>87700 Memmingen</p>
-                        <p>Email: sdnightshift.dev@gmail.com</p>
-                        <p>USt-IdNr.: DE403476229</p>
+        <!-- Rechte Spalte: Social Media -->
+        <div>
+            <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6">Folge dem Studio</h3>
+            <p class="text-slate-600 mb-6 font-medium">Bleib auf dem Laufenden über neue Projekte:</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- GitHub Link -->
+                <a href="https://github.com/deinname" target="_blank" 
+                   class="flex items-center gap-3 bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl hover:bg-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
+                    <div class="text-slate-400 group-hover:text-primary transition-colors">
+                        <i data-lucide="github" class="w-5 h-5"></i>
                     </div>
-                </div>
+                    <span class="text-slate-700 font-semibold group-hover:text-primary transition-colors">GitHub</span>
+                </a>
 
+                <!-- X / Twitter Link -->
+                <a href="https://twitter.com/deinname" target="_blank" 
+                   class="flex items-center gap-3 bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl hover:bg-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
+                    <div class="text-slate-400 group-hover:text-primary transition-colors">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-slate-700 font-semibold group-hover:text-primary transition-colors">X / Twitter</span>
+                </a>
+
+                <!-- Instagram Link -->
+                <a href="https://instagram.com/deinname" target="_blank" 
+                   class="flex items-center gap-3 bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl hover:bg-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
+                    <div class="text-slate-400 group-hover:text-primary transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-slate-700 font-semibold group-hover:text-primary transition-colors">Instagram</span>
+                </a>
+
+                <!-- LinkedIn oder Discord Link -->
+                <a href="#" target="_blank" 
+                   class="flex items-center gap-3 bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl hover:bg-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
+                    <div class="text-slate-400 group-hover:text-primary transition-colors">
+                        <i data-lucide="message-square" class="w-5 h-5"></i>
+                        <!-- message-square passt gut für Discord -->
+                    </div>
+                    <span class="text-slate-700 font-semibold group-hover:text-primary transition-colors">Discord</span>
+                </a>
             </div>
-        </section>
+        </div>
+
+    </div>
+</section>
 
     </main>
 
     <!-- 5. BOTTOM FOOTER -->
-    <footer class="w-full bg-slate-100 border-t border-slate-200 py-6 text-center">
-        <div
-            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-sm font-medium text-slate-500">
-            <p>© 2026 SD Nightshift Studio</p>
-            <span class="hidden md:inline text-slate-300">|</span>
-            <p>Alle Rechte vorbehalten</p>
-            <span class="hidden md:inline text-slate-300">|</span>
-            <!-- Hier verlinkst du später deine allgemeine Webseite-Datenschutzerklärung -->
-            <a href="#" class="hover:text-primary transition-colors">Datenschutz</a>
-        </div>
-    </footer>
+<footer class="w-full bg-slate-100 border-t border-slate-200 py-6 text-center">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-sm font-medium text-slate-500">
+        <p>© 2026 SD Nightshift Studio</p>
+        <span class="hidden md:inline text-slate-300">|</span>
+        <p>Alle Rechte vorbehalten</p>
+        <span class="hidden md:inline text-slate-300">|</span>
+        <!-- Pfade korrigiert -->
+        <a href="legal/impressum.html" class="hover:text-primary transition-colors">Impressum</a>
+        <span class="text-slate-300">|</span>
+        <a href="legal/datenschutz.html" class="hover:text-primary transition-colors">Datenschutz</a>
+    </div>
+</footer>
 
     <script>
         // Icons initialisieren

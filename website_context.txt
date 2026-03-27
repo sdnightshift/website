@@ -1,5 +1,5 @@
 --- SD NIGHTSHIFT STUDIO CONTEXT SNAPSHOT ---
-Erstellt am: 27.3.2026, 11:06:09
+Erstellt am: 27.3.2026, 12:33:49
 
 
 ============================================================
@@ -35,22 +35,29 @@ FILE: apps\adventuverse.html
 </head>
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
-    <!-- HEADER (Identisch zu Index für Wiedererkennung) -->
-    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900">
-                <img src="../assets/images/logo.png" alt="SD Logo" class="w-10 h-10">
+<!-- HEADER (Synchronisiert mit Index + relative Pfade) -->
+<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
+        
+        <!-- Logo & Name -->
+        <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+            <img src="../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
+            <!-- text-lg auf Mobile, text-2xl ab sm (640px) -->
+            <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
                 Nightshift Studio
-            </a>
-            
-            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
-                <a href="../index.html#home" class="hover:text-primary transition-colors">Home</a>
-                <a href="../index.html#apps" class="text-primary transition-colors py-1 border-b-2 border-primary">Apps</a>
-                <a href="../index.html#contact" class="hover:text-primary transition-colors">Kontakt</a>
-            </nav>
-            <a href="index.html" class="md:hidden text-slate-600"><i data-lucide="arrow-left"></i></a>
-        </div>
-    </header>
+            </span>
+        </a>
+        
+        <!-- Zurück-Link -->
+        <a href="../index.html#apps" class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
+            <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+            <!-- "Zurück zur Übersicht" wird auf Mobile zu "Zurück" -->
+            <span class="hidden sm:inline">Zurück zur Startseite</span>
+            <span class="sm:hidden">Zurück</span>
+        </a>
+
+    </div>
+</header>
 
     <main class="flex-grow">
         <!-- HERO SECTION -->
@@ -61,7 +68,8 @@ FILE: apps\adventuverse.html
                     <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-[3rem] shadow-2xl border border-slate-100 flex items-center justify-center overflow-hidden group">
                         <!-- Hier später dein echtes App-Icon -->
                         <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
-                        <i data-lucide="book-open" class="w-32 h-32 text-primary logo-glow transition-transform group-hover:scale-110 duration-500"></i>
+                        <!-- <i data-lucide="book-open" class="w-32 h-32 text-primary logo-glow transition-transform group-hover:scale-110 duration-500"></i> -->
+                        <img src="../assets/images/apps/adventuverse_logo.png" alt="Adventuverse_Logo" class="w-[200px] h-[200px] md:w-64 md:h-64 logo-glow">
                     </div>
                 </div>
 
@@ -143,9 +151,34 @@ FILE: apps\adventuverse.html
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
+<script>
+    // Icons initialisieren
+    lucide.createIcons();
+
+    // Mobile Menü Logik (Identisch zu Index)
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    menuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+        } else {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        }
+    });
+
+    // Automatisches Schließen bei Klick
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        });
+    });
+</script>
 </body>
 </html>
 
@@ -165,7 +198,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Konfiguration
-const OUTPUT_FILE = 'website_context.txt';
+const OUTPUT_FILE = 'website_context.txt'; // Name der Zieldatei
 const INCLUDE_EXTS = ['.html', '.css', '.js'];
 const EXCLUDE_DIRS = ['assets', '.git', '.vscode', 'node_modules'];
 
@@ -196,18 +229,27 @@ function writeBundle() {
     combinedContent += `Erstellt am: ${new Date().toLocaleString()}\n\n`;
 
     allFiles.forEach(filePath => {
-        // Wir ignorieren das Skript selbst im Output
-        if (filePath.endsWith('bundle.js')) return;
+        const fileName = path.basename(filePath);
 
-        const content = fs.readFileSync(filePath, 'utf8');
-        combinedContent += `\n${'='.repeat(60)}\n`;
-        combinedContent += `FILE: ${filePath}\n`;
-        combinedContent += `${'='.repeat(60)}\n\n`;
-        combinedContent += content + '\n\n';
+        // WICHTIG: Ignoriere das Skript selbst UND die Ausgabedatei
+        if (fileName === 'bundle.js' || fileName === OUTPUT_FILE) {
+            return;
+        }
+
+        try {
+            const content = fs.readFileSync(filePath, 'utf8');
+            combinedContent += `\n${'='.repeat(60)}\n`;
+            combinedContent += `FILE: ${filePath}\n`;
+            combinedContent += `${'='.repeat(60)}\n\n`;
+            combinedContent += content + '\n\n';
+        } catch (err) {
+            console.error(`Fehler beim Lesen von ${filePath}:`, err);
+        }
     });
 
     fs.writeFileSync(OUTPUT_FILE, combinedContent);
     console.log(`✅ Erfolg! Kontext wurde in '${OUTPUT_FILE}' gespeichert.`);
+    console.log(`(Die Datei '${OUTPUT_FILE}' wurde beim Einlesen ignoriert.)`);
 }
 
 writeBundle();
@@ -251,37 +293,45 @@ FILE: index.html
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
     <!-- HEADER -->
-<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between relative">
-        <!-- Logo -->
-        <a href="#home" class="flex items-center gap-3 text-2xl font-bold tracking-tight text-slate-900">
-            <img src="assets/images/logo.png" alt="SD Nightshift Studio Logo" class="w-10 h-10 text-primary">
-            Nightshift Studio
-        </a>
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between relative gap-2">
 
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center gap-8 text-m font-semibold text-slate-700">
-            <a href="#home" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Home</a>
-            <a href="#about" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Über mich</a>
-            <a href="#apps" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Apps</a>
-            <a href="#contact" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Kontakt</a>
-        </nav>
+            <!-- Logo & Brand Name -->
+            <a href="#home" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+                <!-- Bildgröße passt sich an (w-8 auf Mobile, w-10 ab sm) -->
+                <img src="assets/images/logo.png" alt="SD Logo"
+                    class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
+                <!-- Textgröße skaliert: text-lg auf Mobile, text-2xl ab sm -->
+                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
+                    Nightshift Studio
+                </span>
+            </a>
 
-        <!-- Burger Button -->
-        <button class="md:hidden text-slate-600 p-2" id="mobile-menu-btn">
-            <i data-lucide="menu"></i>
-        </button>
+            <!-- Desktop Navigation (Wird auf Mobile komplett ausgeblendet) -->
+            <nav class="hidden md:flex items-center gap-8 text-base font-semibold text-slate-700">
+                <a href="#about"
+                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Über
+                    mich</a>
+                <a href="#apps"
+                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Apps</a>
+                <a href="#contact"
+                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Kontakt</a>
+            </nav>
 
-        <!-- DAS MOBILE MENÜ (Jetzt innerhalb des Headers und mit top-full) -->
-        <div id="mobile-menu"
-    class="hidden md:hidden bg-white border-t border-b border-slate-200 px-6 py-6 flex-col gap-5 text-base font-semibold text-slate-700 absolute top-full left-0 w-full shadow-xl">
-            <a href="#home" class="hover:text-primary transition-colors">Home</a>
-            <a href="#about" class="hover:text-primary transition-colors">Über mich</a>
-            <a href="#apps" class="hover:text-primary transition-colors">Apps</a>
-            <a href="#contact" class="hover:text-primary transition-colors">Kontakt</a>
+            <!-- Burger Button (Immer rechts außen auf Mobile) -->
+            <button class="md:hidden text-slate-600 p-2 shrink-0" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <!-- MOBILE MENÜ (Positionierung bleibt gleich, innerhalb des Headers) -->
+            <div id="mobile-menu"
+                class="hidden md:hidden bg-white border-t border-b border-slate-200 px-6 py-6 flex-col gap-5 text-base font-semibold text-slate-700 absolute top-full left-0 w-full shadow-xl">
+                <a href="#about" class="hover:text-primary transition-colors">Über mich</a>
+                <a href="#apps" class="hover:text-primary transition-colors">Apps</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Kontakt</a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <!-- MAIN CONTENT -->
     <main class="flex-grow">
@@ -372,42 +422,50 @@ FILE: index.html
                     <!-- App Card 1 (AdventuVerse) -->
                     <a href="apps/adventuverse.html"
                         class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group relative">
-                        <!-- Coming Soon Badge -->
-                        <div
-                            class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full z-10 border border-blue-100 flex items-center gap-2 shadow-sm">
-                            <span class="relative flex h-2 w-2">
-                                <span
-                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                            </span>
-                            In Entwicklung
-                        </div>
 
+                        <!-- Oberer Bildbereich mit Logo -->
                         <div
                             class="h-48 bg-gradient-to-br from-blue-50 to-slate-100 border-b border-slate-100 flex items-center justify-center relative overflow-hidden">
-                            <i data-lucide="book-open"
-                                class="w-16 h-16 text-primary/40 group-hover:scale-110 transition-transform duration-500"></i>
+                            <!-- Dein AdventuVerse Logo -->
+                            <img src="assets/images/apps/adventuverse_logo.png" alt="AdventuVerse Logo"
+                                class="w-[180px] h-[180px] object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500">
                         </div>
 
+                        <!-- Content Bereich -->
                         <div class="p-8 flex flex-col flex-grow text-center">
-                            <h3 class="text-2xl font-bold text-slate-900 mb-2">AdventuVerse</h3>
+
+                            <!-- Status-Badge: Jetzt harmonisch mittig über dem Text -->
+                            <div
+                                class="inline-flex items-center self-center gap-2 bg-blue-50 text-primary text-[10px] uppercase tracking-widest font-bold px-3 py-1.5 rounded-full border border-blue-100 mb-5 shadow-sm">
+                                <span class="relative flex h-2 w-2">
+                                    <span
+                                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                                </span>
+                                In Entwicklung
+                            </div>
+
+                            <h3 class="text-2xl font-bold text-slate-900 mb-3">AdventuVerse</h3>
+
                             <p class="text-sm text-slate-500 mb-8 leading-relaxed">
                                 Tauche ein in fesselnde, interaktive Stories aus verschiedenen Genres. Triff deine
                                 Entscheidungen und nutze deinen Verstand – dein Smartphone wird zum Schlüssel deiner
                                 Abenteuer.
                             </p>
 
+                            <!-- Button am unteren Ende der Karte -->
                             <div class="w-full mt-auto">
                                 <span
-                                    class="w-full bg-primary group-hover:bg-blue-700 text-white py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 transition-all">
+                                    class="w-full bg-primary group-hover:bg-blue-600 text-white py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 transition-all shadow-md shadow-blue-500/20 active:scale-[0.98]">
                                     Details ansehen
-                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                    <i data-lucide="arrow-right"
+                                        class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
                                 </span>
                             </div>
                         </div>
                     </a>
 
-                    <!-- Placeholder Card 3 -->
+                    <!-- Placeholder Card -->
                     <div
                         class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col group opacity-60">
                         <div class="h-48 bg-slate-50 border-b border-slate-100 flex items-center justify-center">
@@ -436,8 +494,7 @@ FILE: index.html
                         class="flex items-center gap-4 bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl w-fit shadow-sm hover:bg-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
 
                         <!-- Icon-Box: Färbt sich beim Hover blau ein -->
-                        <div
-                            class="bg-primary p-2.5 rounded-lg text-white group-hover:bg-blue-600 transition-colors">
+                        <div class="bg-primary p-2.5 rounded-lg text-white group-hover:bg-blue-600 transition-colors">
                             <i data-lucide="mail" class="w-6 h-6"></i>
                         </div>
 
@@ -479,36 +536,36 @@ FILE: index.html
         </div>
     </footer>
 
-<script>
-    // Icons initialisieren
-    lucide.createIcons();
+    <script>
+        // Icons initialisieren
+        lucide.createIcons();
 
-    // Elemente auswählen
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    // Alle Links innerhalb des Mobile-Menüs finden
-    const mobileLinks = mobileMenu.querySelectorAll('a');
+        // Elemente auswählen
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        // Alle Links innerhalb des Mobile-Menüs finden
+        const mobileLinks = mobileMenu.querySelectorAll('a');
 
-    // Toggle-Funktion für den Burger-Button
-    menuBtn.addEventListener('click', () => {
-        const isHidden = mobileMenu.classList.contains('hidden');
-        if (isHidden) {
-            mobileMenu.classList.remove('hidden');
-            mobileMenu.classList.add('flex');
-        } else {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
-        }
-    });
-
-    // NEU: Automatisches Schließen bei Klick auf einen Link
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
+        // Toggle-Funktion für den Burger-Button
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            }
         });
-    });
-</script>
+
+        // NEU: Automatisches Schließen bei Klick auf einen Link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+    </script>
 </body>
 
 </html>
