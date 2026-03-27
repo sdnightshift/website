@@ -21,14 +21,17 @@
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-            /* Verhindert das Springen des Layouts beim Seitenwechsel */
-    html {
-        overflow-y: scroll;
-    }
-    /* Optional: Verhindert, dass Flex-Items den Header "aufpumpen" */
-    .header-container {
-        min-height: 72px; /* Setze eine feste Mindesthöhe */
-    }
+        /* Verhindert das Springen des Layouts beim Seitenwechsel */
+        html {
+            overflow-y: scroll;
+        }
+
+        /* Optional: Verhindert, dass Flex-Items den Header "aufpumpen" */
+        .header-container {
+            min-height: 72px;
+            /* Setze eine feste Mindesthöhe */
+        }
+
         .logo-glow {
             filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2));
         }
@@ -41,15 +44,17 @@
 
     <!-- HEADER -->
     <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
 
             <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
-                <img src="../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
+                <img src="../assets/images/logo.png" alt="SD Logo"
+                    class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
                 <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
                     Nightshift Studio
                 </span>
             </a>
 
+            <!-- Der "Zurück"-Link sollte shrink-0 haben, um den Header stabil zu halten -->
             <a href="../index.html" id="back-link"
                 class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
                 <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
@@ -87,7 +92,8 @@
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">Kontakt</h2>
                     <p class="text-lg">
-                        E-Mail: <a href="mailto:sdnightshift.dev@gmail.com" class="text-primary font-semibold hover:underline">sdnightshift.dev@gmail.com</a>
+                        E-Mail: <a href="mailto:sdnightshift.dev@gmail.com"
+                            class="text-primary font-semibold hover:underline">sdnightshift.dev@gmail.com</a>
                     </p>
                 </div>
 
@@ -112,8 +118,9 @@
                 <div class="pt-8 border-t border-slate-100">
                     <h2 class="text-xl font-bold text-slate-900 mb-4 text-slate-400">EU-Streitschlichtung</h2>
                     <p class="text-sm text-slate-500">
-                        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
-                        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://ec.europa.eu/consumers/odr/</a>.<br>
+                        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+                        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer"
+                            class="text-primary hover:underline">https://ec.europa.eu/consumers/odr/</a>.<br>
                         Unsere E-Mail-Adresse finden Sie oben im Impressum.
                     </p>
                 </div>
@@ -123,29 +130,30 @@
     </main>
 
     <!-- FOOTER -->
-<footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
-        
-        <!-- Gruppe 1: Copyright -->
-        <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-slate-400">
-            <p>© 2026 SD Nightshift Studio</p>
-            <span class="hidden sm:inline">|</span>
-            <p>Alle Rechte vorbehalten</p>
-        </div>
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
 
-        <span class="hidden md:inline text-slate-300">|</span>
+            <!-- Gruppe 1: Copyright -->
+            <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-slate-400">
+                <p>© 2026 SD Nightshift Studio</p>
+                <span class="hidden sm:inline">|</span>
+                <p>Alle Rechte vorbehalten</p>
+            </div>
 
-        <!-- Gruppe 2: Links (Bleibt auf Mobile IMMER in einer Reihe) -->
-        <div class="flex items-center gap-3">
-            <a href="../index.html" class="hover:text-primary transition-colors text-slate-500">Startseite</a>
-            <span class="text-slate-300">|</span>
-            <a href="impressum.html" class="hover:text-primary transition-colors text-slate-500">Impressum</a>
-            <span class="text-slate-300">|</span>
-            <a href="datenschutz.html" class="hover:text-primary transition-colors text-slate-500">Datenschutz</a>
+            <span class="hidden md:inline text-slate-300">|</span>
+
+            <!-- Gruppe 2: Links (Bleibt auf Mobile IMMER in einer Reihe) -->
+            <div class="flex items-center gap-3">
+                <a href="../index.html" class="hover:text-primary transition-colors text-slate-500">Startseite</a>
+                <span class="text-slate-300">|</span>
+                <a href="impressum.html" class="hover:text-primary transition-colors text-slate-500">Impressum</a>
+                <span class="text-slate-300">|</span>
+                <a href="datenschutz.html" class="hover:text-primary transition-colors text-slate-500">Datenschutz</a>
+            </div>
+
         </div>
-        
-    </div>
-</footer>
+    </footer>
 
     <script>
         lucide.createIcons();

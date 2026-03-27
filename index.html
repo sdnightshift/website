@@ -40,40 +40,44 @@
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
     <!-- HEADER -->
-<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
-    <!-- max-w-6xl und px-4 sm:px-6 MÜSSEN auf jeder Seite identisch sein -->
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+        <!-- max-w-6xl und px-4 sm:px-6 MÜSSEN auf jeder Seite identisch sein -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
 
-        <!-- Logo & Brand Name: shrink-0 verhindert das Verkleinern -->
-        <a href="#home" class="flex items-center gap-2 sm:gap-3 group shrink-0">
-            <img src="assets/images/logo.png" alt="SD Logo"
-                class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
-            <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
-                Nightshift Studio
-            </span>
-        </a>
+            <!-- Logo & Brand Name: shrink-0 verhindert das Verkleinern -->
+            <a href="#home" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+                <img src="assets/images/logo.png" alt="SD Logo"
+                    class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
+                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
+                    Nightshift Studio
+                </span>
+            </a>
 
-        <!-- Desktop Navigation: Nutzt flex-grow um den Platz zu füllen, falls nötig -->
-        <nav class="hidden md:flex items-center gap-8 text-base font-semibold text-slate-700">
-            <a href="#about" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Über mich</a>
-            <a href="#apps" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Apps</a>
-            <a href="#contact" class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Kontakt</a>
-        </nav>
+            <!-- Desktop Navigation: Nutzt flex-grow um den Platz zu füllen, falls nötig -->
+            <nav class="hidden md:flex items-center gap-8 text-base font-semibold text-slate-700">
+                <a href="#about"
+                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Über
+                    mich</a>
+                <a href="#apps"
+                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Apps</a>
+                <a href="#contact"
+                    class="hover:text-primary transition-colors py-1 border-b-2 border-transparent hover:border-primary">Kontakt</a>
+            </nav>
 
-        <!-- Burger Button (Mobile) -->
-        <button class="md:hidden text-slate-600 p-2 shrink-0" id="mobile-menu-btn">
-            <i data-lucide="menu"></i>
-        </button>
+            <!-- Burger Button (Mobile) -->
+            <button class="md:hidden text-slate-600 p-2 shrink-0" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
 
-        <!-- Mobile Menü (Absolute Positionierung) -->
-        <div id="mobile-menu"
-            class="hidden bg-white border-t border-b border-slate-200 px-6 py-6 flex-col gap-5 text-base font-semibold text-slate-700 absolute top-full left-0 w-full shadow-xl">
-            <a href="#about" class="hover:text-primary transition-colors">Über mich</a>
-            <a href="#apps" class="hover:text-primary transition-colors">Apps</a>
-            <a href="#contact" class="hover:text-primary transition-colors">Kontakt</a>
+            <!-- Mobile Menü (Absolute Positionierung) -->
+            <div id="mobile-menu"
+                class="hidden bg-white border-t border-b border-slate-200 px-6 py-6 flex-col gap-5 text-base font-semibold text-slate-700 absolute top-full left-0 w-full shadow-xl">
+                <a href="#about" class="hover:text-primary transition-colors">Über mich</a>
+                <a href="#apps" class="hover:text-primary transition-colors">Apps</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Kontakt</a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
     <!-- MAIN CONTENT -->
     <main class="flex-grow">
