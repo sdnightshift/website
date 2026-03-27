@@ -32,26 +32,25 @@
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
     <!-- HEADER (Minimalistisch wie auf der App-Seite) -->
-    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
-            
-            <!-- Logo & Name -->
-            <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
-                <img src="../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
-                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
-                    Nightshift Studio
-                </span>
-            </a>
-            
-            <!-- Zurück-Link -->
-            <a href="../index.html" class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
-                <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
-                <span class="hidden sm:inline">Zurück zur Startseite</span>
-                <span class="sm:hidden">Zurück</span>
-            </a>
+<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
+        
+        <!-- Logo bleibt gleich -->
+        <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+            <img src="../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
+            <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
+                Nightshift Studio
+            </span>
+        </a>
+        
+        <!-- MODIFIZIERTER ZURÜCK-LINK -->
+        <a href="../index.html" id="back-link" class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
+            <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+            <span>Zurück</span>
+        </a>
 
-        </div>
-    </header>
+    </div>
+</header>
 
     <main class="flex-grow">
         <!-- HERO SECTION -->
@@ -122,8 +121,22 @@
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
+<script>
+    lucide.createIcons();
+
+    // Intelligente Zurück-Logik
+    const backLink = document.getElementById('back-link');
+
+    backLink.addEventListener('click', (e) => {
+        // Prüfen, ob eine vorherige Seite im Browser-Verlauf existiert 
+        // UND ob diese Seite von deiner Domain kommt (referrer)
+        if (document.referrer && document.referrer.includes(window.location.hostname)) {
+            e.preventDefault(); // Verhindert das normale Laden von ../index.html
+            window.history.back(); // Springt exakt zur letzten Seite zurück
+        }
+        // Falls kein Referrer da ist (Direktaufruf), 
+        // greift das normale href="../index.html" als Sicherheitsnetz.
+    });
+</script>
 </body>
 </html>
