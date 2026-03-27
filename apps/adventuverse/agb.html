@@ -1,65 +1,120 @@
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGB - AdventuVerse | SD Nightshift Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { fontFamily: { sans:['Inter', 'sans-serif'] }, colors: { primary: '#5397EA' } } } }</script>
+    <script>tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
+                    colors: { primary: '#5397EA' }
+                }
+            }
+        }</script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        .legal-content h2 { @apply text-2xl font-bold text-slate-900 mt-12 mb-4; }
-        .legal-content p { @apply text-slate-600 leading-relaxed mb-4; }
-    </style>
     <link rel="icon" type="image/png" href="../../assets/images/logo.png">
 </head>
+
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
+    <!-- HEADER -->
     <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="../../index.html" class="flex items-center gap-3 text-2xl font-bold text-slate-900">
-                <img src="../../assets/images/logo.png" alt="SD Logo" class="w-10 h-10">
-                <span class="hidden sm:inline">Nightshift Studio</span>
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-2">
+            <a href="../../index.html" class="flex items-center gap-3 group shrink-0">
+                <img src="../../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10">
+                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900">Nightshift Studio</span>
             </a>
-            <a href="index.html" id="back-link" class="flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-primary transition-colors group">
-                <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i> Zurück
+            <a href="index.html" id="back-link"
+                class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group">
+                <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+                <span>Zurück</span>
             </a>
         </div>
     </header>
 
-    <main class="flex-grow">
-        <section class="bg-slate-50 py-12 md:py-20 border-b border-slate-200">
-            <div class="max-w-4xl mx-auto px-6">
-                <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">Allgemeine Geschäftsbedingungen</h1>
-                <p class="text-lg text-slate-600 mt-2">AdventuVerse – Stand: März 2026</p>
+    <main class="flex-grow bg-white">
+        <!-- TITELBEREICH -->
+        <section class="bg-slate-50 py-12 md:py-16 border-b border-slate-200 text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Allgemeine
+                    Geschäftsbedingungen</h1>
+                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">AdventuVerse – Stand: März
+                    2026</p>
             </div>
         </section>
 
-        <section class="py-16 bg-white">
-            <div class="max-w-4xl mx-auto px-6 legal-content">
-                <p>Willkommen bei AdventuVerse. Durch die Nutzung unserer App erklären Sie sich mit den folgenden Bedingungen einverstanden:</p>
-                
-                <h2>1. Nutzungsrecht</h2>
-                <p>Wir gewähren Ihnen ein persönliches, nicht übertragbares Recht, die App AdventuVerse für private Zwecke zu nutzen.</p>
+        <!-- DOKUMENTEN-BODY -->
+        <section class="py-16">
+            <div class="max-w-3xl mx-auto px-6 text-slate-700 leading-relaxed space-y-12">
 
-                <h2>2. Virtuelle Güter (Münzen & Abenteuer)</h2>
-                <p>In der App können Sie virtuelle Münzen erwerben. Diese sind kein echtes Geld und können nicht zurückerstattet oder in echtes Geld umgetauscht werden. Der Zugriff auf gekaufte Geschichten bleibt bestehen, solange der Account existiert.</p>
+                <!-- Einleitung -->
+                <div>
+                    <p class="text-lg">Willkommen bei AdventuVerse. Durch die Nutzung dieser Anwendung erklären Sie sich
+                        mit den folgenden Bedingungen einverstanden. Bitte lesen Sie diese aufmerksam durch.</p>
+                </div>
 
-                <h2>3. Haftungsausschluss</h2>
-                <p>Die App wird "wie besehen" bereitgestellt. Wir übernehmen keine Haftung für Datenverlust oder Schäden an Hardware, sofern nicht grob fahrlässig gehandelt wurde.</p>
+                <!-- Sektion 1 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Nutzungsrecht</h2>
+                    <p>Wir gewähren Ihnen ein persönliches, nicht übertragbares und nicht exklusives Recht, die App
+                        AdventuVerse für den privaten Gebrauch auf Ihren mobilen Endgeräten zu nutzen.</p>
+                </div>
+
+                <!-- Sektion 2 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Virtuelle Güter (Münzen & Abenteuer)</h2>
+                    <p>Innerhalb der App besteht die Möglichkeit, virtuelle Münzen zu erwerben. Hierbei gelten folgende
+                        Grundregeln:</p>
+                    <ul class="list-disc list-inside mt-4 space-y-2 ml-2">
+                        <li>Virtuelle Münzen besitzen keinen realen Geldwert und können nicht in echte Währung
+                            umgetauscht werden.</li>
+                        <li>Käufe von virtuellen Gütern sind final und nicht erstattungsfähig.</li>
+                        <li>Der Zugriff auf erworbene Geschichten bleibt bestehen, solange Ihr Nutzerkonto existiert und
+                            der Dienst betrieben wird.</li>
+                    </ul>
+                </div>
+
+                <!-- Sektion 3 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Haftungsausschluss</h2>
+                    <p>Die Anwendung wird im aktuellen Zustand ("wie besehen") bereitgestellt. SD Nightshift Studio
+                        übernimmt keine Haftung für:</p>
+                    <ul class="list-disc list-inside mt-4 space-y-2 ml-2 border-l-4 border-slate-100 pl-4">
+                        <li>Eventuellen Datenverlust innerhalb der App.</li>
+                        <li>Schäden an der Hardware, die durch die Nutzung entstehen könnten.</li>
+                        <li>Unterbrechungen der Server-Erreichbarkeit.</li>
+                    </ul>
+                    <p class="mt-4 italic">Dies gilt nicht bei nachweislich grober Fahrlässigkeit oder Vorsatz seitens
+                        des Betreibers.</p>
+                </div>
+
             </div>
         </section>
     </main>
 
-    <footer class="w-full bg-slate-100 border-t border-slate-200 py-6 text-center text-sm text-slate-500">
-        © 2026 SD Nightshift Studio | <a href="../../legal/impressum.html" class="hover:text-primary">Impressum</a> | <a href="../../legal/datenschutz.html" class="hover:text-primary">Studio-Datenschutz</a>
+    <!-- FOOTER -->
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+            <p>© 2026 SD Nightshift Studio</p>
+            <span class="hidden md:inline text-slate-300">|</span>
+            <a href="../../legal/impressum.html" class="hover:text-primary">Impressum</a>
+            <span class="text-slate-300">|</span>
+            <a href="../../legal/datenschutz.html" class="hover:text-primary">Studio-Datenschutz</a>
+        </div>
     </footer>
 
     <script>
         lucide.createIcons();
-        document.getElementById('back-link').addEventListener('click', function(e) {
+        document.getElementById('back-link').addEventListener('click', function (e) {
             if (document.referrer && window.history.length > 1) { e.preventDefault(); window.history.back(); }
         });
     </script>
 </body>
+
 </html>

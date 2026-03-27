@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SD Nightshift Studio | Moderne Apps</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
                     colors: { primary: '#5397EA' }
                 }
             }
@@ -221,68 +219,72 @@
             </div>
         </section>
 
-<!-- 4. CONTACT & SOCIAL MEDIA -->
-<section id="contact" class="bg-white py-16 md:py-20 border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
+        <!-- 4. CONTACT & SOCIAL MEDIA -->
+        <section id="contact" class="bg-white py-16 md:py-20 border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24">
 
-        <!-- Linke Spalte: Kontakt -->
-        <div>
-            <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6">Kontakt</h3>
-            <p class="text-slate-600 mb-6 font-medium">Hast du Fragen oder Feedback zu meinen Apps?</p>
-            
-            <a href="mailto:sdnightshift.dev@gmail.com" 
-               class="flex items-center gap-4 bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl w-full sm:w-fit shadow-sm hover:bg-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
-                <div class="bg-primary p-2.5 rounded-lg text-white group-hover:bg-blue-600 transition-colors">
-                    <i data-lucide="mail" class="w-6 h-6"></i>
+                <!-- Linke Spalte: Kontakt -->
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6">Kontakt</h3>
+                    <p class="text-slate-600 mb-6 font-medium">Hast du Fragen oder Feedback zu meinen Apps?</p>
+
+                    <a href="mailto:sdnightshift.dev@gmail.com"
+                        class="flex items-center gap-4 bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl w-full sm:w-fit shadow-sm hover:bg-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
+                        <div class="bg-primary p-2.5 rounded-lg text-white group-hover:bg-blue-600 transition-colors">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span
+                                class="text-xs text-slate-400 font-semibold uppercase tracking-wider leading-none mb-1">E-Mail
+                                schreiben</span>
+                            <span class="text-slate-700 ">
+                                sdnightshift.dev@gmail.com
+                            </span>
+                        </div>
+                    </a>
                 </div>
-                <div class="flex flex-col">
-                    <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider leading-none mb-1">E-Mail schreiben</span>
-                    <span class="text-slate-700 ">
-                        sdnightshift.dev@gmail.com
-                    </span>
+
+                <!-- Rechte Spalte: Social Media -->
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6">Social Media</h3>
+                    <p class="text-slate-600 mb-6 font-medium">Comming soon!</p>
+
+
                 </div>
-            </a>
-        </div>
 
-        <!-- Rechte Spalte: Social Media -->
-        <div>
-            <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6">Social Media</h3>
-            <p class="text-slate-600 mb-6 font-medium">Comming soon!</p>
-            
-            
-        </div>
-
-    </div>
-</section>
+            </div>
+        </section>
 
     </main>
 
     <!-- 5. BOTTOM FOOTER -->
-<footer class="w-full bg-slate-100 border-t border-slate-200 py-6 text-center">
-    <!-- Der Hauptcontainer stapelt die Gruppen auf Mobile untereinander -->
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
-        
-        <!-- Gruppe 1: Copyright (Stapelt sich auf sehr schmalen Handys ebenfalls, falls nötig) -->
-        <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
-            <p>© 2026 SD Nightshift Studio</p>
-            <span class="hidden sm:inline text-slate-300">|</span>
-            <p>Alle Rechte vorbehalten</p>
-        </div>
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-6 text-center">
+        <!-- Der Hauptcontainer stapelt die Gruppen auf Mobile untereinander -->
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
 
-        <!-- Dieser Trennstrich wird auf Mobile ausgeblendet -->
-        <span class="hidden md:inline text-slate-300">|</span>
+            <!-- Gruppe 1: Copyright (Stapelt sich auf sehr schmalen Handys ebenfalls, falls nötig) -->
+            <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+                <p>© 2026 SD Nightshift Studio</p>
+                <span class="hidden sm:inline text-slate-300">|</span>
+                <p>Alle Rechte vorbehalten</p>
+            </div>
 
-        <!-- Gruppe 2: Rechtliches (Bleibt auf Mobile nebeneinander in einer Reihe!) -->
-        <div class="flex items-center gap-3">
-            <a href="legal/impressum.html" class="hover:text-primary transition-colors">Impressum</a>
-            <span class="text-slate-300">|</span>
-            <a href="legal/datenschutz.html" class="hover:text-primary transition-colors">Datenschutz</a>
+            <!-- Dieser Trennstrich wird auf Mobile ausgeblendet -->
+            <span class="hidden md:inline text-slate-300">|</span>
+
+            <!-- Gruppe 2: Rechtliches (Bleibt auf Mobile nebeneinander in einer Reihe!) -->
+            <div class="flex items-center gap-3">
+                <a href="legal/impressum.html" class="hover:text-primary transition-colors">Impressum</a>
+                <span class="text-slate-300">|</span>
+                <a href="legal/datenschutz.html" class="hover:text-primary transition-colors">Datenschutz</a>
+            </div>
+
         </div>
-        
-    </div>
-</footer>
+    </footer>
 
     <script>
+
         // Icons initialisieren
         lucide.createIcons();
 

@@ -1,81 +1,142 @@
 <!DOCTYPE html>
 <html lang="de" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenschutz - AdventuVerse | SD Nightshift Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { theme: { extend: { fontFamily: { sans:['Inter', 'sans-serif'] }, colors: { primary: '#5397EA' } } } }</script>
+    <script>tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
+                    colors: { primary: '#5397EA' }
+                }
+            }
+        }</script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        .legal-content h2 { @apply text-2xl font-bold text-slate-900 mt-12 mb-4; }
-        .legal-content h3 { @apply text-lg font-bold text-slate-800 mt-8 mb-3; }
-        .legal-content p { @apply text-slate-600 leading-relaxed mb-4; }
-        .legal-content ul { @apply list-disc list-inside text-slate-600 mb-6 space-y-2; }
-    </style>
     <link rel="icon" type="image/png" href="../../assets/images/logo.png">
 </head>
+
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
     <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="../../index.html" class="flex items-center gap-3 text-2xl font-bold text-slate-900">
-                <img src="../../assets/images/logo.png" alt="SD Logo" class="w-10 h-10">
-                <span class="hidden sm:inline">Nightshift Studio</span>
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-2">
+            <a href="../../index.html" class="flex items-center gap-3 group shrink-0">
+                <img src="../../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10">
+                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900">Nightshift Studio</span>
             </a>
-            <a href="index.html" id="back-link" class="flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-primary transition-colors group">
-                <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i> Zurück
+            <a href="index.html" id="back-link"
+                class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group">
+                <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+                <span>Zurück</span>
             </a>
         </div>
     </header>
 
-    <main class="flex-grow">
-        <section class="bg-slate-50 py-12 md:py-20 border-b border-slate-200">
-            <div class="max-w-4xl mx-auto px-6">
-                <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">App-Datenschutzerklärung</h1>
-                <p class="text-lg text-slate-600 mt-2">AdventuVerse – Stand: März 2026</p>
+    <main class="flex-grow bg-white">
+        <!-- TITELBEREICH -->
+        <section class="bg-slate-50 py-12 md:py-16 border-b border-slate-200 text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">App-Datenschutzerklärung
+                </h1>
+                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">AdventuVerse – Stand: März
+                    2026</p>
             </div>
         </section>
 
-        <section class="py-16 bg-white">
-            <div class="max-w-4xl mx-auto px-6 legal-content">
-                <p>Verantwortlich für die App "AdventuVerse": SD Nightshift Studio (Details siehe <a href="../../legal/impressum.html" class="text-primary hover:underline">Impressum</a>).</p>
+        <!-- DOKUMENTEN-BODY -->
+        <section class="py-16">
+            <div class="max-w-3xl mx-auto px-6 text-slate-700 leading-relaxed space-y-12">
 
-                <h2>1. Datenerfassung & Supabase</h2>
-                <p>Wir nutzen Supabase zur Authentifizierung und Speicherung von Spielständen. Dabei wird Ihre E-Mail-Adresse und Ihr gewählter Nutzername gespeichert. Diese Daten dienen ausschließlich dem Betrieb der App und der geräteübergreifenden Speicherung Ihres Fortschritts.</p>
-
-                <!-- Hervorgehobener Bereich für Sensoren -->
-                <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 md:p-8 my-10">
-                    <h2 class="!mt-0 flex items-center gap-3 text-primary"><i data-lucide="shield-check"></i> 2. Gerätesensoren und Berechtigungen</h2>
-                    <p class="font-medium text-slate-800">Alle Sensordaten werden ausschließlich lokal auf Ihrem Gerät verarbeitet und niemals an unsere Server oder Dritte gesendet.</p>
-                    <ul class="mt-4">
-                        <li><strong>Mikrofon:</strong> Misst lediglich kurzzeitig die Lautstärke für Rätsel. Es werden <strong>keine</strong> Sprachaufnahmen gemacht.</li>
-                        <li><strong>Bewegungssensoren:</strong> Erkennung von Schütteln oder Drehen des Geräts.</li>
-                        <li><strong>Lichtsensor:</strong> Prüfung der Umgebungshelligkeit für Spielmechaniken.</li>
-                    </ul>
+                <!-- Einleitung -->
+                <div>
+                    <p>Der Schutz Ihrer persönlichen Daten ist uns wichtig. Nachfolgend informieren wir Sie darüber, wie
+                        AdventuVerse Daten verarbeitet. Verantwortlich ist SD Nightshift Studio (Details siehe <a
+                            href="../../legal/impressum.html"
+                            class="text-primary font-semibold hover:underline">Impressum</a>).</p>
                 </div>
 
-                <h2>3. Werbung (Google AdMob)</h2>
-                <p>Unsere App nutzt Google AdMob zur Anzeige von Werbung. Google erhebt dabei ggf. Werbe-IDs (IDFA/AAID). Sie können dies in den Systemeinstellungen Ihres Geräts einschränken.</p>
+                <!-- Kapitel 1 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Datenerfassung & Infrastruktur</h2>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Cloud-Dienste (Supabase)</h3>
+                    <p>Um Spielstände geräteübergreifend zu synchronisieren, nutzen wir den Dienst
+                        <strong>Supabase</strong>. Dabei werden Ihre E-Mail-Adresse (bei Anmeldung über Drittanbieter)
+                        sowie Ihr gewählter Nutzername auf verschlüsselten Servern gespeichert.</p>
+                </div>
 
-                <h2>4. In-App-Käufe (RevenueCat)</h2>
-                <p>Für Käufe nutzen wir RevenueCat zur Validierung. Es werden keine Kreditkartendaten auf unseren Servern gespeichert. Die Abwicklung erfolgt über den App Store.</p>
+                <!-- Kapitel 2 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Hardware-Zugriffe & Sensoren</h2>
+                    <p>AdventuVerse nutzt technische Funktionen Ihres Geräts, um interaktive Spielmechaniken zu
+                        ermöglichen. Hierbei gilt unser Grundsatz: <strong>Alle Sensordaten werden ausschließlich lokal
+                            auf Ihrem Gerät verarbeitet.</strong></p>
 
-                <h2>5. Ihre Rechte</h2>
-                <p>Sie haben das Recht auf Auskunft, Korrektur und Löschung. Sie können Ihr Konto und alle Daten jederzeit direkt in der App unwiderruflich löschen.</p>
+                    <div class="mt-6 space-y-4 border-l-4 border-blue-50 pl-6">
+                        <div>
+                            <h4 class="font-bold text-slate-900">Mikrofon</h4>
+                            <p class="text-sm text-slate-600">Wird für Rätsel genutzt (z. B. Pusten). Die App misst nur
+                                den Pegel; es werden keine Aufnahmen erstellt oder übertragen.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Bewegungsdaten</h4>
+                            <p class="text-sm text-slate-600">Erkennung von Neigungen, Schütteln oder Drehungen des
+                                Geräts für Spielaktionen.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Lichtsensor</h4>
+                            <p class="text-sm text-slate-600">Wird genutzt, um Spielereignisse basierend auf der
+                                Umgebungshelligkeit auszulösen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kapitel 3 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Werbe- und Zahlsysteme</h2>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Google AdMob</h3>
+                    <p>Die App nutzt Google AdMob zur Werbe-Finanzierung. Google verwendet ggf. Werbe-IDs (IDFA/AAID),
+                        um Anzeigen zu personalisieren. Sie können dies in Ihren Systemeinstellungen einschränken.</p>
+
+                    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">RevenueCat</h3>
+                    <p>Zur Verwaltung von In-App-Käufen nutzen wir RevenueCat. Es werden keine privaten Zahlungsdaten
+                        (Kreditkarten etc.) auf unseren Servern gespeichert; die Abwicklung erfolgt durch den App Store.
+                    </p>
+                </div>
+
+                <!-- Kapitel 4 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Ihre Rechte</h2>
+                    <p>Sie haben das Recht auf Auskunft, Korrektur und Löschung Ihrer Daten. Sie können Ihr Konto sowie
+                        alle Fortschritte jederzeit <strong>direkt innerhalb der App unwiderruflich löschen.</strong>
+                    </p>
+                </div>
+
             </div>
         </section>
     </main>
 
-    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center text-sm text-slate-500 leading-relaxed">
-        © 2026 SD Nightshift Studio | <a href="../../legal/impressum.html" class="hover:text-primary">Impressum</a> | <a href="../../legal/datenschutz.html" class="hover:text-primary">Studio-Datenschutz</a>
+    <!-- FOOTER -->
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+            <p>© 2026 SD Nightshift Studio</p>
+            <span class="hidden md:inline text-slate-300">|</span>
+            <a href="../../legal/impressum.html" class="hover:text-primary">Impressum</a>
+            <span class="text-slate-300">|</span>
+            <a href="../../legal/datenschutz.html" class="hover:text-primary">Studio-Datenschutz</a>
+        </div>
     </footer>
 
     <script>
         lucide.createIcons();
-        document.getElementById('back-link').addEventListener('click', function(e) {
+        document.getElementById('back-link').addEventListener('click', function (e) {
             if (document.referrer && window.history.length > 1) { e.preventDefault(); window.history.back(); }
         });
     </script>
 </body>
+
 </html>
