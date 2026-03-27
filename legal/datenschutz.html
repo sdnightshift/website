@@ -24,39 +24,23 @@
         .logo-glow {
             filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2));
         }
-
-        /* Styling für die juristischen Texte */
-        .legal-content h3 {
-            @apply text-xl font-bold text-slate-900 mt-10 mb-4;
-        }
-
-        .legal-content p {
-            @apply text-slate-600 leading-relaxed mb-4;
-        }
-
-        .legal-content ul {
-            @apply list-disc list-inside text-slate-600 mb-6 space-y-2;
-        }
     </style>
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
 </head>
 
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
-    <!-- HEADER (Minimalistisch wie auf der App-Seite) -->
+    <!-- HEADER -->
     <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
 
-            <!-- Logo bleibt gleich -->
             <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
-                <img src="../assets/images/logo.png" alt="SD Logo"
-                    class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
+                <img src="../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
                 <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
                     Nightshift Studio
                 </span>
             </a>
 
-            <!-- MODIFIZIERTER ZURÜCK-LINK -->
             <a href="../index.html" id="back-link"
                 class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
                 <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
@@ -66,84 +50,97 @@
         </div>
     </header>
 
-    <main class="flex-grow">
-        <!-- HERO SECTION -->
-        <section class="bg-slate-50 py-12 md:py-20 border-b border-slate-200">
-            <div class="max-w-4xl mx-auto px-6">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">Datenschutzerklärung
-                </h1>
-                <p class="text-lg text-slate-600">Informationen über die Verarbeitung Ihrer Daten auf unserer Website.
-                </p>
+    <main class="flex-grow bg-white">
+        <!-- TITELBEREICH (Hero) -->
+        <section class="bg-slate-50 py-12 md:py-16 border-b border-slate-200 text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Datenschutzerklärung</h1>
+                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">Website – Stand: März 2026</p>
             </div>
         </section>
 
-        <!-- CONTENT SECTION -->
-        <section class="py-16 md:py-24 bg-white">
-            <div class="max-w-4xl mx-auto px-6 legal-content">
+        <!-- DOKUMENTEN-BODY -->
+        <section class="py-16">
+            <div class="max-w-3xl mx-auto px-6 text-slate-700 leading-relaxed space-y-12">
 
-                <h2 class="text-2xl font-bold text-slate-900 mb-6">1. Datenschutz auf einen Blick</h2>
+                <!-- Kapitel 1 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Datenschutz auf einen Blick</h2>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Allgemeine Hinweise</h3>
+                    <p>
+                        Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+                    </p>
+                    <p class="mt-4">
+                        Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ entnehmen.
+                    </p>
+                </div>
 
-                <h3>Allgemeine Hinweise</h3>
-                <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten
-                    passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie
-                    persönlich identifiziert werden können.</p>
+                <!-- Kapitel 2 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Hosting</h2>
+                    <p>
+                        Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
+                    </p>
+                    <div class="mt-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <p class="font-bold text-slate-800 mb-1">GitHub Pages</p>
+                        <p class="text-sm">GitHub Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA.</p>
+                    </div>
+                    <p class="mt-4">
+                        GitHub erfasst Logfiles (IP-Adresse, Browsertyp, Betriebssystem etc.) beim Besuch der Seite. Dies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO im Interesse einer stabilen und sicheren Auslieferung unserer Website.
+                    </p>
+                </div>
 
-                <h3>Datenerfassung auf dieser Website</h3>
-                <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong></p>
-                <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten
-                    können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle“ in dieser Datenschutzerklärung
-                    entnehmen.</p>
+                <!-- Kapitel 3 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Datenerfassung auf dieser Website</h2>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Anfrage per E-Mail</h3>
+                    <p>
+                        Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                    </p>
+                    <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">SSL- bzw. TLS-Verschlüsselung</h3>
+                    <p>
+                        Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://“ auf „https://“ wechselt.
+                    </p>
+                </div>
 
-                <p><strong>Wie erfassen wir Ihre Daten?</strong></p>
-                <p>Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B.
-                    um Daten handeln, die Sie in ein Kontaktformular eingeben oder uns per E-Mail senden.</p>
-                <p>Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere
-                    IT-Systeme erfasst. Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder
-                    Uhrzeit des Seitenaufrufs).</p>
+                <!-- Kapitel 4 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Hinweis zur verantwortlichen Stelle</h2>
+                    <p>Die verantwortliche Stelle für die Datenverarbeitung ist:</p>
+                    <div class="mt-4 text-slate-800 font-medium">
+                        <p>Sebastian Wolfgang Dichmann</p>
+                        <p>Am Ziegelstadel 20</p>
+                        <p>87700 Memmingen</p>
+                        <p class="mt-2">E-Mail: <a href="mailto:sdnightshift.dev@gmail.com" class="text-primary hover:underline">sdnightshift.dev@gmail.com</a></p>
+                    </div>
+                </div>
 
-                <h2 class="text-2xl font-bold text-slate-900 mt-16 mb-6">2. Hosting</h2>
-                <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
-                <p><strong>GitHub Pages</strong><br>
-                    GitHub Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA.</p>
-                <p>Wenn Sie unsere Website besuchen, erfasst GitHub u. a. Ihre IP-Adresse. GitHub ist ein CDN (Content
-                    Delivery Network). Die Nutzung von GitHub Pages erfolgt im Interesse einer schnellen und sicheren
-                    Bereitstellung unseres Online-Angebots (Art. 6 Abs. 1 lit. f DSGVO).</p>
+                <!-- Kapitel 5 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">5. Ihre Rechte</h2>
+                    <p>
+                        Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.
+                    </p>
+                    <ul class="list-disc list-inside mt-4 space-y-2 ml-2">
+                        <li>Auskunftsrecht (Art. 15 DSGVO)</li>
+                        <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+                        <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+                        <li>Widerspruchsrecht gegen die Verarbeitung</li>
+                    </ul>
+                </div>
 
-                <h2 class="text-2xl font-bold text-slate-900 mt-16 mb-6">3. Allgemeine Hinweise und Pflichtinformationen
-                </h2>
-
-                <h3>Hinweis zur verantwortlichen Stelle</h3>
-                <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-                <p>
-                    <strong>Sebastian Wolfgang Dichmann</strong><br>
-                    Am Ziegelstadel 20<br>
-                    87700 Memmingen<br>
-                    E-Mail: sdnightshift.dev@gmail.com
-                </p>
-
-                <h3>Ihre Rechte</h3>
-                <p>Sie haben jederzeit das Recht:</p>
-                <ul>
-                    <li>Auskunft über Ihre gespeicherten personenbezogenen Daten zu erhalten.</li>
-                    <li>Die Berichtigung oder Löschung Ihrer Daten zu verlangen.</li>
-                    <li>Die Einschränkung der Verarbeitung Ihrer Daten zu verlangen.</li>
-                    <li>Widerspruch gegen die Verarbeitung einzulegen.</li>
-                    <li>Sich bei der zuständigen Aufsichtsbehörde zu beschweren.</li>
-                </ul>
-
-                <p class="mt-20 text-sm text-slate-400 italic">Stand: März 2026</p>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER (Einfach gehalten) -->
+    <!-- FOOTER -->
     <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
-        <div class="max-w-6xl mx-auto px-6">
-            <p class="text-sm font-medium text-slate-500 mb-4">© 2026 SD Nightshift Studio</p>
-            <div class="flex justify-center gap-6 text-sm text-slate-500">
-                <a href="../index.html" class="hover:text-primary transition-colors">Startseite</a>
-                <a href="impressum.html" class="hover:text-primary transition-colors">Impressum</a>
-            </div>
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+            <p>© 2026 SD Nightshift Studio</p>
+            <span class="hidden md:inline text-slate-300">|</span>
+            <a href="../index.html" class="hover:text-primary transition-colors">Startseite</a>
+            <span class="text-slate-300">|</span>
+            <a href="impressum.html" class="hover:text-primary transition-colors">Impressum</a>
         </div>
     </footer>
 
@@ -152,11 +149,9 @@
 
         // Der ultimative "Smart Back" Loader
         document.getElementById('back-link').addEventListener('click', function (e) {
-            // history.length > 1 bedeutet: Der Browser hat eine Seite, zu der er zurückgehen kann.
-            // document.referrer bedeutet: Der Nutzer kam nicht durch das Tippen der URL hierher.
             if (document.referrer && window.history.length > 1) {
-                e.preventDefault(); // Stoppt den Sprung zur index.html
-                window.history.back(); // Geht exakt eine Seite zurück (z.B. zur App-Seite)
+                e.preventDefault();
+                window.history.back();
             }
         });
     </script>

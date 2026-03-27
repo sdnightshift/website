@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressum | SD Nightshift Studio</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -19,90 +20,121 @@
         }
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .logo-glow {
+            filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2));
+        }
+    </style>
+    <!-- Favicon ergänzt -->
     <link rel="icon" type="image/png" href="../assets/images/logo.png">
 </head>
 
 <body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
 
-    <!-- HEADER (Minimal) -->
+    <!-- HEADER -->
     <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="../index.html" class="flex items-center gap-3 text-2xl font-bold text-slate-900">
-                <img src="../assets/images/logo.png" alt="SD Logo" class="w-10 h-10">
-                Nightshift Studio
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
+
+            <a href="../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+                <img src="../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
+                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
+                    Nightshift Studio
+                </span>
             </a>
-            <a href="../index.html" class="text-sm font-bold text-slate-500 hover:text-primary flex items-center gap-2">
-                <i data-lucide="arrow-left" class="w-4 h-4"></i> Zurück
+
+            <a href="../index.html" id="back-link"
+                class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
+                <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+                <span>Zurück</span>
             </a>
+
         </div>
     </header>
 
-    <main class="flex-grow">
-        <section class="bg-slate-50 py-12 border-b border-slate-200">
-            <div class="max-w-4xl mx-auto px-6">
-                <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">Impressum</h1>
+    <main class="flex-grow bg-white">
+        <!-- TITELBEREICH (Jetzt zentriert wie auf den anderen Seiten) -->
+        <section class="bg-slate-50 py-12 md:py-16 border-b border-slate-200 text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Impressum</h1>
+                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">Anbieterkennzeichnung</p>
             </div>
         </section>
 
-        <section class="py-16 bg-white">
-            <div class="max-w-4xl mx-auto px-6 space-y-8 text-slate-600 leading-relaxed">
+        <!-- DOKUMENTEN-BODY -->
+        <section class="py-16">
+            <div class="max-w-3xl mx-auto px-6 text-slate-700 leading-relaxed space-y-12">
+
+                <!-- Sektion 1 -->
                 <div>
-                    <h2 class="text-xl font-bold text-slate-900 mb-2">Angaben gemäß § 5 DDG</h2>
-                    <p>
-                        Sebastian Wolfgang Dichmann<br>
-                        SD Nightshift Studio<br>
-                        Am Ziegelstadel 20<br>
-                        87700 Memmingen
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">Angaben gemäß § 5 DDG</h2>
+                    <div class="text-lg">
+                        <p class="font-bold text-slate-900">Sebastian Wolfgang Dichmann</p>
+                        <p>SD Nightshift Studio</p>
+                        <p>Am Ziegelstadel 20</p>
+                        <p>87700 Memmingen</p>
+                    </div>
+                </div>
+
+                <!-- Sektion 2 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">Kontakt</h2>
+                    <p class="text-lg">
+                        E-Mail: <a href="mailto:sdnightshift.dev@gmail.com" class="text-primary font-semibold hover:underline">sdnightshift.dev@gmail.com</a>
                     </p>
                 </div>
 
+                <!-- Sektion 3 -->
                 <div>
-                    <h2 class="text-xl font-bold text-slate-900 mb-2">Kontakt</h2>
-                    <p>E-Mail: <a href="mailto:sdnightshift.dev@gmail.com"
-                            class="text-primary hover:underline">sdnightshift.dev@gmail.com</a></p>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">Umsatzsteuer-ID</h2>
+                    <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
+                    <p class="text-lg font-bold text-slate-900 mt-1">DE403476229</p>
                 </div>
 
+                <!-- Sektion 4 -->
                 <div>
-                    <h2 class="text-xl font-bold text-slate-900 mb-2">Umsatzsteuer-ID</h2>
-                    <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
-                        <strong>DE403476229</strong>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">Redaktionell verantwortlich</h2>
+                    <div class="text-lg">
+                        <p>Sebastian Wolfgang Dichmann</p>
+                        <p>Am Ziegelstadel 20</p>
+                        <p>87700 Memmingen</p>
+                    </div>
+                </div>
+
+                <!-- Sektion 5 -->
+                <div class="pt-8 border-t border-slate-100">
+                    <h2 class="text-xl font-bold text-slate-900 mb-4 text-slate-400">EU-Streitschlichtung</h2>
+                    <p class="text-sm text-slate-500">
+                        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: 
+                        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">https://ec.europa.eu/consumers/odr/</a>.<br>
+                        Unsere E-Mail-Adresse finden Sie oben im Impressum.
                     </p>
                 </div>
 
-                <div>
-                    <h2 class="text-xl font-bold text-slate-900 mb-2">Redaktionell verantwortlich</h2>
-                    <p>Sebastian Wolfgang Dichmann<br>Am Ziegelstadel 20<br>87700 Memmingen</p>
-                </div>
-
-                <div class="pt-12 border-t border-slate-100">
-                    <h2 class="text-lg font-bold text-slate-900 mb-2">EU-Streitschlichtung</h2>
-                    <p class="text-sm">Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS)
-                        bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank"
-                            class="text-primary hover:underline">https://ec.europa.eu/consumers/odr/</a>.<br>Unsere
-                        E-Mail-Adresse finden Sie oben im Impressum.</p>
-                </div>
             </div>
         </section>
     </main>
 
-    <footer class="w-full bg-slate-100 border-t border-slate-200 py-6 text-center text-sm text-slate-500">
-        © 2026 SD Nightshift Studio | <a href="datenschutz.html" class="hover:text-primary">Datenschutz</a>
+    <!-- FOOTER -->
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+            <p>© 2026 SD Nightshift Studio</p>
+            <span class="hidden md:inline text-slate-300">|</span>
+            <a href="../index.html" class="hover:text-primary transition-colors">Startseite</a>
+            <span class="text-slate-300">|</span>
+            <a href="datenschutz.html" class="hover:text-primary transition-colors">Datenschutz</a>
+        </div>
     </footer>
 
     <script>
         lucide.createIcons();
 
-        // Smart Back Logik (identisch zur Datenschutzseite)
-        // Wir suchen den Link, der zurück zur index führt
-        const backLink = document.querySelector('a[href="../index.html"]');
-        if (backLink) {
-            backLink.addEventListener('click', function (e) {
-                if (document.referrer && window.history.length > 1) {
-                    e.preventDefault();
-                    window.history.back();
-                }
-            });
-        }
+        // Smart Back Logik
+        document.getElementById('back-link').addEventListener('click', function (e) {
+            if (document.referrer && window.history.length > 1) {
+                e.preventDefault();
+                window.history.back();
+            }
+        });
     </script>
 </body>
 
