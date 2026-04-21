@@ -18,15 +18,17 @@
         }</script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-    /* Verhindert das Springen des Layouts beim Seitenwechsel */
-    html {
-        overflow-y: scroll;
-    }
-    /* Optional: Verhindert, dass Flex-Items den Header "aufpumpen" */
-    .header-container {
-        min-height: 72px; /* Setze eine feste Mindesthöhe */
-    }
-</style>
+        /* Verhindert das Springen des Layouts beim Seitenwechsel */
+        html {
+            overflow-y: scroll;
+        }
+
+        /* Optional: Verhindert, dass Flex-Items den Header "aufpumpen" */
+        .header-container {
+            min-height: 72px;
+            /* Setze eine feste Mindesthöhe */
+        }
+    </style>
     <link rel="icon" type="image/png" href="../../assets/images/logo.png">
 </head>
 
@@ -52,8 +54,7 @@
             <div class="max-w-3xl mx-auto px-6">
                 <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">App-Datenschutzerklärung
                 </h1>
-                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">AdventuVerse – Stand: März
-                    2026</p>
+                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">AdventuVerse – Stand: April 2026</p>
             </div>
         </section>
 
@@ -71,11 +72,15 @@
 
                 <!-- Kapitel 1 -->
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Datenerfassung & Infrastruktur</h2>
-                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Cloud-Dienste (Supabase)</h3>
-                    <p>Um Spielstände geräteübergreifend zu synchronisieren, nutzen wir den Dienst
-                        <strong>Supabase</strong>. Dabei werden Ihre E-Mail-Adresse (bei Anmeldung über Drittanbieter)
-                        sowie Ihr gewählter Nutzername auf verschlüsselten Servern gespeichert.</p>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Datenerfassung & Anmeldung</h2>
+                    
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Gast-Modus</h3>
+                    <p class="mb-4">Sie können die App ohne Registrierung nutzen. In diesem Fall werden Ihre Fortschritte, Statistiken und Münzen ausschließlich lokal auf Ihrem Endgerät gespeichert (AsyncStorage). Diese Daten sind an Ihr Gerät gebunden und gehen bei einer Deinstallation der App oder beim Löschen des App-Caches verloren.</p>
+
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Registrierung & Cloud-Dienste (Supabase)</h3>
+                    <p>Um Spielstände geräteübergreifend zu synchronisieren und Ihren Fortschritt dauerhaft zu sichern, nutzen wir den Backend-Dienst <strong>Supabase</strong>. 
+                        Bei einer Anmeldung via <strong>Google (OAuth)</strong> werden Ihre E-Mail-Adresse sowie Ihr Profilbild-Link von Google an uns übertragen. 
+                        Zudem wird Ihr gewählter Nutzername auf verschlüsselten Servern gespeichert. Zur Sicherheit und Missbrauchsprävention (z. B. Schutz vor DDoS-Angriffen) erfassen unsere Server kurzzeitig Ihre IP-Adresse.</p>
                 </div>
 
                 <!-- Kapitel 2 -->
@@ -83,23 +88,23 @@
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Hardware-Zugriffe & Sensoren</h2>
                     <p>AdventuVerse nutzt technische Funktionen Ihres Geräts, um interaktive Spielmechaniken zu
                         ermöglichen. Hierbei gilt unser Grundsatz: <strong>Alle Sensordaten werden ausschließlich lokal
-                            auf Ihrem Gerät verarbeitet.</strong></p>
+                            auf Ihrem Gerät verarbeitet.</strong> Es findet keine Übertragung oder Speicherung dieser Rohdaten auf unseren Servern statt.</p>
 
                     <div class="mt-6 space-y-4 border-l-4 border-blue-50 pl-6">
                         <div>
                             <h4 class="font-bold text-slate-900">Mikrofon</h4>
                             <p class="text-sm text-slate-600">Wird für Rätsel genutzt (z. B. Pusten). Die App misst nur
-                                den Pegel; es werden keine Aufnahmen erstellt oder übertragen.</p>
+                                den Pegel (Lautstärke); es werden keine Audioaufnahmen erstellt, gespeichert oder übertragen.</p>
                         </div>
                         <div>
-                            <h4 class="font-bold text-slate-900">Bewegungsdaten</h4>
+                            <h4 class="font-bold text-slate-900">Bewegungsdaten (Beschleunigungssensor)</h4>
                             <p class="text-sm text-slate-600">Erkennung von Neigungen, Schütteln oder Drehungen des
-                                Geräts für Spielaktionen.</p>
+                                Geräts für Spielaktionen innerhalb der Geschichten.</p>
                         </div>
                         <div>
                             <h4 class="font-bold text-slate-900">Lichtsensor</h4>
                             <p class="text-sm text-slate-600">Wird genutzt, um Spielereignisse basierend auf der
-                                Umgebungshelligkeit auszulösen.</p>
+                                Umgebungshelligkeit auszulösen (nur auf unterstützten Android-Geräten).</p>
                         </div>
                     </div>
                 </div>
@@ -107,21 +112,19 @@
                 <!-- Kapitel 3 -->
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Werbe- und Zahlsysteme</h2>
-                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Google AdMob</h3>
-                    <p>Die App nutzt Google AdMob zur Werbe-Finanzierung. Google verwendet ggf. Werbe-IDs (IDFA/AAID),
-                        um Anzeigen zu personalisieren. Sie können dies in Ihren Systemeinstellungen einschränken.</p>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Google AdMob & Zustimmungsverwaltung</h3>
+                    <p class="mb-4">Die App nutzt Google AdMob zur Anzeige von Werbung. Beim ersten Start fragen wir Sie über ein standardisiertes Auswahlfenster (Consent Management Platform - CMP), ob Sie personalisierter Werbung zustimmen. <strong>Sie können Ihre Auswahl jederzeit in den App-Einstellungen unter "Werbe-Einstellungen" einsehen und mit Wirkung für die Zukunft widerrufen.</strong></p>
+                    <p>Google verwendet Werbe-IDs (IDFA unter iOS / AAID unter Android), um Anzeigen zu personalisieren und die Leistung der Werbung zu messen.</p>
 
                     <h3 class="text-xl font-semibold text-slate-800 mt-6 mb-2">RevenueCat</h3>
-                    <p>Zur Verwaltung von In-App-Käufen nutzen wir RevenueCat. Es werden keine privaten Zahlungsdaten
-                        (Kreditkarten etc.) auf unseren Servern gespeichert; die Abwicklung erfolgt durch den App Store.
-                    </p>
+                    <p>Zur Verwaltung von In-App-Käufen und Abonnements nutzen wir den Dienst <strong>RevenueCat</strong>. Dabei wird eine anonyme Kennung Ihres Store-Accounts verarbeitet, um gekaufte Inhalte (z. B. neue Geschichten) Ihrem Profil zuzuordnen. Es werden keine privaten Zahlungsdaten (wie Kreditkartennummern) auf unseren Servern gespeichert; die Abwicklung erfolgt ausschließlich durch den jeweiligen App Store.</p>
                 </div>
 
                 <!-- Kapitel 4 -->
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Ihre Rechte</h2>
                     <p>Sie haben das Recht auf Auskunft, Korrektur und Löschung Ihrer Daten. Sie können Ihr Konto sowie
-                        alle Fortschritte jederzeit <strong>direkt innerhalb der App unwiderruflich löschen.</strong>
+                        alle damit verbundenen Fortschritte und Käufe jederzeit <strong>direkt innerhalb der App unter "Einstellungen" -> "Konto löschen" unwiderruflich löschen.</strong>
                     </p>
                 </div>
 
@@ -130,29 +133,32 @@
     </main>
 
     <!-- FOOTER -->
-<footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
-        
-        <!-- Gruppe 1: Copyright -->
-        <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-slate-400">
-            <p>© 2026 SD Nightshift Studio</p>
-            <span class="hidden sm:inline">|</span>
-            <p>Alle Rechte vorbehalten</p>
-        </div>
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
 
-        <span class="hidden md:inline text-slate-300">|</span>
+            <!-- Gruppe 1: Copyright -->
+            <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-slate-400">
+                <p>© 2026 SD Nightshift Studio</p>
+                <span class="hidden sm:inline">|</span>
+                <p>Alle Rechte vorbehalten</p>
+            </div>
 
-        <!-- Gruppe 2: Links (Bleibt auf Mobile IMMER in einer Reihe) -->
-        <div class="flex items-center gap-3">
-            <a href="../../index.html" class="hover:text-primary transition-colors text-slate-500">Startseite</a>
-            <span class="text-slate-300">|</span>
-            <a href="../../legal/impressum.html" class="hover:text-primary transition-colors text-slate-500">Impressum</a>
-            <span class="text-slate-300">|</span>
-            <a href="../../legal/datenschutz.html" class="hover:text-primary transition-colors text-slate-500">Datenschutz</a>
+            <span class="hidden md:inline text-slate-300">|</span>
+
+            <!-- Gruppe 2: Links (Bleibt auf Mobile IMMER in einer Reihe) -->
+            <div class="flex items-center gap-3">
+                <a href="../../index.html" class="hover:text-primary transition-colors text-slate-500">Startseite</a>
+                <span class="text-slate-300">|</span>
+                <a href="../../legal/impressum.html"
+                    class="hover:text-primary transition-colors text-slate-500">Impressum</a>
+                <span class="text-slate-300">|</span>
+                <a href="../../legal/datenschutz.html"
+                    class="hover:text-primary transition-colors text-slate-500">Datenschutz</a>
+            </div>
+
         </div>
-        
-    </div>
-</footer>
+    </footer>
 
     <script>
         lucide.createIcons();
