@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz - BrainEase | SD Nightshift Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
+                    colors: { primary: '#5397EA' }
+                }
+            }
+        }</script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+</head>
+
+<body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-2">
+            <a href="../../index.html" class="flex items-center gap-3 group shrink-0">
+                <img src="../../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10">
+                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900">Nightshift Studio</span>
+            </a>
+            <a href="index.html" id="back-link"
+                class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group">
+                <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+                <span>Zurück</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow bg-white">
+        <section class="bg-slate-50 py-12 md:py-16 border-b border-slate-200 text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">App-Datenschutzerklärung</h1>
+                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">BrainEase – Stand: Juni 2026</p>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="max-w-3xl mx-auto px-6 text-slate-700 leading-relaxed space-y-12">
+                <div>
+                    <p class="text-lg">Der Schutz deiner privaten Gedanken und deiner persönlichen Daten hat für uns höchste Priorität. Diese Datenschutzerklärung klärt dich darüber auf, welche Daten in der App „BrainEase“ erhoben werden, wie wir sie schützen und welche Rechte du hast.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Grundsatz: Lokale Speicherung</h2>
+                    <div class="space-y-4">
+                        <p>BrainEase ist nach dem "Privacy by Design"-Prinzip entwickelt. <strong>Deine Tagebucheinträge und sortierten Gedanken werden standardmäßig verschlüsselt und ausschließlich lokal auf deinem Gerät gespeichert.</strong></p>
+                        <p>Wir haben keinen Zugriff auf deine gespeicherten Verlaufsdaten. Wenn du ein Backup aktivieren möchtest, erfolgt dies freiwillig und wird in deinem eigenen, privaten Cloud-Speicher (Apple iCloud oder Google Drive) abgelegt.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. KI-Analyse deiner Gedanken</h2>
+                    <div class="space-y-4">
+                        <p>Um deine notierten Gedanken zu strukturieren, nutzt die App Künstliche Intelligenz. Dafür wird der von dir eingegebene Text über eine sichere Verbindung an unsere Serverinfrastruktur (gehostet bei Google Firebase in Frankfurt am Main, Deutschland / EU) gesendet und von dort über eine Schnittstelle an OpenAI (API) weitergeleitet.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Keine Speicherung:</strong> Deine Texte werden auf unseren Servern nur für den Bruchteil einer Sekunde im Arbeitsspeicher verarbeitet und danach sofort gelöscht. Es werden keine Logs deiner Inhalte angelegt.</li>
+                            <li><strong>Kein KI-Training:</strong> OpenAI nutzt Daten, die über die API (Programmierschnittstelle) gesendet werden, strikt <strong>nicht</strong> für das Training oder die Verbesserung ihrer KI-Modelle.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Accounts & Authentifizierung</h2>
+                    <div class="space-y-4">
+                        <p>Wenn du die App startest, wird zunächst ein anonymer Gast-Account erstellt (Firebase Auth), um die Basisfunktionen zu ermöglichen. Es werden hierbei keine persönlichen Daten wie Name oder E-Mail-Adresse erfasst.</p>
+                        <p>Entscheidest du dich dafür, deinen Account zu sichern (z.B. über "Mit Apple anmelden" oder "Mit Google anmelden"), erhalten wir lediglich eine anonymisierte Nutzer-ID sowie die mit dem Dienst verknüpfte E-Mail-Adresse (zur Wiederherstellung des Accounts). Diese Daten werden nicht an Dritte weiterverkauft.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. In-App-Käufe und Abonnements</h2>
+                    <p>Für die Abwicklung von Premium-Abonnements nutzen wir den Dienst <em>RevenueCat</em>. RevenueCat verarbeitet lediglich anonymisierte Identifikatoren und Kaufbelege, um den Freischalt-Status deiner App zu prüfen. Weder wir noch RevenueCat erhalten Zugang zu deinen Kreditkarten- oder Bankdaten, da alle Zahlungen vollständig über deinen Apple App Store oder Google Play Store abgewickelt werden.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">5. Analysedaten & Absturzberichte (Nur mit Opt-In)</h2>
+                    <div class="space-y-4">
+                        <p>Um Bugs zu finden und die App zu verbessern, nutzen wir Firebase Analytics und Firebase Crashlytics. <strong>Diese Dienste sind standardmäßig deaktiviert.</strong></p>
+                        <p>Nur wenn du uns beim ersten Start der App im Einwilligungs-Dialog (Consent-Dialog) ausdrücklich die Erlaubnis erteilst (Opt-in), erheben wir anonymisierte Nutzungsdaten (z.B. besuchte Bildschirme, Gerätetyp, Absturzprotokolle). Du kannst diese Einwilligung jederzeit in den Einstellungen der App unter "Privatsphäre" widerrufen.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">6. Berechtigungen (Mikrofon & Benachrichtigungen)</h2>
+                    <ul class="list-disc pl-5 space-y-4">
+                        <li><strong>Mikrofon / Spracherkennung:</strong> Wenn du deine Gedanken diktierst, nutzt die App die systemeigene Spracherkennung deines Geräts (Apple Siri / Google Speech). Audiodaten werden direkt von deinem Betriebssystem verarbeitet und nicht auf unseren Servern gespeichert.</li>
+                        <li><strong>Benachrichtigungen:</strong> Die App benötigt diese Berechtigung nur, wenn du lokale, tägliche Erinnerungen für deine Abendroutine aktivieren möchtest. Diese Benachrichtigungen werden rein lokal auf deinem Gerät geplant.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">7. Deine Rechte (DSGVO)</h2>
+                    <div class="space-y-4">
+                        <p>Nach der Datenschutz-Grundverordnung (DSGVO) stehen dir unter anderem das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner Daten zu.</p>
+                        <p><strong>Account löschen:</strong> Du kannst all deine Daten, deine lokale Datenbank und deinen Cloud-Account jederzeit unwiderruflich und direkt in der App löschen (Profil > Account löschen).</p>
+                        <p>Bei Fragen zum Datenschutz wende dich jederzeit an uns. Kontaktdaten findest du im <a href="../../legal/impressum.html" class="text-primary hover:underline">Impressum</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+            <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-slate-400">
+                <p>© 2026 SD Nightshift Studio</p>
+                <span class="hidden sm:inline">|</span>
+                <p>Alle Rechte vorbehalten</p>
+            </div>
+            <span class="hidden md:inline text-slate-300">|</span>
+            <div class="flex items-center gap-3">
+                <a href="../../index.html" class="hover:text-primary transition-colors text-slate-500">Startseite</a>
+                <span class="text-slate-300">|</span>
+                <a href="../../legal/impressum.html" class="hover:text-primary transition-colors text-slate-500">Impressum</a>
+                <span class="text-slate-300">|</span>
+                <a href="../../legal/datenschutz.html" class="hover:text-primary transition-colors text-slate-500">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('back-link').addEventListener('click', function (e) {
+            if (document.referrer && window.history.length > 1) { e.preventDefault(); window.history.back(); }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrainEase | SD Nightshift Studio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
+                    colors: { primary: '#5397EA' }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+
+        .header-container {
+            min-height: 72px;
+        }
+
+        .logo-glow {
+            filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2));
+        }
+    </style>
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+</head>
+
+<body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
+            <a href="../../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+                <img src="../../assets/images/logo.png" alt="SD Logo"
+                    class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
+                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
+                    Nightshift Studio
+                </span>
+            </a>
+            <a href="../../index.html#apps"
+                class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
+                <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+                <span class="hidden sm:inline">Zurück zur Startseite</span>
+                <span class="sm:hidden">Zurück</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="relative bg-slate-50 py-16 md:py-24 border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <div
+                        class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-[3rem] shadow-2xl border border-slate-100 flex items-center justify-center overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
+                        <img src="../../assets/images/apps/brainease/brainease_logo.png" alt="BrainEase Logo"
+                            class="w-[200px] h-[200px] md:w-64 md:h-64 logo-glow">
+                    </div>
+                </div>
+
+                <div class="w-full md:w-2/3 text-left">
+                    <div
+                        class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
+                        Achtsamkeit & Schlaf
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">BrainEase</h1>
+                    <p class="text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl">
+                        BrainEase hilft dir, das Gedanken-Chaos des Tages loszulassen und abends echte Ruhe zu finden. 
+                        Mit einer sanften Abendroutine machst du den Kopf frei für einen tiefen, erholsamen Schlaf.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-12 text-center text-slate-900">Was dich erwartet</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Smarte Gedankensortierung</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Notiere oder diktiere, was dich bewegt. BrainEase strukturiert deine Gedanken sanft für dich und gibt dir ein beruhigendes, empathisches Feedback, um Sorgen leichter loszulassen.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="moon"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Begleitete Auszeit</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Schließe deine Routine mit einer 2-minütigen Atempause ab. Entspannende Klänge helfen dir, physisch und mental herunterzufahren.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">100% Privat & Sicher</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Deine Einträge werden verschlüsselt und sicher direkt auf deinem Gerät gespeichert. Deine intimsten Gedanken gehören nur dir und werden niemals an Dritte weitergegeben.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 class="text-2xl font-bold mb-6">Rechtliches & Datenschutz</h2>
+                <p class="text-slate-500 mb-8 max-w-xl mx-auto">Transparenz und der Schutz deiner privatesten Gedanken sind uns wichtig. Hier findest du die spezifischen Nutzungsbedingungen und Datenschutzrichtlinien für BrainEase.</p>
+                <div class="flex justify-center gap-6 text-sm font-semibold text-primary">
+                    <a href="datenschutz.html" class="hover:underline">App-Datenschutz</a>
+                    <a href="agb.html" class="hover:underline">AGB (BrainEase)</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+            <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-slate-400">
+                <p>© 2026 SD Nightshift Studio</p>
+                <span class="hidden sm:inline">|</span>
+                <p>Alle Rechte vorbehalten</p>
+            </div>
+            <span class="hidden md:inline text-slate-300">|</span>
+            <div class="flex items-center gap-3">
+                <a href="../../index.html" class="hover:text-primary transition-colors text-slate-500">Startseite</a>
+                <span class="text-slate-300">|</span>
+                <a href="../../legal/impressum.html" class="hover:text-primary transition-colors text-slate-500">Impressum</a>
+                <span class="text-slate-300">|</span>
+                <a href="../../legal/datenschutz.html" class="hover:text-primary transition-colors text-slate-500">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
