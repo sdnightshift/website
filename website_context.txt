@@ -895,7 +895,7 @@ FILE: index.html
                     <h3 class="text-xl font-bold text-slate-900 border-b border-slate-300 pb-2 mb-6">Kontakt</h3>
                     <p class="text-slate-600 mb-6 font-medium">Hast du Fragen oder Feedback zu meinen Apps?</p>
 
-                    <a href="mailto:sdnightshift.dev@gmail.com"
+                    <a href="mailto:sdnightshiftstudio@gmail.com"
                         class="flex items-center gap-4 bg-slate-50 border border-slate-200 px-5 py-4 rounded-xl w-full sm:w-fit shadow-sm hover:bg-slate-100 hover:border-primary/30 hover:shadow-md transition-all group">
                         <div class="bg-primary p-2.5 rounded-lg text-white group-hover:bg-blue-600 transition-colors">
                             <i data-lucide="mail" class="w-6 h-6"></i>
@@ -905,7 +905,7 @@ FILE: index.html
                                 class="text-xs text-slate-400 font-semibold uppercase tracking-wider leading-none mb-1">E-Mail
                                 schreiben</span>
                             <span class="text-slate-700 ">
-                                sdnightshift.dev@gmail.com
+                                sdnightshiftstudio@gmail.com
                             </span>
                         </div>
                     </a>
@@ -1103,7 +1103,7 @@ FILE: legal\datenschutz.html
                         <p>Sebastian Wolfgang Dichmann</p>
                         <p>Am Ziegelstadel 20</p>
                         <p>87700 Memmingen</p>
-                        <p class="mt-2">E-Mail: <a href="mailto:sdnightshift.dev@gmail.com" class="text-primary hover:underline">sdnightshift.dev@gmail.com</a></p>
+                        <p class="mt-2">E-Mail: <a href="mailto:sdnightshiftstudio@gmail.com" class="text-primary hover:underline">sdnightshiftstudio@gmail.com</a></p>
                     </div>
                 </div>
 
@@ -1250,7 +1250,7 @@ FILE: legal\impressum.html
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">Kontakt</h2>
                     <p class="text-lg">
-                        E-Mail: <a href="mailto:sdnightshift.dev@gmail.com" class="text-primary font-semibold hover:underline">sdnightshift.dev@gmail.com</a>
+                        E-Mail: <a href="mailto:sdnightshiftstudio@gmail.com" class="text-primary font-semibold hover:underline">sdnightshiftstudio@gmail.com</a>
                     </p>
                 </div>
 
