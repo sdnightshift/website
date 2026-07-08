@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Smarte BeetIdeen | SD Nightshift Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
+                    colors: { primary: '#5397EA' }
+                }
+            }
+        }</script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Verhindert das Springen des Layouts beim Seitenwechsel */
+        html {
+            overflow-y: scroll;
+        }
+
+        /* Optional: Verhindert, dass Flex-Items den Header "aufpumpen" */
+        .header-container {
+            min-height: 72px;
+            /* Setze eine feste Mindesthöhe */
+        }
+    </style>
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+</head>
+
+<body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-2">
+            <a href="../../index.en.html" class="flex items-center gap-3 group shrink-0">
+                <img src="../../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10">
+                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900">Nightshift Studio</span>
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="index.en.html" id="back-link"
+                    class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group">
+                    <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+                    <span>Back</span>
+                </a>
+                <!-- Language switcher -->
+                <div class="flex items-center gap-1 text-xs font-bold border border-slate-200 rounded-full p-1 shrink-0">
+                    <a href="datenschutz.html"
+                        class="px-2.5 py-1 rounded-full text-slate-500 hover:text-primary transition-colors">DE</a>
+                    <a href="datenschutz.en.html" class="px-2.5 py-1 rounded-full bg-primary text-white transition-colors">EN</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow bg-white">
+        <!-- TITELBEREICH -->
+        <section class="bg-slate-50 py-12 md:py-16 border-b border-slate-200 text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">App Privacy Policy
+                </h1>
+                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">Smarte BeetIdeen –
+                    Last updated: June 2026</p>
+            </div>
+        </section>
+
+        <!-- DOKUMENTEN-BODY -->
+        <section class="py-16">
+            <div class="max-w-3xl mx-auto px-6 text-slate-700 leading-relaxed space-y-12">
+
+                <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6 text-amber-900">
+                    <h2 class="text-xl font-bold mb-2">Data minimization as a principle</h2>
+                    <p>We only collect the data that is strictly necessary to operate the app. By default, all your garden projects, photos, and beds are stored <strong>exclusively locally on your device</strong> until you actively decide to create a user account.</p>
+                </div>
+
+                <!-- Einleitung -->
+                <div>
+                    <p>Protecting your personal data is important to us. This Privacy Policy explains the nature, scope, and purpose of processing personal data within our "Smarte BeetIdeen" app. The controller for data processing is SD Nightshift Studio (see <a href="../../legal/impressum.en.html"
+                            class="text-primary font-semibold hover:underline">Legal Notice</a> for details).</p>
+                </div>
+
+                <!-- Kapitel 1 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Data collection and storage</h2>
+
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Local use (guest mode)</h3>
+                    <p class="mb-4">If you use the app without signing in, all the beds, plant lists, and diagnosis history you create remain in a local database on your smartphone. We have no access to this data.</p>
+
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">User account and cloud sync</h3>
+                    <p>If you sign in via Google or Apple, we collect your email address and name to create your account. If you enable the optional "cloud sync" feature (Premium), your projects and images are encrypted and backed up on our servers (Supabase) so you can restore them on other devices.</p>
+                </div>
+
+                <!-- Kapitel 2 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Data processing through app features</h2>
+                    <p>To offer you the app's smart features, specific data must be temporarily processed:</p>
+
+                    <div class="mt-6 space-y-4 border-l-4 border-blue-50 pl-6">
+                        <div>
+                            <h4 class="font-bold text-slate-900">Artificial intelligence (images & diagnoses)</h4>
+                            <p class="text-sm text-slate-600">If you photograph a bed or a sick plant, that image is sent via an encrypted connection to our AI partners (OpenAI / Fal.ai). It is processed there only for the duration of the analysis, is <strong>not</strong> used to train AI models, and is immediately deleted afterward.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">In-app purchases (subscription & Garden Pass)</h4>
+                            <p class="text-sm text-slate-600">All payments are processed securely through the Apple App Store or Google Play Store. We use the service RevenueCat to manage unlocks. We never have any insight into your bank or credit card details; we only process anonymized purchase IDs.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Usage analytics (strict opt-in)</h4>
+                            <p class="text-sm text-slate-600">We use Google Analytics for Firebase to detect crashes and improve the app. This happens <strong>only</strong> if you have explicitly consented during onboarding. You can withdraw this consent at any time with a single tap in the app settings.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kapitel 3 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Third-party providers used</h2>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Hosting and infrastructure</h3>
+                    <p class="mb-4">We work exclusively with carefully vetted service providers who have committed to GDPR compliance. Our core infrastructure includes:</p>
+                    <ul class="list-disc list-inside space-y-2 ml-2 mb-4">
+                        <li><strong>Supabase:</strong> Database hosting, authentication, and cloud storage.</li>
+                        <li><strong>RevenueCat:</strong> Validation of subscriptions and in-app purchases.</li>
+                        <li><strong>OpenAI & Fal.ai:</strong> Provision of AI interfaces for text and image generation.</li>
+                        <li><strong>Google Firebase:</strong> Error and usage analytics (only with active consent).</li>
+                    </ul>
+                    <p>All data transfers between the app and the servers use current security standards (SSL/TLS encryption).</p>
+                </div>
+
+                <!-- Kapitel 4 -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Your rights under the GDPR</h2>
+                    <p>You have the right at any time to access, rectify, restrict, and erase your personal data. <strong>Full control:</strong> You can independently, completely, and irrevocably remove your account, along with all associated images and cloud data, from our servers at any time directly in the app under "Profile -> Delete account". If you use "Sign in with Apple", the authentication token with Apple is automatically revoked upon deletion as well.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
+        <div
+            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+
+            <!-- Gruppe 1: Copyright -->
+            <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-slate-400">
+                <p>© 2026 SD Nightshift Studio</p>
+                <span class="hidden sm:inline">|</span>
+                <p>All rights reserved</p>
+            </div>
+
+            <span class="hidden md:inline text-slate-300">|</span>
+
+            <!-- Gruppe 2: Links (Bleibt auf Mobile IMMER in einer Reihe) -->
+            <div class="flex items-center gap-3">
+                <a href="../../index.en.html" class="hover:text-primary transition-colors text-slate-500">Home</a>
+                <span class="text-slate-300">|</span>
+                <a href="../../legal/impressum.en.html"
+                    class="hover:text-primary transition-colors text-slate-500">Legal Notice</a>
+                <span class="text-slate-300">|</span>
+                <a href="../../legal/datenschutz.en.html"
+                    class="hover:text-primary transition-colors text-slate-500">Privacy Policy</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('back-link').addEventListener('click', function (e) {
+            if (document.referrer && window.history.length > 1) { e.preventDefault(); window.history.back(); }
+        });
+    </script>
+</body>
+
+</html>

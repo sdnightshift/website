@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smarte BeetIdeen | SD Nightshift Studio</title>
+    <title>AdventuVerse | SD Nightshift Studio</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -21,14 +21,14 @@
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        html {
+                html {
             overflow-y: scroll;
         }
 
         .header-container {
             min-height: 72px;
+            /* Setze eine feste Mindesthöhe */
         }
-
         .logo-glow {
             filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2));
         }
@@ -43,7 +43,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
 
             <!-- Logo & Name -->
-            <a href="../../index.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+            <a href="../../index.en.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
                 <img src="../../assets/images/logo.png" alt="SD Logo"
                     class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
                 <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">
@@ -52,18 +52,18 @@
             </a>
 
             <div class="flex items-center gap-3 shrink-0">
-                <!-- Zurück-Link -->
-                <a href="../../index.html#apps"
+                <!-- Back link -->
+                <a href="../../index.en.html#apps"
                     class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
                     <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
-                    <span class="hidden sm:inline">Zurück zur Startseite</span>
-                    <span class="sm:hidden">Zurück</span>
+                    <span class="hidden sm:inline">Back to home</span>
+                    <span class="sm:hidden">Back</span>
                 </a>
-                <!-- Sprach-Umschalter -->
+                <!-- Language switcher -->
                 <div class="flex items-center gap-1 text-xs font-bold border border-slate-200 rounded-full p-1 shrink-0">
-                    <a href="index.html" class="px-2.5 py-1 rounded-full bg-primary text-white transition-colors">DE</a>
-                    <a href="index.en.html"
-                        class="px-2.5 py-1 rounded-full text-slate-500 hover:text-primary transition-colors">EN</a>
+                    <a href="index.html"
+                        class="px-2.5 py-1 rounded-full text-slate-500 hover:text-primary transition-colors">DE</a>
+                    <a href="index.en.html" class="px-2.5 py-1 rounded-full bg-primary text-white transition-colors">EN</a>
                 </div>
             </div>
 
@@ -79,8 +79,8 @@
                     <div
                         class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-[3rem] shadow-2xl border border-slate-100 flex items-center justify-center overflow-hidden group">
                         <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
-                        <img src="../../assets/images/apps/smartebeetideen/smartebeetideen_logo.png"
-                            alt="Smarte BeetIdeen Logo" class="w-[200px] h-[200px] md:w-64 md:h-64 logo-glow">
+                        <img src="../../assets/images/apps/adventuverse/adventuverse_logo.png" alt="Adventuverse_Logo"
+                            class="w-[200px] h-[200px] md:w-64 md:h-64 logo-glow">
                     </div>
                 </div>
 
@@ -88,12 +88,12 @@
                 <div class="w-full md:w-2/3 text-left">
                     <div
                         class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
-                        House &amp; Home
+                        Gaming
                     </div>
-                    <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">Smarte
-                        BeetIdeen</h1>
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">AdventuVerse</h1>
                     <p class="text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl">
-                        Aus Ideen wachsen Lieblingsorte. Plane atemberaubende Beete, erhalte maßgeschneiderte Pflegeanleitungen und rette kranke Gewächse mit dem integrierten Pflanzendoktor. Dein Garten, smart gedacht.
+                        Leave reality behind and become the hero of your own story. AdventuVerse combines gripping
+                        storytelling with interactive mechanics, where every one of your choices shapes the ending.
                     </p>
                 </div>
             </div>
@@ -102,34 +102,37 @@
         <!-- APP FEATURES -->
         <section class="py-20 bg-white">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-3xl font-bold mb-12 text-center text-slate-900">Was dich erwartet</h2>
+                <h2 class="text-3xl font-bold mb-12 text-center text-slate-900">What you can expect</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Feature 1 -->
                     <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
                         <div
                             class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
-                            <i data-lucide="sprout"></i>
+                            <i data-lucide="clapperboard"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Beetplanung</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Fotografiere deinen Gartenbereich, wähle deinen Stil und lass dir von unserer KI realistische Vorher-Nachher-Bilder inklusive passender Pflanzliste erstellen.</p>
+                        <h3 class="text-xl font-bold mb-3">A multiverse of genres</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">From gripping thrillers to epic sci-fi
+                            adventures. We offer stories for every taste.</p>
                     </div>
                     <!-- Feature 2 -->
                     <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
                         <div
                             class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
-                            <i data-lucide="home"></i>
+                            <i data-lucide="git-branch"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Dein digitaler Garten</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Speichere deine Projekte ab und erhalte jederzeit Zugriff auf detaillierte Pflegeanleitungen für Gießen, Düngen und den perfekten Standort deiner Pflanzen.</p>
+                        <h3 class="text-xl font-bold mb-3">Your choice matters</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Every decision branches the plot. There's
+                            no right or wrong – only your story.</p>
                     </div>
                     <!-- Feature 3 -->
                     <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
                         <div
                             class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
-                            <i data-lucide="leaf"></i>
+                            <i data-lucide="smartphone"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">Smarter PflanzenDoktor</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">Deine Pflanze lässt die Blätter hängen? Mach ein Foto und unsere Diagnose-KI verrät dir in Sekundenschnelle, was fehlt und wie du sie wieder gesund pflegst.</p>
+                        <h3 class="text-xl font-bold mb-3">Immersive UI</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">A design that lets you forget the world
+                            around you. Optimized for the perfect reading experience.</p>
                     </div>
                 </div>
             </div>
@@ -138,47 +141,69 @@
         <!-- LEGAL INFO (Speziell für die App) -->
         <section class="py-16 bg-slate-50 border-t border-slate-200">
             <div class="max-w-6xl mx-auto px-6 text-center">
-                <h2 class="text-2xl font-bold mb-6">Rechtliches &amp; Datenschutz</h2>
-                <p class="text-slate-500 mb-8 max-w-xl mx-auto">Der Schutz deiner Daten und absolute Transparenz stehen bei uns an erster Stelle. Hier findest du die spezifischen Bedingungen für die Nutzung der App.</p>
+                <h2 class="text-2xl font-bold mb-6">Legal & Privacy</h2>
+                <p class="text-slate-500 mb-8 max-w-xl mx-auto">AdventuVerse takes the protection of your data
+                    seriously. Here you'll find the specific terms for this app.</p>
                 <div class="flex justify-center gap-6 text-sm font-semibold text-primary">
-                    <a href="datenschutz.html" class="hover:underline">App-Datenschutz</a>
-                    <a href="agb.html" class="hover:underline">AGB (Smarte BeetIdeen)</a>
+                    <a href="datenschutz.en.html" class="hover:underline">App Privacy Policy</a>
+                    <a href="agb.en.html" class="hover:underline">Terms of Service (AdventuVerse)</a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- 5. BOTTOM FOOTER (Synchronisiert mit Index + relative Pfade) -->
-    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
-        <div
-            class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+<footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
 
-            <!-- Gruppe 1: Copyright -->
-            <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-slate-400">
-                <p>© 2026 SD Nightshift Studio</p>
-                <span class="hidden sm:inline">|</span>
-                <p>Alle Rechte vorbehalten</p>
-            </div>
-
-            <span class="hidden md:inline text-slate-300">|</span>
-
-            <!-- Gruppe 2: Links (Bleibt auf Mobile IMMER in einer Reihe) -->
-            <div class="flex items-center gap-3">
-                <a href="../../index.html" class="hover:text-primary transition-colors text-slate-500">Startseite</a>
-                <span class="text-slate-300">|</span>
-                <a href="../../legal/impressum.html"
-                    class="hover:text-primary transition-colors text-slate-500">Impressum</a>
-                <span class="text-slate-300">|</span>
-                <a href="../../legal/datenschutz.html"
-                    class="hover:text-primary transition-colors text-slate-500">Datenschutz</a>
-            </div>
-
+        <!-- Gruppe 1: Copyright -->
+        <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-slate-400">
+            <p>© 2026 SD Nightshift Studio</p>
+            <span class="hidden sm:inline">|</span>
+            <p>All rights reserved</p>
         </div>
-    </footer>
+
+        <span class="hidden md:inline text-slate-300">|</span>
+
+        <!-- Gruppe 2: Links (Bleibt auf Mobile IMMER in einer Reihe) -->
+        <div class="flex items-center gap-3">
+            <a href="../../index.en.html" class="hover:text-primary transition-colors text-slate-500">Home</a>
+            <span class="text-slate-300">|</span>
+            <a href="../../legal/impressum.en.html" class="hover:text-primary transition-colors text-slate-500">Legal Notice</a>
+            <span class="text-slate-300">|</span>
+            <a href="../../legal/datenschutz.en.html" class="hover:text-primary transition-colors text-slate-500">Privacy Policy</a>
+        </div>
+
+    </div>
+</footer>
 
     <script>
         // Icons initialisieren
         lucide.createIcons();
+
+        // Mobile Menü Logik (Identisch zu Index)
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            }
+        });
+
+        // Automatisches Schließen bei Klick
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
     </script>
 </body>
 

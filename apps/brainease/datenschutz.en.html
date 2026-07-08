@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BrainEase | SD Nightshift Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif']
+                    },
+                    colors: { primary: '#5397EA' }
+                }
+            }
+        }</script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+</head>
+
+<body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-2">
+            <a href="../../index.en.html" class="flex items-center gap-3 group shrink-0">
+                <img src="../../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10">
+                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900">Nightshift Studio</span>
+            </a>
+            <div class="flex items-center gap-3">
+                <a href="index.en.html" id="back-link"
+                    class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group">
+                    <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+                    <span>Back</span>
+                </a>
+                <!-- Language switcher -->
+                <div class="flex items-center gap-1 text-xs font-bold border border-slate-200 rounded-full p-1 shrink-0">
+                    <a href="datenschutz.html"
+                        class="px-2.5 py-1 rounded-full text-slate-500 hover:text-primary transition-colors">DE</a>
+                    <a href="datenschutz.en.html" class="px-2.5 py-1 rounded-full bg-primary text-white transition-colors">EN</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow bg-white">
+        <section class="bg-slate-50 py-12 md:py-16 border-b border-slate-200 text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">App Privacy Policy</h1>
+                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">BrainEase – Last updated: July 2026</p>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="max-w-3xl mx-auto px-6 text-slate-700 leading-relaxed space-y-12">
+                <div>
+                    <p class="text-lg">Protecting your private thoughts and personal data is our top priority. This Privacy Policy explains what data is collected in the "BrainEase" app, how we protect it, and what rights you have.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Controller</h2>
+                    <div class="space-y-4">
+                        <p>The controller within the meaning of the General Data Protection Regulation (GDPR) for data processing in the "BrainEase" app is SD Nightshift Studio. You can find the controller's full contact details in our <a href="../../legal/impressum.en.html" class="text-primary hover:underline">Legal Notice</a>.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Principle: local & encrypted storage</h2>
+                    <div class="space-y-4">
+                        <p>BrainEase is developed according to the "privacy by design" principle. <strong>Your journal entries and sorted thoughts are, by default, strongly encrypted (database encryption) and stored exclusively locally on your device.</strong> The corresponding key is stored in your device's secure system storage (Keychain / Keystore).</p>
+                        <p>We have no access to your stored history data. If you want to create a backup, you can manually export your data as an additionally password-encrypted file and store it in a location of your choice. There is no automatic cloud synchronization via our servers.</p>
+                        <p><strong>Legal basis:</strong> Local processing is carried out to provide the core function of the app that you requested (Art. 6(1)(b) GDPR).</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. AI analysis of your thoughts</h2>
+                    <div class="space-y-4">
+                        <p>To structure your recorded thoughts, the app uses artificial intelligence. For this purpose, the text you enter is sent via a secure, encrypted connection to our server infrastructure (hosted on Google Firebase in Frankfurt am Main, Germany / EU) and forwarded from there via an application programming interface (API) to OpenAI.</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>No storage:</strong> Your texts are processed on our servers only in memory, for a fraction of a second, and are deleted immediately afterward. No logs of your content are created.</li>
+                            <li><strong>No AI training:</strong> OpenAI strictly does <strong>not</strong> use data sent via the API to train or improve its AI models.</li>
+                            <li><strong>Voluntary:</strong> The AI analysis is only triggered when you actively submit text for sorting. Without your input, no content leaves your device.</li>
+                        </ul>
+                        <p>Forwarding to OpenAI involves a transfer to the USA. See Section 9 (Data transfer to third countries) for details.</p>
+                        <p><strong>Legal basis:</strong> Performance of a contract / provision of the premium feature you requested (Art. 6(1)(b) GDPR).</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. No user accounts (anonymous use) & abuse protection</h2>
+                    <div class="space-y-4">
+                        <p>BrainEase does not require registration, and we do not create personal user accounts for you. You remain completely anonymous while using the app.</p>
+                        <p>To protect our interfaces from abuse, an invisible, anonymous technical session (via Firebase Auth) is generated in the background when the app starts. We additionally use Firebase App Check to ensure that requests to our servers actually originate from the unmodified app. No contact details such as name or email address are collected or linked to you in the process.</p>
+                        <p>A display name and an optional form of address that you can optionally set in the settings are stored exclusively locally on your device and are not transmitted to us.</p>
+                        <p><strong>Legal basis:</strong> Legitimate interest in secure, abuse-free operation of the app (Art. 6(1)(f) GDPR).</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">5. In-app purchases and subscriptions</h2>
+                    <div class="space-y-4">
+                        <p>To process premium subscriptions, we use the service <em>RevenueCat</em> (RevenueCat, Inc., USA). RevenueCat only processes anonymized identifiers and purchase receipts in order to verify your app's unlock status. Neither we nor RevenueCat gain access to your credit card or bank details, since all payments are processed entirely via your Apple App Store or Google Play Store.</p>
+                        <p>The privacy terms of the respective store operator (Apple or Google) through which the purchase is processed apply in addition.</p>
+                        <p><strong>Legal basis:</strong> Performance of a contract (Art. 6(1)(b) GDPR).</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">6. Analytics data & crash reports (opt-in only)</h2>
+                    <div class="space-y-4">
+                        <p>To find bugs and improve the app, we use Firebase Analytics and Firebase Crashlytics (Google). <strong>These services are disabled by default.</strong></p>
+                        <p>Only if you expressly grant permission (opt-in) in the consent dialog the first time the app is started do we collect anonymized usage data (e.g. screens visited, device type, crash logs). You can withdraw this consent at any time with future effect in the app settings under "Privacy".</p>
+                        <p><strong>Legal basis:</strong> Your explicit consent (Art. 6(1)(a) GDPR). The lawfulness of processing carried out before the withdrawal remains unaffected by the withdrawal.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">7. Permissions (microphone & notifications)</h2>
+                    <ul class="list-disc pl-5 space-y-4">
+                        <li><strong>Microphone / speech recognition:</strong> When you dictate your thoughts, the app uses your device's built-in speech recognition (Apple Siri / Google Speech). The conversion of speech to text is performed by your operating system; depending on the device and system settings, audio data may be processed by Apple or Google under their own privacy policies. We ourselves do not receive or store any audio data; only the finished text is made available to us on your device.</li>
+                        <li><strong>Notifications:</strong> The app only needs this permission if you want to enable local, daily reminders for your evening routine. These notifications are scheduled and triggered purely locally on your device.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">8. Feedback & support</h2>
+                    <div class="space-y-4">
+                        <p>If you send us feedback through the app, you open a form provided by our service provider <em>Tally</em> (Tally B.V., Belgium / EU). To assign and process your feedback, the app version and your anonymous technical identifier (see Section 4) are transmitted. If you contact us by email, we process the data you provide (e.g. email address, message content) exclusively to handle your inquiry.</p>
+                        <p><strong>Legal basis:</strong> Legitimate interest in responding to inquiries and improving the app (Art. 6(1)(f) GDPR).</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">9. Data transfer to third countries</h2>
+                    <div class="space-y-4">
+                        <p>Some of the services we use are operated by providers based in the USA (in particular OpenAI for AI analysis, as well as — only if consent has been given — Google Analytics/Crashlytics, and RevenueCat as part of purchase processing). This may result in the transfer of personal data to the USA.</p>
+                        <p>We base these transfers on appropriate safeguards within the meaning of Art. 44 et seq. GDPR, in particular the EU Commission's Standard Contractual Clauses and, where applicable, a provider's certification under the EU-U.S. Data Privacy Framework. The data-protection agreements required for data processing are in place with the providers.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">10. Storage period</h2>
+                    <div class="space-y-4">
+                        <p>Your journal entries remain on your device until you delete them yourself or uninstall the app. Text submitted for AI analysis is not stored permanently (see Section 3). Optionally collected, anonymized analytics and crash data is processed according to the standard retention periods of the respective Firebase services.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">11. Your rights (GDPR) & data deletion</h2>
+                    <div class="space-y-4">
+                        <p>Under the General Data Protection Regulation (GDPR), you have — where the statutory requirements are met — the following rights: right of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20), and objection to processing (Art. 21). You can withdraw any consent given at any time with future effect.</p>
+                        <p>Since we do not store any personal content or accounts on our servers, these rights regarding your journal data lie primarily in your own hands.</p>
+                        <p><strong>Data deletion:</strong> Since all your journal entries and settings are stored exclusively, in encrypted form, on your own smartphone, uninstalling the app from your device is sufficient to completely and irrevocably delete all your app data.</p>
+                        <p><strong>Right to complain:</strong> You have the right to lodge a complaint with a data protection supervisory authority if you believe that the processing of your data violates the GDPR.</p>
+                        <p>If you have any questions about data protection, feel free to contact us at any time. Contact details can be found in the <a href="../../legal/impressum.en.html" class="text-primary hover:underline">Legal Notice</a>.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">12. Minimum age</h2>
+                    <div class="space-y-4">
+                        <p>BrainEase is not directed at children. Use of the app is only permitted from the age of 16. If a lower age limit applies for effective consent under national law, use by minors is only permitted with the consent of their legal guardians.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">13. Changes to this Privacy Policy</h2>
+                    <div class="space-y-4">
+                        <p>We reserve the right to amend this Privacy Policy so that it always complies with current legal requirements or to implement changes to our services. The version available at the time of your use applies. The date above ("last updated") indicates the time of the last update.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+            <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-slate-400">
+                <p>© 2026 SD Nightshift Studio</p>
+                <span class="hidden sm:inline">|</span>
+                <p>All rights reserved</p>
+            </div>
+            <span class="hidden md:inline text-slate-300">|</span>
+            <div class="flex items-center gap-3">
+                <a href="../../index.en.html" class="hover:text-primary transition-colors text-slate-500">Home</a>
+                <span class="text-slate-300">|</span>
+                <a href="../../legal/impressum.en.html" class="hover:text-primary transition-colors text-slate-500">Legal Notice</a>
+                <span class="text-slate-300">|</span>
+                <a href="../../legal/datenschutz.en.html" class="hover:text-primary transition-colors text-slate-500">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('back-link').addEventListener('click', function (e) {
+            if (document.referrer && window.history.length > 1) { e.preventDefault(); window.history.back(); }
+        });
+    </script>
+</body>
+
+</html>
