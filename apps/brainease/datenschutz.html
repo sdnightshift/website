@@ -44,7 +44,7 @@
         <section class="bg-slate-50 py-12 md:py-16 border-b border-slate-200 text-center">
             <div class="max-w-3xl mx-auto px-6">
                 <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">App-Datenschutzerklärung</h1>
-                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">BrainEase – Stand: Juni 2026</p>
+                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">BrainEase – Stand: Juli 2026</p>
             </div>
         </section>
 
@@ -55,59 +55,116 @@
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Grundsatz: Lokale Speicherung</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Verantwortlicher</h2>
                     <div class="space-y-4">
-                        <p>BrainEase ist nach dem "Privacy by Design"-Prinzip entwickelt. <strong>Deine Tagebucheinträge und sortierten Gedanken werden standardmäßig stark verschlüsselt und ausschließlich lokal auf deinem Gerät gespeichert.</strong></p>
-                        <p>Wir haben keinen Zugriff auf deine gespeicherten Verlaufsdaten. Wenn du ein Backup erstellen möchtest, kannst du deine Daten manuell als verschlüsselte Datei exportieren und an einem Ort deiner Wahl speichern. Eine automatische Cloud-Synchronisation über unsere Server findet nicht statt.</p>
+                        <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) für die Datenverarbeitung in der App „BrainEase“ ist das SD Nightshift Studio. Die vollständigen Kontaktdaten des Verantwortlichen findest du in unserem <a href="../../legal/impressum.html" class="text-primary hover:underline">Impressum</a>.</p>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. KI-Analyse deiner Gedanken</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Grundsatz: Lokale & verschlüsselte Speicherung</h2>
                     <div class="space-y-4">
-                        <p>Um deine notierten Gedanken zu strukturieren, nutzt die App Künstliche Intelligenz. Dafür wird der von dir eingegebene Text über eine sichere Verbindung an unsere Serverinfrastruktur (gehostet bei Google Firebase in Frankfurt am Main, Deutschland / EU) gesendet und von dort über eine Schnittstelle an OpenAI (API) weitergeleitet.</p>
+                        <p>BrainEase ist nach dem „Privacy by Design“-Prinzip entwickelt. <strong>Deine Tagebucheinträge und sortierten Gedanken werden standardmäßig stark verschlüsselt (Datenbankverschlüsselung) und ausschließlich lokal auf deinem Gerät gespeichert.</strong> Der zugehörige Schlüssel wird im gesicherten Systemspeicher deines Geräts (Keychain / Keystore) abgelegt.</p>
+                        <p>Wir haben keinen Zugriff auf deine gespeicherten Verlaufsdaten. Wenn du ein Backup erstellen möchtest, kannst du deine Daten manuell als zusätzlich passwortverschlüsselte Datei exportieren und an einem Ort deiner Wahl speichern. Eine automatische Cloud-Synchronisation über unsere Server findet nicht statt.</p>
+                        <p><strong>Rechtsgrundlage:</strong> Die lokale Verarbeitung erfolgt zur Erbringung der von dir angeforderten Kernfunktion der App (Art. 6 Abs. 1 lit. b DSGVO).</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. KI-Analyse deiner Gedanken</h2>
+                    <div class="space-y-4">
+                        <p>Um deine notierten Gedanken zu strukturieren, nutzt die App Künstliche Intelligenz. Dafür wird der von dir eingegebene Text über eine sichere, verschlüsselte Verbindung an unsere Serverinfrastruktur (gehostet bei Google Firebase in Frankfurt am Main, Deutschland / EU) gesendet und von dort über eine Programmierschnittstelle (API) an OpenAI weitergeleitet.</p>
                         <ul class="list-disc pl-5 space-y-2">
                             <li><strong>Keine Speicherung:</strong> Deine Texte werden auf unseren Servern nur für den Bruchteil einer Sekunde im Arbeitsspeicher verarbeitet und danach sofort gelöscht. Es werden keine Logs deiner Inhalte angelegt.</li>
-                            <li><strong>Kein KI-Training:</strong> OpenAI nutzt Daten, die über die API (Programmierschnittstelle) gesendet werden, strikt <strong>nicht</strong> für das Training oder die Verbesserung ihrer KI-Modelle.</li>
+                            <li><strong>Kein KI-Training:</strong> OpenAI nutzt Daten, die über die API gesendet werden, strikt <strong>nicht</strong> für das Training oder die Verbesserung ihrer KI-Modelle.</li>
+                            <li><strong>Freiwillig:</strong> Die KI-Analyse wird nur ausgelöst, wenn du aktiv einen Text zur Sortierung übermittelst. Ohne deine Eingabe verlässt kein Inhalt dein Gerät.</li>
                         </ul>
+                        <p>Bei der Weiterleitung an OpenAI erfolgt eine Übermittlung in die USA. Näheres dazu findest du in Abschnitt 9 (Datenübermittlung in Drittländer).</p>
+                        <p><strong>Rechtsgrundlage:</strong> Vertragserfüllung / Erbringung der von dir angeforderten Premium-Funktion (Art. 6 Abs. 1 lit. b DSGVO).</p>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Keine Benutzerkonten (Anonyme Nutzung)</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Keine Benutzerkonten (anonyme Nutzung) & Missbrauchsschutz</h2>
                     <div class="space-y-4">
                         <p>BrainEase erfordert keine Registrierung und wir legen keine persönlichen Benutzerkonten für dich an. Du bleibst bei der Nutzung vollständig anonym.</p>
-                        <p>Um unsere Schnittstellen vor Missbrauch zu schützen, wird beim Start der App im Hintergrund lediglich eine unsichtbare, anonyme technische Sitzung (über Firebase Auth) generiert. Es werden hierbei keinerlei Kontaktdaten wie Name oder E-Mail-Adresse erfasst oder mit dir in Verbindung gebracht.</p>
+                        <p>Um unsere Schnittstellen vor Missbrauch zu schützen, wird beim Start der App im Hintergrund lediglich eine unsichtbare, anonyme technische Sitzung (über Firebase Auth) generiert. Zusätzlich setzen wir Firebase App Check ein, um sicherzustellen, dass Anfragen an unsere Server tatsächlich von der unveränderten App stammen. Es werden hierbei keinerlei Kontaktdaten wie Name oder E-Mail-Adresse erfasst oder mit dir in Verbindung gebracht.</p>
+                        <p>Ein von dir in den Einstellungen optional vergebener Anzeigename sowie eine optionale Angabe zur Anrede werden ausschließlich lokal auf deinem Gerät gespeichert und nicht an uns übertragen.</p>
+                        <p><strong>Rechtsgrundlage:</strong> Berechtigtes Interesse an einem sicheren, missbrauchsfreien Betrieb der App (Art. 6 Abs. 1 lit. f DSGVO).</p>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. In-App-Käufe und Abonnements</h2>
-                    <p>Für die Abwicklung von Premium-Abonnements nutzen wir den Dienst <em>RevenueCat</em>. RevenueCat verarbeitet lediglich anonymisierte Identifikatoren und Kaufbelege, um den Freischalt-Status deiner App zu prüfen. Weder wir noch RevenueCat erhalten Zugang zu deinen Kreditkarten- oder Bankdaten, da alle Zahlungen vollständig über deinen Apple App Store oder Google Play Store abgewickelt werden.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">5. Analysedaten & Absturzberichte (Nur mit Opt-In)</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">5. In-App-Käufe und Abonnements</h2>
                     <div class="space-y-4">
-                        <p>Um Bugs zu finden und die App zu verbessern, nutzen wir Firebase Analytics und Firebase Crashlytics. <strong>Diese Dienste sind standardmäßig deaktiviert.</strong></p>
-                        <p>Nur wenn du uns beim ersten Start der App im Einwilligungs-Dialog (Consent-Dialog) ausdrücklich die Erlaubnis erteilst (Opt-in), erheben wir anonymisierte Nutzungsdaten (z.B. besuchte Bildschirme, Gerätetyp, Absturzprotokolle). Du kannst diese Einwilligung jederzeit in den Einstellungen der App unter "Privatsphäre" widerrufen.</p>
+                        <p>Für die Abwicklung von Premium-Abonnements nutzen wir den Dienst <em>RevenueCat</em> (RevenueCat, Inc., USA). RevenueCat verarbeitet lediglich anonymisierte Identifikatoren und Kaufbelege, um den Freischalt-Status deiner App zu prüfen. Weder wir noch RevenueCat erhalten Zugang zu deinen Kreditkarten- oder Bankdaten, da alle Zahlungen vollständig über deinen Apple App Store oder Google Play Store abgewickelt werden.</p>
+                        <p>Es gelten ergänzend die Datenschutzbestimmungen des jeweiligen Store-Betreibers (Apple bzw. Google), über den der Kauf abgewickelt wird.</p>
+                        <p><strong>Rechtsgrundlage:</strong> Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO).</p>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">6. Berechtigungen (Mikrofon & Benachrichtigungen)</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">6. Analysedaten & Absturzberichte (nur mit Opt-In)</h2>
+                    <div class="space-y-4">
+                        <p>Um Bugs zu finden und die App zu verbessern, nutzen wir Firebase Analytics und Firebase Crashlytics (Google). <strong>Diese Dienste sind standardmäßig deaktiviert.</strong></p>
+                        <p>Nur wenn du uns beim ersten Start der App im Einwilligungs-Dialog (Consent-Dialog) ausdrücklich die Erlaubnis erteilst (Opt-in), erheben wir anonymisierte Nutzungsdaten (z. B. besuchte Bildschirme, Gerätetyp, Absturzprotokolle). Du kannst diese Einwilligung jederzeit in den Einstellungen der App unter „Privatsphäre“ mit Wirkung für die Zukunft widerrufen.</p>
+                        <p><strong>Rechtsgrundlage:</strong> Deine ausdrückliche Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt vom Widerruf unberührt.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">7. Berechtigungen (Mikrofon & Benachrichtigungen)</h2>
                     <ul class="list-disc pl-5 space-y-4">
-                        <li><strong>Mikrofon / Spracherkennung:</strong> Wenn du deine Gedanken diktierst, nutzt die App die systemeigene Spracherkennung deines Geräts (Apple Siri / Google Speech). Audiodaten werden direkt von deinem Betriebssystem verarbeitet und nicht auf unseren Servern gespeichert.</li>
-                        <li><strong>Benachrichtigungen:</strong> Die App benötigt diese Berechtigung nur, wenn du lokale, tägliche Erinnerungen für deine Abendroutine aktivieren möchtest. Diese Benachrichtigungen werden rein lokal auf deinem Gerät geplant.</li>
+                        <li><strong>Mikrofon / Spracherkennung:</strong> Wenn du deine Gedanken diktierst, nutzt die App die systemeigene Spracherkennung deines Geräts (Apple Siri / Google Speech). Die Umwandlung von Sprache in Text wird von deinem Betriebssystem durchgeführt; dabei können – je nach Gerät und Systemeinstellung – Audiodaten von Apple bzw. Google nach deren eigenen Datenschutzbestimmungen verarbeitet werden. Wir selbst empfangen oder speichern keine Audiodaten; uns wird ausschließlich der fertige Text auf deinem Gerät zur Verfügung gestellt.</li>
+                        <li><strong>Benachrichtigungen:</strong> Die App benötigt diese Berechtigung nur, wenn du lokale, tägliche Erinnerungen für deine Abendroutine aktivieren möchtest. Diese Benachrichtigungen werden rein lokal auf deinem Gerät geplant und ausgelöst.</li>
                     </ul>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">7. Deine Rechte (DSGVO) & Datenlöschung</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">8. Feedback & Support</h2>
                     <div class="space-y-4">
-                        <p>Nach der Datenschutz-Grundverordnung (DSGVO) stehen dir unter anderem das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner Daten zu. Da wir jedoch keine personenbezogenen Daten oder Accounts auf unseren Servern speichern, liegen diese Rechte primär in deiner eigenen Hand.</p>
+                        <p>Wenn du uns über die App Feedback sendest, öffnest du ein Formular unseres Dienstleisters <em>Tally</em> (Tally B.V., Belgien / EU). Zur Zuordnung und Bearbeitung deiner Rückmeldung werden dabei die App-Version sowie deine anonyme technische Kennung (siehe Abschnitt 4) übermittelt. Sofern du uns per E-Mail kontaktierst, verarbeiten wir die von dir mitgeteilten Daten (z. B. E-Mail-Adresse, Inhalt der Nachricht) ausschließlich zur Bearbeitung deiner Anfrage.</p>
+                        <p><strong>Rechtsgrundlage:</strong> Berechtigtes Interesse an der Beantwortung von Anfragen und der Verbesserung der App (Art. 6 Abs. 1 lit. f DSGVO).</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">9. Datenübermittlung in Drittländer</h2>
+                    <div class="space-y-4">
+                        <p>Einige der eingesetzten Dienste werden von Anbietern mit Sitz in den USA betrieben (insbesondere OpenAI für die KI-Analyse sowie – nur bei erteilter Einwilligung – Google Analytics/Crashlytics und im Rahmen der Kaufabwicklung RevenueCat). Dabei kann es zu einer Übermittlung personenbezogener Daten in die USA kommen.</p>
+                        <p>Diese Übermittlungen stützen wir auf geeignete Garantien im Sinne der Art. 44 ff. DSGVO, insbesondere auf die Standardvertragsklauseln der EU-Kommission und – soweit einschlägig – auf eine Zertifizierung der Anbieter unter dem EU-U.S. Data Privacy Framework. Mit den Anbietern bestehen die datenschutzrechtlich erforderlichen Vereinbarungen zur Auftragsverarbeitung.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">10. Speicherdauer</h2>
+                    <div class="space-y-4">
+                        <p>Deine Tagebucheinträge verbleiben so lange auf deinem Gerät, bis du sie selbst löschst oder die App deinstallierst. Bei der KI-Analyse übermittelte Texte werden nicht dauerhaft gespeichert (siehe Abschnitt 3). Optional erhobene, anonymisierte Analyse- und Absturzdaten werden gemäß den Standard-Aufbewahrungsfristen der jeweiligen Firebase-Dienste verarbeitet.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">11. Deine Rechte (DSGVO) & Datenlöschung</h2>
+                    <div class="space-y-4">
+                        <p>Nach der Datenschutz-Grundverordnung (DSGVO) stehen dir – soweit die gesetzlichen Voraussetzungen vorliegen – folgende Rechte zu: Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie Widerspruch gegen die Verarbeitung (Art. 21). Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+                        <p>Da wir keine personenbezogenen Inhalte oder Accounts auf unseren Servern speichern, liegen diese Rechte in Bezug auf deine Tagebuchdaten primär in deiner eigenen Hand.</p>
                         <p><strong>Datenlöschung:</strong> Da alle deine Tagebucheinträge und Einstellungen ausschließlich verschlüsselt auf deinem eigenen Smartphone liegen, reicht es zur vollständigen und unwiderruflichen Löschung all deiner App-Daten aus, die App von deinem Gerät zu deinstallieren.</p>
+                        <p><strong>Beschwerderecht:</strong> Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, wenn du der Ansicht bist, dass die Verarbeitung deiner Daten gegen die DSGVO verstößt.</p>
                         <p>Bei Fragen zum Datenschutz wende dich jederzeit an uns. Kontaktdaten findest du im <a href="../../legal/impressum.html" class="text-primary hover:underline">Impressum</a>.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">12. Mindestalter</h2>
+                    <div class="space-y-4">
+                        <p>BrainEase richtet sich nicht an Kinder. Die Nutzung der App ist erst ab einem Alter von 16 Jahren gestattet. Sofern nach nationalem Recht eine niedrigere Altersgrenze für eine wirksame Einwilligung gilt, ist die Nutzung durch Minderjährige nur mit Zustimmung der Erziehungsberechtigten zulässig.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">13. Änderungen dieser Datenschutzerklärung</h2>
+                    <div class="space-y-4">
+                        <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen umzusetzen. Es gilt jeweils die zum Zeitpunkt deiner Nutzung abrufbare Fassung. Das oben genannte Datum („Stand“) gibt den Zeitpunkt der letzten Aktualisierung an.</p>
                     </div>
                 </div>
             </div>
