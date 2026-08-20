@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Puzzle Collector organises your puzzle collection, solving sessions, statistics and exports — locally on your device.">
+    <title>Puzzle Collector | SD Nightshift Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'] },
+                    colors: { primary: '#5397EA' }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html { overflow-y: scroll; }
+        .logo-glow { filter: drop-shadow(0 16px 22px rgba(37, 99, 235, 0.22)); }
+    </style>
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
+</head>
+
+<body class="font-sans antialiased text-slate-900 bg-white flex flex-col min-h-screen">
+    <header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-xl border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-2">
+            <a href="../../index.en.html" class="flex items-center gap-2 sm:gap-3 group shrink-0">
+                <img src="../../assets/images/logo.png" alt="SD Logo" class="w-8 h-8 sm:w-10 sm:h-10 transition-transform group-hover:scale-105">
+                <span class="text-lg sm:text-2xl font-bold tracking-tight text-slate-900 whitespace-nowrap">Nightshift Studio</span>
+            </a>
+            <div class="flex items-center gap-3 shrink-0">
+                <a href="../../index.en.html#apps" class="flex items-center gap-1.5 text-sm font-bold text-slate-500 hover:text-primary transition-colors group shrink-0">
+                    <i data-lucide="arrow-left" class="w-4 h-4 transition-transform group-hover:-translate-x-1"></i>
+                    <span class="hidden sm:inline">Back to home</span><span class="sm:hidden">Back</span>
+                </a>
+                <div class="flex items-center gap-1 text-xs font-bold border border-slate-200 rounded-full p-1 shrink-0">
+                    <a href="index.html" class="px-2.5 py-1 rounded-full text-slate-500 hover:text-primary transition-colors">DE</a>
+                    <a href="index.en.html" class="px-2.5 py-1 rounded-full bg-primary text-white transition-colors">EN</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="relative bg-slate-50 py-16 md:py-24 border-b border-slate-200 overflow-hidden">
+            <div class="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-blue-100/60 blur-3xl" aria-hidden="true"></div>
+            <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12 relative">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-[3rem] shadow-2xl border border-slate-100 flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
+                        <img src="../../assets/images/apps/puzzlecollector/puzzlecollector_logo.png" alt="Puzzle Collector Logo" class="w-[220px] h-[220px] md:w-72 md:h-72 object-contain logo-glow">
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3 text-left">
+                    <div class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">Collection &amp; solving time</div>
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">Puzzle Collector</h1>
+                    <p class="text-xl text-slate-600 leading-relaxed max-w-2xl">From the first photo of the box to the final piece: Puzzle Collector keeps your collection, wish list, solving sessions and statistics neatly together — with no user account and your collection data stored locally on your device.</p>
+                    <div class="mt-8 inline-flex items-center gap-2 text-sm font-bold text-primary">
+                        <span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span></span>
+                        Currently in development
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-4 text-center text-slate-900">Everything your collection needs</h2>
+                <p class="text-slate-500 mb-12 text-center max-w-2xl mx-auto">Less list maintenance, more clarity — with tools built around the way puzzlers actually collect and solve.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6"><i data-lucide="camera"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Quick capture</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Photograph a puzzle and its box, scan the barcode or capture printed details with on-device text recognition. Add the title, brand, series, artist, dimensions and article number whenever you like.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6"><i data-lucide="library"></i></div>
+                        <h3 class="text-xl font-bold mb-3">A collection with structure</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Mark puzzles as wish list, owned or sold, record their storage location and status, and manage multiple copies of the same design in one shared view.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6"><i data-lucide="timer"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Track every session</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Start, pause and finish solving sessions right from a puzzle. Daily activity and notes preserve the story of every attempt.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6"><i data-lucide="chart-no-axes-combined"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Motivating statistics</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">See how your collection grows, how many pieces you have completed and when you have been most active — compact, clear and easy to read.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6"><i data-lucide="file-down"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Flexible exports</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Share an individual puzzle as a PDF or sale sheet and export your collection as CSV. Custom text templates put exactly the details you need into every export.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 rounded-3xl border border-slate-100">
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6"><i data-lucide="archive-restore"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Local backups</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">Back up metadata, images, solving sessions and settings in a portable file and restore them when needed. You decide where the file is stored.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 class="text-2xl font-bold mb-6">Start free, unlock forever</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto leading-relaxed">Store up to 10 of your own puzzles in the free collection at the same time. A single one-time in-app purchase unlocks an unlimited collection — no subscription.</p>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white border-t border-slate-200">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <h2 class="text-2xl font-bold mb-6">Legal &amp; privacy</h2>
+                <p class="text-slate-500 mb-8 max-w-2xl mx-auto">Your puzzle data and images are processed locally. External services are used only for analytics you choose to enable and for in-app purchases. Find every detail here.</p>
+                <div class="flex flex-wrap justify-center gap-6 text-sm font-semibold text-primary">
+                    <a href="datenschutz.en.html" class="hover:underline">App Privacy Policy</a>
+                    <a href="agb.en.html" class="hover:underline">Terms of Use (Puzzle Collector)</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full bg-slate-100 border-t border-slate-200 py-10 text-center">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-slate-500">
+            <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-slate-400"><p>© 2026 SD Nightshift Studio</p><span class="hidden sm:inline">|</span><p>All rights reserved</p></div>
+            <span class="hidden md:inline text-slate-300">|</span>
+            <div class="flex items-center gap-3"><a href="../../index.en.html" class="hover:text-primary transition-colors">Home</a><span class="text-slate-300">|</span><a href="../../legal/impressum.en.html" class="hover:text-primary transition-colors">Legal Notice</a><span class="text-slate-300">|</span><a href="../../legal/datenschutz.en.html" class="hover:text-primary transition-colors">Privacy</a></div>
+        </div>
+    </footer>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
