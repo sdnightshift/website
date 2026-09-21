@@ -52,7 +52,7 @@
         <section class="bg-slate-50 py-12 md:py-16 border-b border-slate-200 text-center">
             <div class="max-w-3xl mx-auto px-6">
                 <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">App Privacy Policy</h1>
-                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">BrainEase – Last updated: July 2026</p>
+                <p class="text-slate-500 mt-4 font-medium uppercase tracking-widest text-xs">BrainEase – Last updated: September 21, 2026</p>
             </div>
         </section>
 
@@ -72,41 +72,34 @@
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Principle: local & encrypted storage</h2>
                     <div class="space-y-4">
-                        <p>BrainEase is developed according to the "privacy by design" principle. <strong>Your journal entries and sorted thoughts are, by default, strongly encrypted (database encryption) and stored exclusively locally on your device.</strong> The corresponding key is stored in your device's secure system storage (Keychain / Keystore).</p>
-                        <p>We have no access to your stored history data. If you want to create a backup, you can manually export your data as an additionally password-encrypted file and store it in a location of your choice. There is no automatic cloud synchronization via our servers.</p>
+                        <p>BrainEase is developed according to the "privacy by design" principle. <strong>Your journal entries, gratitude notes, and other journal content are, by default, strongly encrypted (database encryption) and stored exclusively locally on your device.</strong> The corresponding key is stored in your device's secure system storage (Keychain / Keystore).</p>
+                        <p>We have no access to your stored history data. If you want to create a backup, you can manually export your data as an additionally password-encrypted file and store it in a location of your choice. On iOS, this encrypted backup can also be manually stored in and restored from the iCloud account you use with Apple. There is no automatic cloud synchronization via our servers, and the backup password is not transmitted to us separately.</p>
                         <p><strong>Legal basis:</strong> Local processing is carried out to provide the core function of the app that you requested (Art. 6(1)(b) GDPR).</p>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. AI analysis of your thoughts</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. No AI analysis and no transfer of journal content</h2>
                     <div class="space-y-4">
-                        <p>To structure your recorded thoughts, the app uses artificial intelligence. For this purpose, the text you enter is sent via a secure, encrypted connection to our server infrastructure (hosted on Google Firebase in Frankfurt am Main, Germany / EU) and forwarded from there via an application programming interface (API) to OpenAI.</p>
-                        <ul class="list-disc pl-5 space-y-2">
-                            <li><strong>No storage:</strong> Your texts are processed on our servers only in memory, for a fraction of a second, and are deleted immediately afterward. No logs of your content are created.</li>
-                            <li><strong>No AI training:</strong> OpenAI strictly does <strong>not</strong> use data sent via the API to train or improve its AI models.</li>
-                            <li><strong>Voluntary:</strong> The AI analysis is only triggered when you actively submit text for sorting. Without your input, no content leaves your device.</li>
-                        </ul>
-                        <p>Forwarding to OpenAI involves a transfer to the USA. See Section 9 (Data transfer to third countries) for details.</p>
-                        <p><strong>Legal basis:</strong> Performance of a contract / provision of the premium feature you requested (Art. 6(1)(b) GDPR).</p>
+                        <p>BrainEase does not provide AI analysis, automatic sorting, or voice-based feedback. Your journal content is not sent to a BrainEase server and is not processed by an AI model.</p>
+                        <p>Local processing is carried out to provide the core app function you requested (Art. 6(1)(b) GDPR).</p>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. No user accounts (anonymous use) & abuse protection</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. No user account & local profile data</h2>
                     <div class="space-y-4">
-                        <p>BrainEase does not require registration, and we do not create personal user accounts for you. You remain completely anonymous while using the app.</p>
-                        <p>To protect our interfaces from abuse, an invisible, anonymous technical session (via Firebase Auth) is generated in the background when the app starts. We additionally use Firebase App Check to ensure that requests to our servers actually originate from the unmodified app. No contact details such as name or email address are collected or linked to you in the process.</p>
-                        <p>During setup, the app asks you for a display name, a gender selection (used to personalize your evening routine display), and your desired bedtime (used to schedule your reminder). This information is stored exclusively locally on your device and is not transmitted to us.</p>
-                        <p><strong>Legal basis:</strong> Legitimate interest in secure, abuse-free operation of the app (Art. 6(1)(f) GDPR).</p>
+                        <p>BrainEase does not require registration, sign-in, or a user account. There is no server-side profile management.</p>
+                        <p>A display name chosen by you, a gender selection, your reminder time, and other settings are stored exclusively on your device and are not transmitted to us.</p>
+                        <p><strong>Legal basis:</strong> Performance of the contract to provide the local features you choose (Art. 6(1)(b) GDPR).</p>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">5. In-app purchases and subscriptions</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">5. One-time purchase and unlock</h2>
                     <div class="space-y-4">
-                        <p>To process premium subscriptions, we use the service <em>RevenueCat</em> (RevenueCat, Inc., USA). RevenueCat only processes anonymized identifiers and purchase receipts in order to verify your app's unlock status. Neither we nor RevenueCat gain access to your credit card or bank details, since all payments are processed entirely via your Apple App Store or Google Play Store.</p>
-                        <p>The privacy terms of the respective store operator (Apple or Google) through which the purchase is processed apply in addition.</p>
+                        <p>For the one-time "BrainEase Lifetime" purchase and restoring the unlock, we use <em>RevenueCat</em> (RevenueCat, Inc.) as a technical intermediary. An anonymous SDK user identifier, product and purchase status, and purchase receipts may be processed. Neither we nor RevenueCat receive your credit card or bank details; payment is handled through the Apple App Store.</p>
+                        <p>Apple's and RevenueCat's privacy policies apply in addition. This is not a subscription.</p>
                         <p><strong>Legal basis:</strong> Performance of a contract (Art. 6(1)(b) GDPR).</p>
                     </div>
                 </div>
@@ -115,24 +108,24 @@
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">6. Analytics data & crash reports (opt-in only)</h2>
                     <div class="space-y-4">
                         <p>To find bugs and improve the app, we use Firebase Analytics and Firebase Crashlytics (Google). <strong>These services are disabled by default.</strong></p>
-                        <p>Only if you expressly grant permission (opt-in) in the consent dialog the first time the app is started do we collect anonymized usage data (e.g. screens visited, device type, crash logs). You can withdraw this consent at any time with future effect in the app settings under "Privacy".</p>
+                        <p>Only if you expressly grant permission (opt-in) in the consent dialog may we process technical events, screen views, app and device information, and crash diagnostics. <strong>Journal text, thoughts, gratitude, wishes, moods, names, and profile data are not sent to these services.</strong> You can withdraw this consent at any time with future effect in the app settings.</p>
                         <p><strong>Legal basis:</strong> Your explicit consent (Art. 6(1)(a) GDPR). The lawfulness of processing carried out before the withdrawal remains unaffected by the withdrawal.</p>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">7. Permissions (microphone & notifications)</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">7. Permissions and device features</h2>
                     <ul class="list-disc pl-5 space-y-4">
-                        <li><strong>Microphone / speech recognition:</strong> When you dictate your thoughts, the app uses your device's built-in speech recognition (Apple Siri / Google Speech). The conversion of speech to text is performed by your operating system; depending on the device and system settings, audio data may be processed by Apple or Google under their own privacy policies. We ourselves do not receive or store any audio data; only the finished text is made available to us on your device.</li>
                         <li><strong>Notifications:</strong> The app only needs this permission if you want to enable local, daily reminders for your evening routine. These notifications are scheduled and triggered purely locally on your device.</li>
                         <li><strong>File access (backup import & custom audio files):</strong> When you import a backup or select a custom audio file as background music, the app accesses, via your operating system's file picker, only the specific file you explicitly select. The app does not access your camera, photo library, or location; any corresponding permission prompts on iOS are shown solely due to technical dependencies of the system library used.</li>
+                        <li><strong>iCloud backup (iOS):</strong> If you explicitly save a backup to or restore one from iCloud, Apple processes the encrypted backup file you select under Apple's own privacy policy.</li>
                     </ul>
                 </div>
 
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">8. Feedback & support</h2>
                     <div class="space-y-4">
-                        <p>If you send us feedback through the app, you open a form provided by our service provider <em>Tally</em> (Tally B.V., Belgium / EU). To assign and process your feedback, the app version and your anonymous technical identifier (see Section 4) are transmitted. If you contact us by email, we process the data you provide (e.g. email address, message content) exclusively to handle your inquiry.</p>
+                        <p>If you send us feedback through the app, you open a form provided by our service provider <em>Tally</em>. The app version is passed to the form as technical context. Any other information is processed only if you enter it yourself in the form or in an email.</p>
                         <p><strong>Legal basis:</strong> Legitimate interest in responding to inquiries and improving the app (Art. 6(1)(f) GDPR).</p>
                     </div>
                 </div>
@@ -140,15 +133,15 @@
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">9. Data transfer to third countries</h2>
                     <div class="space-y-4">
-                        <p>Some of the services we use are operated by providers based in the USA (in particular OpenAI for AI analysis, as well as — only if consent has been given — Google Analytics/Crashlytics, and RevenueCat as part of purchase processing). This may result in the transfer of personal data to the USA.</p>
-                        <p>We base these transfers on appropriate safeguards within the meaning of Art. 44 et seq. GDPR, in particular the EU Commission's Standard Contractual Clauses and, where applicable, a provider's certification under the EU-U.S. Data Privacy Framework. The data-protection agreements required for data processing are in place with the providers.</p>
+                        <p>Depending on how you use the app, technical data may be processed by Apple (App Store and iCloud backups), RevenueCat (purchase status), Google Firebase (only with opt-in for Analytics and Crashlytics), or Tally (feedback). Processing outside the European Economic Area cannot be ruled out.</p>
+                        <p>The privacy information and appropriate safeguards of the respective providers apply to these transfers. Journal content is not sent to these services.</p>
                     </div>
                 </div>
 
                 <div>
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">10. Storage period</h2>
                     <div class="space-y-4">
-                        <p>Your journal entries remain on your device until you delete them yourself or uninstall the app. Text submitted for AI analysis is not stored permanently (see Section 3). Optionally collected, anonymized analytics and crash data is processed according to the standard retention periods of the respective Firebase services.</p>
+                        <p>Your journal entries and local settings remain on your device until you delete them or uninstall the app. Exported backup files and backups stored in iCloud remain there until you delete them yourself. Optional technical analytics and crash data, as well as purchase and feedback data, are processed according to the retention rules of the respective providers.</p>
                     </div>
                 </div>
 
@@ -156,17 +149,17 @@
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">11. Your rights (GDPR) & data deletion</h2>
                     <div class="space-y-4">
                         <p>Under the General Data Protection Regulation (GDPR), you have — where the statutory requirements are met — the following rights: right of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20), and objection to processing (Art. 21). You can withdraw any consent given at any time with future effect.</p>
-                        <p>Since we do not store any personal content or accounts on our servers, these rights regarding your journal data lie primarily in your own hands.</p>
-                        <p><strong>Data deletion:</strong> Since all your journal entries and settings are stored exclusively, in encrypted form, on your own smartphone, uninstalling the app from your device is sufficient to completely and irrevocably delete all your app data.</p>
+                        <p>Since we do not store journal content or user accounts on our servers, these rights regarding your journal data lie primarily in your own hands. You can withdraw consent for technical telemetry in the app.</p>
+                        <p><strong>Data deletion:</strong> You can delete entries in the app or uninstall it to remove local app data. Exported files and iCloud backups must be deleted separately. An App Store purchase, technical provider records, or feedback you submitted are not automatically deleted when the app is uninstalled.</p>
                         <p><strong>Right to complain:</strong> You have the right to lodge a complaint with a data protection supervisory authority if you believe that the processing of your data violates the GDPR.</p>
                         <p>If you have any questions about data protection, feel free to contact us at any time. Contact details can be found in the <a href="../../legal/impressum.en.html" class="text-primary hover:underline">Legal Notice</a>.</p>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">12. Minimum age</h2>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">12. Age rating and minors</h2>
                     <div class="space-y-4">
-                        <p>BrainEase is not directed at children. Use of the app is only permitted from the age of 16. If a lower age limit applies for effective consent under national law, use by minors is only permitted with the consent of their legal guardians.</p>
+                        <p>BrainEase has an age rating of 4+ in the Apple App Store and is not specifically directed at children. Minors are subject to the legal requirements of their country; paid purchases may only be made with the consent of a legal guardian.</p>
                     </div>
                 </div>
 
