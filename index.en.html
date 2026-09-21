@@ -33,6 +33,13 @@
         .logo-glow {
             filter: drop-shadow(0 10px 15px rgba(37, 99, 235, 0.2));
         }
+
+        .brainease-card-gradient {
+            background-image:
+                radial-gradient(circle at 14% 4%, rgba(154, 151, 207, 0.16), transparent 70%),
+                linear-gradient(135deg, #4B4B78 0%, #2D304D 52%, #181A28 100%) !important;
+            border-color: #3E4364 !important;
+        }
     </style>
     <link rel="icon" type="image/png" href="assets/images/logo.png">
 </head>
@@ -194,7 +201,7 @@
 
                         <!-- Oberer Bildbereich mit Logo -->
                         <div
-                            class="h-48 bg-gradient-to-br from-blue-50 to-slate-100 border-b border-slate-100 flex items-center justify-center relative overflow-hidden">
+                            class="brainease-card-gradient h-48 bg-gradient-to-br from-blue-50 to-slate-100 border-b border-slate-100 flex items-center justify-center relative overflow-hidden">
                             <img src="assets/images/apps/brainease/brainease_logo.png" alt="BrainEase Logo"
                                 class="w-[180px] h-[180px] object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-500">
                         </div>
