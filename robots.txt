@@ -1,0 +1,11 @@
+# Public website pages may be crawled by search and AI search services.
+# The internal context snapshot contains duplicated, potentially outdated copy.
+User-agent: *
+Disallow: /website_context.txt
+Allow: /
+
+User-agent: OAI-SearchBot
+Disallow: /website_context.txt
+Allow: /
+
+Sitemap: https://www.sdnightshiftstudio.com/sitemap.xml

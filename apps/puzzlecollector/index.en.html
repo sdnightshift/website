@@ -4,17 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Puzzle Collector organises your puzzle collection, solving sessions, statistics and exports — locally on your device.">
-    <title>Puzzle Collector | SD Nightshift Studio</title>
+    <title>Puzzle Collector – Puzzle Collection &amp; Solving Times</title>
+    <meta name="description" content="Puzzle Collector is in development: organise puzzles, wish lists, solving sessions and statistics, with local data, backups and PDF or CSV exports.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://www.sdnightshiftstudio.com/apps/puzzlecollector/index.en.html">
+    <link rel="alternate" hreflang="de" href="https://www.sdnightshiftstudio.com/apps/puzzlecollector/index.html">
+    <link rel="alternate" hreflang="en" href="https://www.sdnightshiftstudio.com/apps/puzzlecollector/index.en.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.sdnightshiftstudio.com/apps/puzzlecollector/index.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Puzzle Collector | SD Nightshift Studio">
-    <meta property="og:description" content="Puzzle Collector organises your puzzle collection, solving sessions, statistics and exports — locally on your device.">
+    <meta property="og:site_name" content="SD Nightshift Studio">
+    <meta property="og:title" content="Puzzle Collector – Puzzle Collection &amp; Solving Times">
+    <meta property="og:description" content="Puzzle Collector is in development: organise puzzles, wish lists, solving sessions and statistics, with local data, backups and PDF or CSV exports.">
     <meta property="og:url" content="https://www.sdnightshiftstudio.com/apps/puzzlecollector/index.en.html">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:locale:alternate" content="de_DE">
     <meta property="og:image" content="https://www.sdnightshiftstudio.com/assets/images/apps/puzzlecollector/puzzlecollector_logo.png">
     <meta property="og:image:alt" content="Puzzle Collector app logo">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="1024">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Puzzle Collector – Puzzle Collection &amp; Solving Times">
+    <meta name="twitter:description" content="Puzzle Collector is in development: organise puzzles, wish lists, solving sessions and statistics, with local data, backups and PDF or CSV exports.">
+    <meta name="twitter:image" content="https://www.sdnightshiftstudio.com/assets/images/apps/puzzlecollector/puzzlecollector_logo.png">
+    <meta name="twitter:image:alt" content="Puzzle Collector app logo">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://www.sdnightshiftstudio.com/apps/puzzlecollector/index.en.html#webpage",
+          "url": "https://www.sdnightshiftstudio.com/apps/puzzlecollector/index.en.html",
+          "name": "Puzzle Collector – Puzzle Collection & Solving Times",
+          "description": "Puzzle Collector is in development: organise puzzles, wish lists, solving sessions and statistics, with local data, backups and PDF or CSV exports.",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://www.sdnightshiftstudio.com/#website"
+          },
+          "publisher": {
+            "@id": "https://www.sdnightshiftstudio.com/#studio"
+          },
+          "mainEntity": {
+            "@id": "https://www.sdnightshiftstudio.com/apps/puzzlecollector/#app"
+          },
+          "breadcrumb": {
+            "@id": "https://www.sdnightshiftstudio.com/apps/puzzlecollector/index.en.html#breadcrumb"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://www.sdnightshiftstudio.com/apps/puzzlecollector/#app",
+          "name": "Puzzle Collector",
+          "url": "https://www.sdnightshiftstudio.com/apps/puzzlecollector/index.en.html",
+          "description": "Puzzle Collector is in development: organise puzzles, wish lists, solving sessions and statistics, with local data, backups and PDF or CSV exports.",
+          "image": "https://www.sdnightshiftstudio.com/assets/images/apps/puzzlecollector/puzzlecollector_logo.png",
+          "applicationCategory": "LifestyleApplication",
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://www.sdnightshiftstudio.com/#studio",
+            "name": "SD Nightshift Studio",
+            "url": "https://www.sdnightshiftstudio.com/"
+          },
+          "creativeWorkStatus": "In development"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.sdnightshiftstudio.com/apps/puzzlecollector/index.en.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "SD Nightshift Studio",
+              "item": "https://www.sdnightshiftstudio.com/index.en.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Puzzle Collector",
+              "item": "https://www.sdnightshiftstudio.com/apps/puzzlecollector/index.en.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -67,10 +142,12 @@
                 <div class="w-full md:w-2/3 text-left">
                     <div class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">Collection &amp; solving time</div>
                     <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">Puzzle Collector</h1>
-                    <p class="text-xl text-slate-600 leading-relaxed max-w-2xl">From the first photo of the box to the final piece: Puzzle Collector keeps your collection, wish list, solving sessions and statistics neatly together — with no user account and your collection data stored locally on your device.</p>
+                    <p class="text-xl text-slate-600 leading-relaxed max-w-2xl">
+                        Puzzle Collector is an app in development for managing your puzzle collection and solving times. From the first photo of the box to the final piece, keep your collection, wish list, sessions and statistics together — with no user account and your collection data stored locally on your device.
+                    </p>
                     <div class="mt-8 inline-flex items-center gap-2 text-sm font-bold text-primary">
                         <span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span></span>
-                        Currently in development
+                        In development. The features described here reflect the planned scope.
                     </div>
                 </div>
             </div>
@@ -119,6 +196,52 @@
             <div class="max-w-6xl mx-auto px-6 text-center">
                 <h2 class="text-2xl font-bold mb-6">Start free, unlock forever</h2>
                 <p class="text-slate-500 max-w-2xl mx-auto leading-relaxed">Store up to 10 of your own puzzles in the free collection at the same time. A single one-time in-app purchase unlocks an unlimited collection — no subscription.</p>
+            </div>
+        </section>
+
+        <!-- Häufige Fragen / Frequently asked questions -->
+        <section id="faq" aria-labelledby="faq-heading" class="py-16 md:py-20 bg-white border-t border-slate-200 scroll-mt-24">
+            <div class="max-w-3xl mx-auto px-6">
+                <h2 id="faq-heading" class="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Questions about Puzzle Collector</h2>
+                <p class="text-slate-600 mb-8">Features, availability and privacy at a glance.</p>
+                <div class="divide-y divide-slate-200">
+                    <details class="group py-5">
+                        <summary class="cursor-pointer rounded-md text-base sm:text-lg font-semibold text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">Is Puzzle Collector available yet?</summary>
+                        <div class="mt-3 text-slate-600 leading-relaxed [&_a]:text-blue-700 [&_a]:hover:text-blue-800 [&_a]:underline [&_a]:underline-offset-4">
+                            <p>Puzzle Collector is currently in development. The features described here reflect the planned scope. Once the app is released, the relevant store link will appear on this page.</p>
+                        </div>
+                    </details>
+                    <details class="group py-5">
+                        <summary class="cursor-pointer rounded-md text-base sm:text-lg font-semibold text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">How can I organise my puzzle collection?</summary>
+                        <div class="mt-3 text-slate-600 leading-relaxed [&_a]:text-blue-700 [&_a]:hover:text-blue-800 [&_a]:underline [&_a]:underline-offset-4">
+                            <p>Planned capture tools include photos of puzzles and boxes, barcode scanning and on-device text recognition. Record details such as title, brand, piece count, artist, storage location and condition. Organise puzzles as wish list, owned or sold, and manage multiple copies of the same design together.</p>
+                        </div>
+                    </details>
+                    <details class="group py-5">
+                        <summary class="cursor-pointer rounded-md text-base sm:text-lg font-semibold text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">Can I track solving times?</summary>
+                        <div class="mt-3 text-slate-600 leading-relaxed [&_a]:text-blue-700 [&_a]:hover:text-blue-800 [&_a]:underline [&_a]:underline-offset-4">
+                            <p>Start, pause and finish sessions directly from a puzzle. Daily activity and notes add context to each attempt. Statistics give you an overview of your collection, completed pieces and activity.</p>
+                        </div>
+                    </details>
+                    <details class="group py-5">
+                        <summary class="cursor-pointer rounded-md text-base sm:text-lg font-semibold text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">Where is my data stored and how can I back it up?</summary>
+                        <div class="mt-3 text-slate-600 leading-relaxed [&_a]:text-blue-700 [&_a]:hover:text-blue-800 [&_a]:underline [&_a]:underline-offset-4">
+                            <p>Collection data and images are processed locally on your device. A portable backup file is planned for saving and restoring metadata, images, solving sessions and settings. External services may be used for optional analytics and in-app purchases; see the <a href="datenschutz.en.html">privacy policy</a> for details.</p>
+                        </div>
+                    </details>
+                    <details class="group py-5">
+                        <summary class="cursor-pointer rounded-md text-base sm:text-lg font-semibold text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">Which exports are planned?</summary>
+                        <div class="mt-3 text-slate-600 leading-relaxed [&_a]:text-blue-700 [&_a]:hover:text-blue-800 [&_a]:underline [&_a]:underline-offset-4">
+                            <p>Share individual puzzles as PDFs or sale sheets, and export your collection as CSV. Custom text templates let you choose which details appear in an export.</p>
+                        </div>
+                    </details>
+                    <details class="group py-5">
+                        <summary class="cursor-pointer rounded-md text-base sm:text-lg font-semibold text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700">How is free access planned to work?</summary>
+                        <div class="mt-3 text-slate-600 leading-relaxed [&_a]:text-blue-700 [&_a]:hover:text-blue-800 [&_a]:underline [&_a]:underline-offset-4">
+                            <p>The free collection is planned to hold up to 10 of your own puzzles at a time. A single one-time in-app purchase is planned to unlock an unlimited collection permanently, without a subscription. The offer shown at release will provide the final details.</p>
+                        </div>
+                    </details>
+                </div>
             </div>
         </section>
 
