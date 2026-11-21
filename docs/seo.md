@@ -18,12 +18,10 @@ Die Angaben stehen direkt im HTML und benötigen kein JavaScript:
 - Strukturierte Daten für Website, Herausgeber, Seiten und Apps; auf den
   App-Seiten auch ein Navigationspfad.
 
-Die Produktseiten erklären direkt im HTML, für wen die App gedacht ist und
-was sie kann. Bei unveröffentlichten Apps ist der geplante Umfang erkennbar.
-Die FAQs beantworten konkrete Fragen zu Gratislimits, Exporten und dem Umgang
-mit App-Daten. Die Antworten lassen sich ohne JavaScript und mit der Tastatur
-öffnen. BrainEase und Puzzle Collector verknüpfen die sichtbaren Screenshots
-auch über strukturierte App-Daten.
+Die App-Seiten und die Startseite beantworten häufige Fragen als lesbares HTML.
+Die aufklappbaren Antworten funktionieren ohne JavaScript und lassen sich mit
+der Tastatur bedienen. Bei unveröffentlichten Apps sind Status und geplanter
+Funktionsumfang ausdrücklich gekennzeichnet.
 
 Die strukturierten App-Daten beschreiben die Produkte. Es werden keine Preise,
 Bewertungen, Sterne oder Veröffentlichungstermine erfunden. Das vollständige
@@ -38,12 +36,11 @@ unverändert.
 
 ## robots.txt und Sitemap
 
-`robots.txt` erlaubt das Crawlen der öffentlichen Website. Eine Gruppe nennt
-die Suchcrawler `OAI-SearchBot` (ChatGPT), `Claude-SearchBot` (Claude) und
-`PerplexityBot` (Perplexity) ausdrücklich. Googlebot und Bingbot fallen unter
-die allgemeine Regel. Beide Gruppen schließen `/website_context.txt` aus, weil
-die Datei teilweise veraltete Kopien der Seiten enthält. Die Datei bleibt per
-direkter URL abrufbar.
+`robots.txt` erlaubt das Crawlen der öffentlichen Website. `OAI-SearchBot`, der
+Crawler für ChatGPT Search, ist ausdrücklich zugelassen. Der interne
+`website_context.txt`-Snapshot ist in beiden Crawler-Gruppen ausgeschlossen,
+weil er vollständige Seiten als teilweise veraltete Kopien enthält. Diese Regel
+ist eine Crawler-Anweisung und keine Zugriffssperre.
 
 Für `GPTBot` gibt es keine gesonderte Regel. Die Entscheidung über das Crawlen
 für mögliches Modelltraining ist unabhängig vom Zugriff für ChatGPT Search.
@@ -82,13 +79,10 @@ Sitemap nicht überschrieben.
 3. Mit der URL-Prüfung die Startseite und die App-Seiten prüfen. Reguläre Seiten
    müssen HTTP 200 liefern, fehlende Seiten HTTP 404. Hosting oder CDN dürfen
    die gewünschten Crawler nicht durch Bot-Challenges oder Sperren abweisen.
-4. Im Leistungsbericht der Search Console Impressionen, Klicks und Suchanfragen
-   je App-Seite beobachten. Unter „AI Performance“ in Bing Webmaster Tools
-   lassen sich Zitate in unterstützten KI-Antworten nach URL verfolgen.
-5. Bei einem App-Start oder einer Änderung an Funktionen oder Preisen die
-   Angaben in beiden Sprachen, in den strukturierten Daten und in den
-   Store-Einträgen gemeinsam aktualisieren. Bei Bedarf kann IndexNow die
-   geänderten URLs an teilnehmende Suchmaschinen melden.
+4. Suchanfragen, Indexierungsstatus und relevante Besucher auf den App-Seiten
+   beobachten. Bei neuen Funktionen, geänderten Preisen oder Veröffentlichung
+   einer App die Angaben in beiden Sprachen und in den strukturierten Daten
+   gemeinsam pflegen.
 
 Für diese Schritte ist Zugriff auf die Hosting- und Webmaster-Konten nötig.
 Die lokalen Dateien allein reichen noch keine Sitemap bei einem Dienst ein.
@@ -103,9 +97,6 @@ Suchdiensten bestimmt und sind nicht garantiert.
 - [Google: Strukturierte Daten für Software-Apps](https://developers.google.com/search/docs/appearance/structured-data/software-app)
 - [Google: Sichtbarkeit in generativen Suchfunktionen](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
 - [OpenAI Docs: Crawler und robots.txt](https://developers.openai.com/api/docs/bots)
-- [Anthropic: Crawler für Claude](https://privacy.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler)
-- [Perplexity: Suchcrawler](https://docs.perplexity.ai/docs/resources/perplexity-crawlers)
-- [Bing: AI Performance in Webmaster Tools](https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/)
 
 Eine zusätzliche `llms.txt` ist für Googles AI-Suchergebnisse laut dessen
 Dokumentation nicht erforderlich. Die Grundlage dieser Umsetzung sind öffentlich

@@ -4,10 +4,7 @@ User-agent: *
 Disallow: /website_context.txt
 Allow: /
 
-# Search crawlers for ChatGPT, Claude and Perplexity.
 User-agent: OAI-SearchBot
-User-agent: Claude-SearchBot
-User-agent: PerplexityBot
 Disallow: /website_context.txt
 Allow: /
 
